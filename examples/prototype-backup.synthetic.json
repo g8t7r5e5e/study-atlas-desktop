@@ -1,0 +1,177 @@
+{
+  "version": 1,
+  "exportedAt": "2026-10-16T00:00:00.000Z",
+  "demo": {
+    "logs": [
+      {
+        "date": "2027-07-01",
+        "hours": "3",
+        "target": "4",
+        "questions": "20",
+        "correct": "15",
+        "reviewed": "18",
+        "anki": "80",
+        "due": "100",
+        "newcards": "5",
+        "deck": "Example deck",
+        "notes": "Synthetic daily record",
+        "outcome": "Done",
+        "system": "Cardio"
+      },
+      {
+        "date": "2027-07-01",
+        "_block": true,
+        "questions": "10",
+        "correct": "8",
+        "reviewed": "10",
+        "selection": "System-wise",
+        "system": "Cardio",
+        "mode": "Tutor",
+        "notes": "Separate synthetic block"
+      }
+    ],
+    "edits": {
+      "https://app.notion.com/p/f22ad66b4db08368a9eb816748163b8f": {
+        "Main Task": "Synthetic edited lesson"
+      },
+      "https://app.notion.com/p/981ad66b4db082e3a11f0156cb36688e": {
+        "Overall Status": "Reviewed",
+        "FA Status": "Reviewed"
+      }
+    },
+    "topic": {
+      "https://app.notion.com/p/981ad66b4db082e3a11f0156cb36688e": "Reviewed"
+    },
+    "addedDays": [
+      {
+        "url": "local-day-2027-07-01",
+        "date:Date:start": "2027-07-01",
+        "Primary System/Subject": "Cardio",
+        "Main Task": "Synthetic lesson",
+        "Planned Hours": 4,
+        "UWorld Target": 20,
+        "Status": "Not Started"
+      }
+    ],
+    "addedTopics": [
+      {
+        "url": "local-topic-synthetic",
+        "Topic": "Example imported topic",
+        "System": "Cardio",
+        "date:Start Date:start": "2027-07-01",
+        "Overall Status": "Not Started",
+        "FA Status": "Not Started",
+        "B&B Status": "Not Started",
+        "Anki Status": "Not Started",
+        "UWorld Status": "Not Started"
+      }
+    ],
+    "taskStates": {
+      "2027-07-01-0": {
+        "status": "Completed",
+        "priority": "Normal"
+      }
+    },
+    "checks": {
+      "2027-07-01-1": true
+    },
+    "weakness": [
+      {
+        "Weak Topic": "Example weak concept",
+        "System": "Cardio",
+        "Status": "Open",
+        "Severity": "Medium",
+        "Source": "Daily mission",
+        "Correct Concept": "Synthetic explanation",
+        "Date Identified": "2027-07-01",
+        "Review Date": "2027-07-03",
+        "_missionDates": [
+          "2027-07-01"
+        ]
+      }
+    ],
+    "catchup": [
+      {
+        "Item": "Example unfinished priority",
+        "Rescheduled For": "2027-07-02",
+        "Estimated Hours": "1",
+        "Status": "Scheduled",
+        "Priority": "Normal",
+        "Category": "Current content",
+        "Notes": "Synthetic entry",
+        "_entryDate": "2027-07-01"
+      }
+    ],
+    "settings": {
+      "Active Anki Deck": "Example deck",
+      "New Card Budget": 15,
+      "Readiness Status": "Developing",
+      "date:Actual Exam Date:start": "2027-08-01"
+    },
+    "preferences": {
+      "weekday": 4,
+      "saturday": 6,
+      "sunday": 0,
+      "questions": 20,
+      "applyDefaults": true,
+      "focusMinutes": 25,
+      "theme": "Forest",
+      "density": "Comfortable"
+    },
+    "pause": {
+      "start": "2027-07-10",
+      "end": "2027-07-12",
+      "label": "Example break"
+    },
+    "resourceOrder": "study",
+    "weekly": {
+      "legacy-example": {
+        "Biggest Wins": "Synthetic legacy reflection"
+      }
+    },
+    "reflections": {
+      "2027-06-28": {
+        "wins": "Example win",
+        "lessons": "Example lesson",
+        "next": "Example priority"
+      }
+    },
+    "assessmentRecords": [
+      {
+        "id": "synthetic-assessment",
+        "title": "Example assessment",
+        "date": "2027-07-01",
+        "actualDate": "2027-07-01",
+        "status": "Completed",
+        "form": "Example form",
+        "score": "70",
+        "metric": "EPC %",
+        "probability": "",
+        "weak": "Example weak area",
+        "action": "Review",
+        "notes": "Synthetic result, not medical advice"
+      }
+    ],
+    "milestoneRecords": [
+      {
+        "id": "synthetic-milestone",
+        "title": "Example milestone",
+        "date": "2027-07-01",
+        "category": "Study",
+        "status": "Achieved",
+        "completedDate": "2027-07-01",
+        "evidence": "Synthetic evidence",
+        "notes": ""
+      }
+    ],
+    "profile": {
+      "name": "Example Student",
+      "tagline": "One step at a time",
+      "about": "Synthetic test profile",
+      "school": "Example school",
+      "stage": "Student",
+      "location": "Example location",
+      "goal": "Practice migration"
+    }
+  }
+}
