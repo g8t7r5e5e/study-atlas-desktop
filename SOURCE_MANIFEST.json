@@ -1,0 +1,41 @@
+{
+  "title": "USMLE \u2014 Step 1 Study Atlas",
+  "capturedDate": "2026-10-16",
+  "sourceCommit": "2b34c1fc508ffd7615d1b5753b9d39755dc148d7",
+  "sourceVersion": 7,
+  "liveReference": "https://zahoor-study-atlas.modestpark4.chatgpt.site",
+  "containsPersonalBrowserBackup": false,
+  "containsCompiledExe": false,
+  "referenceFiles": [
+    {
+      "path": "prototype/app.js",
+      "bytes": 78378,
+      "sha256": "173bfd3e7882f1e7721209dc9ad71a90e28a1bff55b7f3d3b0ffa433f4e01c05"
+    },
+    {
+      "path": "prototype/dashboard.js",
+      "bytes": 46282,
+      "sha256": "de2d5af12b125050fd690a02483ac901f8f3802f145ba5de4a00fa3c49e01646"
+    },
+    {
+      "path": "prototype/data.js",
+      "bytes": 1964571,
+      "sha256": "36ef6258938b7cc4ed6eaffcf88c6aba98231272b27fc73c089eada261c6201d"
+    },
+    {
+      "path": "prototype/import.js",
+      "bytes": 7897,
+      "sha256": "ec199281b5a943b9f926743aad6750626dad5ad4545fae99e6e047367e9f3f89"
+    },
+    {
+      "path": "prototype/index.html",
+      "bytes": 786,
+      "sha256": "255b82530c3bed7b1f25a193136942ea5328bbd2d81733251fdc0698a2504f29"
+    },
+    {
+      "path": "prototype/style.css",
+      "bytes": 30282,
+      "sha256": "480cddc1d617cf00f8bc36604b1d58ed0c62d20d698423c8be4bc58df9b044c5"
+    }
+  ]
+}

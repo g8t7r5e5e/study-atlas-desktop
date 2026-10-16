@@ -1,0 +1,3 @@
+# Project instructions
+
+Read MASTER_PROMPT.md and START_HERE.md before work. The owner requests implementation through a tested Windows installer. Preserve the approved source in prototype/ as an immutable design baseline. Build in desktop/. Follow docs/FEATURE_PARITY.md and docs/RELEASE_ACCEPTANCE.md. Keep personal data outside Git and release artifacts. Never deploy or edit the hosted Site. Do not claim packaging, signing, visual parity or Windows tests without evidence. Record stages and decisions in PLAN.md. Functional bug fixes are allowed; visual redesign requires explicit owner direction. Continue necessary authorized implementation without repeatedly asking approval for ordinary reversible development decisions.
