@@ -1,0 +1,81 @@
+name: Windows desktop installer
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      [
+        "desktop/**",
+        ".github/workflows/windows-desktop.yml",
+        "prototype/**",
+        "scripts/**",
+      ]
+  pull_request:
+    paths:
+      [
+        "desktop/**",
+        ".github/workflows/windows-desktop.yml",
+        "prototype/**",
+        "scripts/**",
+      ]
+permissions:
+  contents: read
+concurrency:
+  group: desktop-windows-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  windows:
+    runs-on: windows-2022
+    timeout-minutes: 35
+    defaults:
+      run:
+        working-directory: desktop
+        shell: pwsh
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24.19.0"
+          cache: npm
+          cache-dependency-path: desktop/package-lock.json
+      - name: Record native architecture and Windows version
+        run: |
+          node -p "JSON.stringify({platform:process.platform,arch:process.arch,node:process.version})"
+          Get-ComputerInfo -Property WindowsProductName,WindowsVersion,OsBuildNumber
+      - run: npm ci
+      - run: npx playwright install chromium
+      - run: npm run test:reference
+      - run: npm test
+      - run: npm run test:e2e
+      - run: npm run test:electron
+      - name: Build unsigned per-user NSIS installer for runner architecture
+        run: npm run dist:win
+        env:
+          CSC_IDENTITY_AUTO_DISCOVERY: "false"
+      - name: Test packaged executable, persistence and restart
+        run: |
+          $env:STUDY_ATLAS_EXECUTABLE = (Resolve-Path 'release/win-unpacked/Study Atlas.exe').Path
+          npm run test:electron
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Install, upgrade and uninstall in disposable runner
+        run: ./scripts/test-installed.ps1
+      - name: Upload installer, checksums and release guides
+        uses: actions/upload-artifact@v4
+        with:
+          name: Study-Atlas-Windows-x64-candidate
+          if-no-files-found: error
+          path: |
+            desktop/release/*Setup.exe
+            desktop/release/SHA256SUMS.txt
+            desktop/docs/USER_GUIDE.md
+            desktop/docs/RELEASE_NOTES.md
+            desktop/docs/THIRD_PARTY_NOTICES.md
+      - name: Upload test evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Study-Atlas-Windows-test-evidence
+          path: |
+            desktop/test-report/
+            desktop/test-results/
+            desktop/test-evidence/

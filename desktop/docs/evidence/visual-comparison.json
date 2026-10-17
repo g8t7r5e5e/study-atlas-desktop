@@ -1,0 +1,679 @@
+{
+  "comparisons": 48,
+  "fixture": "examples/prototype-backup.synthetic.json with generic curriculum",
+  "maxChangedPixelRatio": 0.0006285217936879987,
+  "results": [
+    {
+      "route": "home",
+      "theme": "Forest",
+      "width": 1440,
+      "reference": [
+        1216,
+        1248
+      ],
+      "desktop": [
+        1216,
+        1248
+      ],
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "today",
+      "theme": "Forest",
+      "width": 1440,
+      "reference": [
+        1216,
+        2223
+      ],
+      "desktop": [
+        1216,
+        2223
+      ],
+      "changedPixelRatio": 0.0006285217936879987
+    },
+    {
+      "route": "planner",
+      "theme": "Forest",
+      "width": 1440,
+      "reference": [
+        1216,
+        780
+      ],
+      "desktop": [
+        1216,
+        780
+      ],
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "calendar",
+      "theme": "Forest",
+      "width": 1440,
+      "reference": [
+        1216,
+        1147
+      ],
+      "desktop": [
+        1216,
+        1147
+      ],
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "resources",
+      "theme": "Forest",
+      "width": 1440,
+      "reference": [
+        1216,
+        16148
+      ],
+      "desktop": [
+        1216,
+        16148
+      ],
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "systems",
+      "theme": "Forest",
+      "width": 1440,
+      "reference": [
+        1216,
+        2808
+      ],
+      "desktop": [
+        1216,
+        2808
+      ],
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "assessments",
+      "theme": "Forest",
+      "width": 1440,
+      "reference": [
+        1216,
+        780
+      ],
+      "desktop": [
+        1216,
+        780
+      ],
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "weakness",
+      "theme": "Forest",
+      "width": 1440,
+      "reference": [
+        1216,
+        780
+      ],
+      "desktop": [
+        1216,
+        780
+      ],
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "catchup",
+      "theme": "Forest",
+      "width": 1440,
+      "reference": [
+        1216,
+        780
+      ],
+      "desktop": [
+        1216,
+        780
+      ],
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "weekly",
+      "theme": "Forest",
+      "width": 1440,
+      "reference": [
+        1216,
+        2298
+      ],
+      "desktop": [
+        1216,
+        2298
+      ],
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "focus",
+      "theme": "Forest",
+      "width": 1440,
+      "reference": [
+        1216,
+        828
+      ],
+      "desktop": [
+        1216,
+        828
+      ],
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "milestones",
+      "theme": "Forest",
+      "width": 1440,
+      "reference": [
+        1216,
+        780
+      ],
+      "desktop": [
+        1216,
+        780
+      ],
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "home",
+      "theme": "Soft contrast",
+      "width": 1440,
+      "reference": [
+        1216,
+        1248
+      ],
+      "desktop": [
+        1216,
+        1248
+      ],
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "today",
+      "theme": "Soft contrast",
+      "width": 1440,
+      "reference": [
+        1216,
+        2223
+      ],
+      "desktop": [
+        1216,
+        2223
+      ],
+      "changedPixelRatio": 0.0006181635769585908
+    },
+    {
+      "route": "planner",
+      "theme": "Soft contrast",
+      "width": 1440,
+      "reference": [
+        1216,
+        780
+      ],
+      "desktop": [
+        1216,
+        780
+      ],
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "calendar",
+      "theme": "Soft contrast",
+      "width": 1440,
+      "reference": [
+        1216,
+        1147
+      ],
+      "desktop": [
+        1216,
+        1147
+      ],
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "resources",
+      "theme": "Soft contrast",
+      "width": 1440,
+      "reference": [
+        1216,
+        16148
+      ],
+      "desktop": [
+        1216,
+        16148
+      ],
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "systems",
+      "theme": "Soft contrast",
+      "width": 1440,
+      "reference": [
+        1216,
+        2808
+      ],
+      "desktop": [
+        1216,
+        2808
+      ],
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "assessments",
+      "theme": "Soft contrast",
+      "width": 1440,
+      "reference": [
+        1216,
+        780
+      ],
+      "desktop": [
+        1216,
+        780
+      ],
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "weakness",
+      "theme": "Soft contrast",
+      "width": 1440,
+      "reference": [
+        1216,
+        780
+      ],
+      "desktop": [
+        1216,
+        780
+      ],
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "catchup",
+      "theme": "Soft contrast",
+      "width": 1440,
+      "reference": [
+        1216,
+        780
+      ],
+      "desktop": [
+        1216,
+        780
+      ],
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "weekly",
+      "theme": "Soft contrast",
+      "width": 1440,
+      "reference": [
+        1216,
+        2298
+      ],
+      "desktop": [
+        1216,
+        2298
+      ],
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "focus",
+      "theme": "Soft contrast",
+      "width": 1440,
+      "reference": [
+        1216,
+        828
+      ],
+      "desktop": [
+        1216,
+        828
+      ],
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "milestones",
+      "theme": "Soft contrast",
+      "width": 1440,
+      "reference": [
+        1216,
+        780
+      ],
+      "desktop": [
+        1216,
+        780
+      ],
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "home",
+      "theme": "Forest",
+      "width": 1920,
+      "reference": [
+        1696,
+        1280
+      ],
+      "desktop": [
+        1696,
+        1280
+      ],
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "today",
+      "theme": "Forest",
+      "width": 1920,
+      "reference": [
+        1696,
+        2223
+      ],
+      "desktop": [
+        1696,
+        2223
+      ],
+      "changedPixelRatio": 0.0004506382671725273
+    },
+    {
+      "route": "planner",
+      "theme": "Forest",
+      "width": 1920,
+      "reference": [
+        1696,
+        960
+      ],
+      "desktop": [
+        1696,
+        960
+      ],
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "calendar",
+      "theme": "Forest",
+      "width": 1920,
+      "reference": [
+        1696,
+        1147
+      ],
+      "desktop": [
+        1696,
+        1147
+      ],
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "resources",
+      "theme": "Forest",
+      "width": 1920,
+      "reference": [
+        1696,
+        13346
+      ],
+      "desktop": [
+        1696,
+        13346
+      ],
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "systems",
+      "theme": "Forest",
+      "width": 1920,
+      "reference": [
+        1696,
+        2808
+      ],
+      "desktop": [
+        1696,
+        2808
+      ],
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "assessments",
+      "theme": "Forest",
+      "width": 1920,
+      "reference": [
+        1696,
+        960
+      ],
+      "desktop": [
+        1696,
+        960
+      ],
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "weakness",
+      "theme": "Forest",
+      "width": 1920,
+      "reference": [
+        1696,
+        960
+      ],
+      "desktop": [
+        1696,
+        960
+      ],
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "catchup",
+      "theme": "Forest",
+      "width": 1920,
+      "reference": [
+        1696,
+        960
+      ],
+      "desktop": [
+        1696,
+        960
+      ],
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "weekly",
+      "theme": "Forest",
+      "width": 1920,
+      "reference": [
+        1696,
+        2298
+      ],
+      "desktop": [
+        1696,
+        2298
+      ],
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "focus",
+      "theme": "Forest",
+      "width": 1920,
+      "reference": [
+        1696,
+        1008
+      ],
+      "desktop": [
+        1696,
+        1008
+      ],
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "milestones",
+      "theme": "Forest",
+      "width": 1920,
+      "reference": [
+        1696,
+        960
+      ],
+      "desktop": [
+        1696,
+        960
+      ],
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "home",
+      "theme": "Soft contrast",
+      "width": 1920,
+      "reference": [
+        1696,
+        1280
+      ],
+      "desktop": [
+        1696,
+        1280
+      ],
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "today",
+      "theme": "Soft contrast",
+      "width": 1920,
+      "reference": [
+        1696,
+        2223
+      ],
+      "desktop": [
+        1696,
+        2223
+      ],
+      "changedPixelRatio": 0.0004432116212155934
+    },
+    {
+      "route": "planner",
+      "theme": "Soft contrast",
+      "width": 1920,
+      "reference": [
+        1696,
+        960
+      ],
+      "desktop": [
+        1696,
+        960
+      ],
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "calendar",
+      "theme": "Soft contrast",
+      "width": 1920,
+      "reference": [
+        1696,
+        1147
+      ],
+      "desktop": [
+        1696,
+        1147
+      ],
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "resources",
+      "theme": "Soft contrast",
+      "width": 1920,
+      "reference": [
+        1696,
+        13346
+      ],
+      "desktop": [
+        1696,
+        13346
+      ],
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "systems",
+      "theme": "Soft contrast",
+      "width": 1920,
+      "reference": [
+        1696,
+        2808
+      ],
+      "desktop": [
+        1696,
+        2808
+      ],
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "assessments",
+      "theme": "Soft contrast",
+      "width": 1920,
+      "reference": [
+        1696,
+        960
+      ],
+      "desktop": [
+        1696,
+        960
+      ],
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "weakness",
+      "theme": "Soft contrast",
+      "width": 1920,
+      "reference": [
+        1696,
+        960
+      ],
+      "desktop": [
+        1696,
+        960
+      ],
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "catchup",
+      "theme": "Soft contrast",
+      "width": 1920,
+      "reference": [
+        1696,
+        960
+      ],
+      "desktop": [
+        1696,
+        960
+      ],
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "weekly",
+      "theme": "Soft contrast",
+      "width": 1920,
+      "reference": [
+        1696,
+        2298
+      ],
+      "desktop": [
+        1696,
+        2298
+      ],
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "focus",
+      "theme": "Soft contrast",
+      "width": 1920,
+      "reference": [
+        1696,
+        1008
+      ],
+      "desktop": [
+        1696,
+        1008
+      ],
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "milestones",
+      "theme": "Soft contrast",
+      "width": 1920,
+      "reference": [
+        1696,
+        960
+      ],
+      "desktop": [
+        1696,
+        960
+      ],
+      "changedPixelRatio": 0
+    }
+  ]
+}

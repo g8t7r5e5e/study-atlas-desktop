@@ -1,0 +1,22 @@
+{
+  "platform": "linux",
+  "arch": "x64",
+  "sourceImplementationCommit": "a3c1c2f",
+  "friendSafetyAudit": {
+    "files": 173,
+    "archives": 1,
+    "passed": true
+  },
+  "artifacts": [
+    {
+      "file": "release/linux-unpacked/study-atlas-desktop",
+      "bytes": 229621064,
+      "sha256": "447dc011502a0a5ab4da365d3004646c86aee4eb03aa1643cdf672c7491b64cd"
+    },
+    {
+      "file": "release/linux-unpacked/resources/app.asar",
+      "bytes": 3311696,
+      "sha256": "67d701e7ee8bafe4d6380166bbdf4bd165711ad6126e37349a90e9edc3148daa"
+    }
+  ]
+}
