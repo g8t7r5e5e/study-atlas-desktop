@@ -4,6 +4,8 @@ Recorded 17 October 2026. Implementation checkpoint: `a3c1c2f`, based on latest 
 
 Final release review also normalized Windows archive separators in the package audit and checked the uninstall process exit code. The package audit passed again with both native and simulated Windows path separators. These script checks do not establish Windows execution.
 
+After publication to `desktop/windows-installer`, the owner reported a failed Windows Actions run. The session cannot read its logs because GitHub API access is denied. A separate checkout reproduction found that `core.autocrlf=true` changes all six approved reference hashes. Repository attributes now preserve `prototype/**` bytes; the same checkout reproduction passes all six hashes after the fix. This establishes and fixes a Windows checkout defect, but the original failure's exact cause and the subsequent Windows run still require log evidence.
+
 ## Verified in this cloud environment
 
 Host: Linux x64, Debian 13. Development Node 24.19.0/npm 11.9.0. Electron 44.8.0 bundles Node 24.22.0 with SQLite. Packager: electron-builder 26.15.3. Browser automation: Playwright 1.64.1 with the host Chromium. Dependencies are pinned and a fresh `npm ci` completed with artifact checksum and TLS verification intact.
