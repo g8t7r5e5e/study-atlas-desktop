@@ -2,7 +2,7 @@ name: Windows desktop installer
 on:
   workflow_dispatch:
   push:
-    branches: [main]
+    branches: [main, desktop/windows-installer]
     paths:
       [
         "desktop/**",
