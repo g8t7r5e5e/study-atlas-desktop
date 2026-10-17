@@ -60,7 +60,7 @@ if (fs.existsSync(release)) {
     if (!fs.existsSync(file)) continue;
     archives++;
     for (const name of asar.listPackage(file)) {
-      const n = name.replace(/^\//, "");
+      const n = name.replace(/\\/g, "/").replace(/^\//, "");
       if (!asar.statFile(file, n).files) inspect(n, asar.extractFile(file, n));
     }
   }

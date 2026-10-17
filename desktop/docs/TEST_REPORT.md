@@ -2,6 +2,8 @@
 
 Recorded 17 October 2026. Implementation checkpoint: `a3c1c2f`, based on latest main at task start `b25d81f`. The protected prototype is unchanged and still matches SOURCE_MANIFEST.json.
 
+Final release review also normalized Windows archive separators in the package audit and checked the uninstall process exit code. The package audit passed again with both native and simulated Windows path separators. These script checks do not establish Windows execution.
+
 ## Verified in this cloud environment
 
 Host: Linux x64, Debian 13. Development Node 24.19.0/npm 11.9.0. Electron 44.8.0 bundles Node 24.22.0 with SQLite. Packager: electron-builder 26.15.3. Browser automation: Playwright 1.64.1 with the host Chromium. Dependencies are pinned and a fresh `npm ci` completed with artifact checksum and TLS verification intact.

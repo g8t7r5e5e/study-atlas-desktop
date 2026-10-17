@@ -4,11 +4,11 @@ Baseline: main b25d81f. All six immutable reference hashes and 22 reference rout
 
 ## Stages
 1. Audit: read all handoff documents (combined instruction files duplicate the individual documents); inspect final overrides and data categories. Complete.
-2. Shell: preserve source renderer and local fonts; compile inline handlers into registered closures, sandbox renderer, constrain IPC/navigation. In progress.
-3. Storage: SQLite schema migrations, normalized stable record identities with compatible JSON extension fields, transactions, import receipts, profile assets, atomic restore and rotated backups.
-4. Workflow: clean friend seed; optional explicit owner seed JSON import; all existing routes; defaults/pause, dates, timer and save errors.
-5. Validation: domain/integration tests, browser interactions, Electron smoke, matched screenshots, security checks and packaging content audit.
-6. Release: Windows NSIS per-user x64/ARM64 workflow, artifact checksum, guides, evidence and explicit Windows gates.
+2. Shell: preserve source renderer and local fonts; compile inline handlers into registered closures, sandbox renderer, constrain IPC/navigation. Complete.
+3. Storage: SQLite schema migrations, normalized stable record identities with compatible JSON extension fields, transactions, import receipts, profile assets, atomic restore and rotated backups. Complete.
+4. Workflow: clean friend seed; optional explicit owner seed JSON import; all existing routes; defaults/pause, dates, timer and save errors. Complete.
+5. Validation: domain/integration tests, browser interactions, Electron smoke, matched screenshots, security checks and packaging content audit. Complete on Linux; Windows gates remain.
+6. Release: Windows NSIS per-user x64 workflow, native ARM64 packaging command, artifact checksum, guides and evidence. Implemented; Windows execution remains unverified.
 
 ## Decisions
 - Keep prototype/ byte-for-byte. Implement in desktop/; no framework or hosted deployment.
@@ -36,3 +36,5 @@ See desktop/docs for schema, traceability, release evidence and user instruction
 All implementation stages available on Linux are complete. Twenty unit/integration/security tests, fifteen browser/visual tests (48 screenshot comparisons), a final thirteen-scenario workflow rerun, and the actual packaged Electron save/restart smoke passed. A frozen reinstall succeeded. The final package passed the friend-safety audit. Source and release instructions are saved in Git checkpoints.
 
 The Windows workflow and installer commands are implemented, with downloadable artifact upload and disposable installed-app checks. They have not run in this session. Remaining Windows/hardware/signing/real-owner-data gates are listed explicitly in desktop/docs/TEST_REPORT.md; no Windows release or certificate is claimed. No website was deployed.
+
+Final release review fixed archive separator normalization for the Windows privacy audit and checks the uninstaller exit code. Native and simulated Windows archive-path audits pass. Reusable cloud `install_script` and `start_skill` were saved as an environment configuration draft; publication and fresh-task restoration have not been verified. Local commits have not been pushed. Estimated overall release work remaining: 10–15%, principally Windows execution and manual acceptance; this is a planning estimate, not a measured test percentage.

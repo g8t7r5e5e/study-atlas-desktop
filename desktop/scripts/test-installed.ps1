@@ -21,6 +21,7 @@ $hash = (Get-FileHash $db -Algorithm SHA256).Hash
 $uninstaller = Get-ChildItem $installDir/*Uninstall*.exe | Select-Object -First 1
 if (-not $uninstaller) { throw 'Uninstaller missing.' }
 $p = Start-Process -FilePath $uninstaller.FullName -ArgumentList '/S' -PassThru -Wait
+if ($p.ExitCode -ne 0) { throw "Uninstall failed: $($p.ExitCode)" }
 if (-not (Test-Path $db)) { throw 'Uninstall removed user data.' }
 if ((Get-FileHash $db -Algorithm SHA256).Hash -ne $hash) { throw 'Uninstall changed user data.' }
 @{installed=$true;reinstalled=$true;uninstallPreservedProfile=$true;priorReleaseUpgrade=$false;architecture='x64'} | ConvertTo-Json | Set-Content test-evidence/installed-windows.json
