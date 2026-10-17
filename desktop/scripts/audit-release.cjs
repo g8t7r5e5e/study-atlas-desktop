@@ -3,6 +3,7 @@ const fs = require("node:fs"),
   path = require("node:path"),
   assert = require("node:assert/strict");
 const root = path.join(__dirname, "..");
+const { auditArchive } = require("./audit-archive.cjs");
 let checked = 0;
 const forbiddenPath =
   /(^|\/)(prototype|examples|private|user-data|backups|test-results|test-evidence)(\/|$)|\.(sqlite|db|log)(-|$)|owner-plan\.json$/i;
@@ -59,10 +60,7 @@ if (fs.existsSync(release)) {
     const file = path.join(release, dir.name, "resources/app.asar");
     if (!fs.existsSync(file)) continue;
     archives++;
-    for (const name of asar.listPackage(file)) {
-      const n = name.replace(/\\/g, "/").replace(/^\//, "");
-      if (!asar.statFile(file, n).files) inspect(n, asar.extractFile(file, n));
-    }
+    auditArchive(file, inspect, asar);
   }
 }
 console.log(

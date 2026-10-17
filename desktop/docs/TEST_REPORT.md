@@ -1,5 +1,11 @@
 # Release-candidate test report
 
+## Latest Windows build diagnosis
+
+The owner's supplied Windows Actions log confirms that Electron packaging and NSIS installer generation completed, then `audit-release.cjs` failed with `"node_modules/@nodable/entities" was not found in this archive`. The previous normalization passed POSIX separators into ASAR's native-path traversal on Windows. This was the observed packaging-step failure; the separate line-ending fix was not its cause.
+
+Archive lookups now use host-native separators while privacy checks retain portable slash-separated names. Two regression tests exercise ASAR's actual filesystem traversal with Windows and Unix path semantics; the Windows test reproduces the original exception before exercising the corrected lookup. All 22 unit/integration/security tests pass, as does the existing Linux packaged-content audit. This build-script correction does not change the packaged application. A new Windows run must still complete the audit, installed-app checks and artifact upload before an installer is considered delivered. The older report below records the initial Linux evidence and predates this supplied Windows log.
+
 Recorded 17 October 2026. Implementation checkpoint: `a3c1c2f`, based on latest main at task start `b25d81f`. The protected prototype is unchanged and still matches SOURCE_MANIFEST.json.
 
 Final release review also normalized Windows archive separators in the package audit and checked the uninstall process exit code. The package audit passed again with both native and simulated Windows path separators. These script checks do not establish Windows execution.
