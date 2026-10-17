@@ -14,3 +14,8 @@ private/
 user-data/
 backups/
 study-atlas-backup-*.json
+desktop/test-results/
+desktop/test-report/
+desktop/test-evidence/
+core
+core.*
