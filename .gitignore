@@ -14,3 +14,19 @@ private/
 user-data/
 backups/
 study-atlas-backup-*.json
+# Private data foundation inputs and generated artifacts
+private-data/
+work/
+artifacts/
+*.sqlite
+*.sqlite3
+*.db
+*.db-wal
+*.db-shm
+*.anki2
+*.anki21
+*.apkg
+*.colpkg
+__pycache__/
+.venv/
+*.pyc

@@ -1,0 +1,343 @@
+{
+  "schema_version": "study-atlas-data-report/v1",
+  "question_records": 3659,
+  "source_label_topics": 1142,
+  "official_categories": 22,
+  "resources": [
+    {
+      "resource_id": "bnb",
+      "records": 496,
+      "runtime_seconds": 543060,
+      "missing_durations": 0,
+      "items_with_candidate_links": 95,
+      "unmatched_items": 401,
+      "candidate_qid_coverage": 552,
+      "reviewed_qid_links": 0
+    },
+    {
+      "resource_id": "firstaid",
+      "records": 13247,
+      "runtime_seconds": null,
+      "missing_durations": 13247,
+      "items_with_candidate_links": 1347,
+      "unmatched_items": 11900,
+      "candidate_qid_coverage": 1814,
+      "reviewed_qid_links": 0
+    },
+    {
+      "resource_id": "pathoma",
+      "records": 110,
+      "runtime_seconds": 122679,
+      "missing_durations": 0,
+      "items_with_candidate_links": 8,
+      "unmatched_items": 102,
+      "candidate_qid_coverage": 75,
+      "reviewed_qid_links": 0
+    }
+  ],
+  "exact_title_candidates": 1005,
+  "fuzzy_title_candidates": 528,
+  "question_ids_with_candidate_resource_links": 2025,
+  "candidate_question_coverage_percent": 55.34,
+  "reviewed_cross_resource_links": 0,
+  "pending_review_items": 14913,
+  "anki_notes": 0,
+  "anki_cards": 0,
+  "foreign_key_errors": [],
+  "integrity_check": "ok",
+  "sources": [
+    {
+      "id": "source:63c115e8c3744ca9cd10c8e0",
+      "source_key": "bnb",
+      "filename": "BNB video mappings.pdf",
+      "sha256": "8850f2f6db000145d81b71be28a6cde1243e6f8b512520a82187d20507693c8d",
+      "captured_at": "2026-10-18T01:06:03.595357+00:00",
+      "source_version": null,
+      "format": "pdf",
+      "owner": "User-supplied source",
+      "rights": "private_local_only",
+      "source_url": null,
+      "record_count": 496,
+      "parser_version": "1.0.2:config:e10808d43975dc4007310533",
+      "validation": {
+        "pdf_pages": 25,
+        "modules": 22,
+        "parsed_rows": 496,
+        "declared_videos": 497,
+        "duration_seconds": 543060,
+        "missing_durations": 0,
+        "module_counts": {
+          "Anesthesia": 4,
+          "Basic Pharmacology": 5,
+          "Behavioral Science": 9,
+          "Biochemistry": 28,
+          "Biostats/Epi": 12,
+          "Cardiology": 47,
+          "Cell Biology": 14,
+          "Dermatology": 11,
+          "Endocrinology": 30,
+          "Gastroenterology": 28,
+          "Genetics": 12,
+          "Hematology": 32,
+          "Immunology": 19,
+          "Infectious Disease": 36,
+          "Musculoskeletal": 20,
+          "Neurology": 50,
+          "Ophthalmology": 10,
+          "Pathology": 11,
+          "Psychiatry": 21,
+          "Pulmonary": 29,
+          "Renal": 31,
+          "Reproductive": 37
+        },
+        "identity_policy": "Checklist lacks official video IDs. Title/module keys are provisional; use explicit stable IDs for later CSV updates."
+      },
+      "warning_count": 20
+    },
+    {
+      "id": "source:7f3c5efabecc555912b3e458",
+      "source_key": "firstaid",
+      "filename": "First Aid for the USMLE Step 1 2025 35th Edition index.pdf",
+      "sha256": "d08cc6e67ab64f07e434741ff73eeddb3f41371aed592db73f41d74fc710e0ef",
+      "captured_at": "2026-10-18T01:06:34.893594+00:00",
+      "source_version": null,
+      "format": "pdf",
+      "owner": "User-supplied source",
+      "rights": "private_local_only",
+      "source_url": null,
+      "record_count": 13247,
+      "parser_version": "1.0.2:config:e10808d43975dc4007310533",
+      "validation": {
+        "pdf_pages": 70,
+        "parsed_index_entries": 13247,
+        "page_reference_count": 14466,
+        "index_pages_seen": [
+          773,
+          774,
+          775,
+          776,
+          777,
+          778,
+          779,
+          780,
+          781,
+          782,
+          783,
+          784,
+          785,
+          786,
+          787,
+          788,
+          789,
+          790,
+          791,
+          792,
+          793,
+          794,
+          795,
+          796,
+          797,
+          798,
+          799,
+          800,
+          801,
+          802,
+          803,
+          804,
+          805,
+          806,
+          807,
+          808,
+          809,
+          810,
+          811,
+          812,
+          814,
+          815,
+          816,
+          817,
+          818,
+          819,
+          820,
+          821,
+          822,
+          823,
+          824,
+          825,
+          826,
+          827,
+          828,
+          829,
+          830,
+          831,
+          832,
+          833,
+          834,
+          835,
+          836,
+          837,
+          838,
+          839,
+          840
+        ],
+        "missing_index_pages_within_range": [
+          813
+        ],
+        "raw_index_lines": 17242,
+        "notes": "Partial numeric index extraction; context/wrapping requires review. No reading-time estimates. Index entries are not canonical topics."
+      },
+      "warning_count": 0
+    },
+    {
+      "id": "source:650f8b063db2b15e2a356909",
+      "source_key": "guidebook",
+      "filename": "USMLE GUIDEBOOK 2025-2026.pdf",
+      "sha256": "a87f72a0ef3cb1fe8e83b92b9ccc61d6773efedd95de73e010ca9bcd6d47c17d",
+      "captured_at": "2026-10-18T01:06:35.276191+00:00",
+      "source_version": null,
+      "format": "pdf",
+      "owner": "User-supplied source",
+      "rights": "private_local_only",
+      "source_url": null,
+      "record_count": 0,
+      "parser_version": "1.0.2:config:e10808d43975dc4007310533",
+      "validation": {
+        "status": "reference_only",
+        "notes": "Institutional guide, not a current official exam specification or a resource mapping catalog."
+      },
+      "warning_count": 0
+    },
+    {
+      "id": "source:42523fae9e7848b05a1407aa",
+      "source_key": "pathoma",
+      "filename": "pathoma mapping.pdf",
+      "sha256": "22b2b03669f08c03e93171a893495131a861c0a2a37673eec1a53682b60eb21d",
+      "captured_at": "2026-10-18T01:06:16.036547+00:00",
+      "source_version": null,
+      "format": "pdf",
+      "owner": "User-supplied source",
+      "rights": "private_local_only",
+      "source_url": null,
+      "record_count": 110,
+      "parser_version": "1.0.2:config:e10808d43975dc4007310533",
+      "validation": {
+        "pdf_pages": 3,
+        "parsed_rows": 110,
+        "duration_seconds": 122679,
+        "combined_rows": 13,
+        "missing_durations": 0,
+        "independently_checked_duration_rows": 110,
+        "ocr_review_required": true,
+        "notes": "Counts are printed duration rows, not individual lessons; OCR needs human review. No claimed edition or provider IDs."
+      },
+      "warning_count": 0
+    },
+    {
+      "id": "source:44c0c52b8b2fbf3607d5f57a",
+      "source_key": "uworld:step1",
+      "filename": "Questions details.csv",
+      "sha256": "8219239b46d0d630440ba4a0bf48722ac81147dff55d84aa23bb4a37c58be39a",
+      "captured_at": "2026-10-18T01:06:03.010798+00:00",
+      "source_version": null,
+      "format": "csv",
+      "owner": "User-supplied source",
+      "rights": "private_local_only",
+      "source_url": null,
+      "record_count": 3659,
+      "parser_version": "1.0.2:config:a29e15f56cabff840d253adf",
+      "validation": {
+        "rows": 3659,
+        "columns": {
+          "id": {
+            "missing": 0,
+            "distinct": 3659
+          },
+          "question": {
+            "missing": 0,
+            "distinct": 3659
+          },
+          "explanation": {
+            "missing": 0,
+            "distinct": 3659
+          },
+          "corrAns": {
+            "missing": 0,
+            "distinct": 10
+          },
+          "subId": {
+            "missing": 0,
+            "distinct": 13
+          },
+          "sysId": {
+            "missing": 0,
+            "distinct": 169
+          },
+          "pplTaken": {
+            "missing": 0,
+            "distinct": 2576
+          },
+          "corrTaken": {
+            "missing": 0,
+            "distinct": 3143
+          },
+          "lastUpdated": {
+            "missing": 0,
+            "distinct": 1
+          },
+          "title": {
+            "missing": 0,
+            "distinct": 1142
+          },
+          "questionType": {
+            "missing": 0,
+            "distinct": 4
+          },
+          "questionFormatType": {
+            "missing": 0,
+            "distinct": 1
+          },
+          "mediaName": {
+            "missing": 3652,
+            "distinct": 8
+          },
+          "otherMedias": {
+            "missing": 1056,
+            "distinct": 2390
+          },
+          "parentQId": {
+            "missing": 0,
+            "distinct": 29
+          }
+        },
+        "unique_qids": 3659,
+        "duplicate_rows": 0,
+        "subject_codes": 13,
+        "system_codes": 169,
+        "raw_title_count": 1142,
+        "excluded_columns": [
+          "question",
+          "explanation",
+          "corrAns",
+          "questionType",
+          "questionFormatType",
+          "mediaName",
+          "otherMedias",
+          "parentQId"
+        ]
+      },
+      "warning_count": 3
+    }
+  ],
+  "planner_gate": {
+    "ready": false,
+    "reason": "Review checkpoint before planner integration: opaque classifications, provisional IDs, OCR/index review, and zero reviewed QID crosswalks."
+  },
+  "limitations": [
+    "Snapshot count is not the current official question-bank size.",
+    "Title and fuzzy matches are review candidates, never verified medical mappings.",
+    "No student activity or AnKing collection was supplied.",
+    "First Aid entries are partial index references, not a chapter workload catalog.",
+    "Pathoma rows can group multiple lessons under one runtime.",
+    "The separately named backend research document was not among the attachments."
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "schema_version": "study-atlas-taxonomy/v1",
+  "version": "2026-10-18",
+  "url": "https://www.usmle.org/exam-resources/step-1-materials/step-1-content-outline-and-specifications",
+  "scope": "Top-level Step 1 specification categories verified from the official page. Not the full detailed content outline. No exam weights used for workload.",
+  "systems": ["Human Development", "Blood & Lymphoreticular/Immune Systems", "Behavioral Health & Nervous Systems/Special Senses", "Musculoskeletal, Skin & Subcutaneous Tissue", "Cardiovascular System", "Respiratory & Renal/Urinary Systems", "Gastrointestinal System", "Reproductive & Endocrine Systems", "Multisystem Processes & Disorders", "Biostatistics & Epidemiology/Population Health", "Social Sciences: Communication and Interpersonal Skills"],
+  "disciplines": ["Pathology", "Physiology", "Nutrition", "Gross Anatomy & Embryology", "Microbiology", "Pharmacology", "Behavioral Sciences", "Biochemistry", "Histology & Cell Biology", "Immunology", "Genetics"]
+}
