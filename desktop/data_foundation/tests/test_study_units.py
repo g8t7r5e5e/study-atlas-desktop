@@ -2,7 +2,7 @@ import tempfile
 import unittest
 from pathlib import Path
 from data_foundation.core import connect, import_catalog
-from data_foundation.study_units import build, definitions, matches, select
+from data_foundation.study_units import build, definitions, matches, select, order_units, reading_sequence
 
 
 class StudyUnitTests(unittest.TestCase):
@@ -17,8 +17,8 @@ class StudyUnitTests(unittest.TestCase):
     def test_curriculum_size_and_requested_sequence(self):
         units=definitions()['units']
         self.assertTrue(200<=len(units)<=400)
-        self.assertEqual([u['title'] for u in units[:4]],[
-            'Cardiac embryology','Cardiac anatomy','Cardiac physiology basics','Wiggers diagram'])
+        names={u['id']:u['title'] for u in units}
+        self.assertEqual(names['cardiovascular-04'],'Wiggers diagram')
         self.assertFalse(matches('COPD',['cop']))
 
     def test_page_scope_and_no_invented_workload(self):
@@ -50,3 +50,33 @@ class StudyUnitTests(unittest.TestCase):
         build(self.db)
         for ids in ([],['missing']):
             with self.assertRaises(ValueError):select(self.db,ids)
+
+    def test_page_order_overrides_ids_and_input_order(self):
+        import_catalog(self.db,self.src,'firstaid',[
+            {'source_key':'early','title':'physiology','page_refs':[289],'locator':'fixture'},
+            {'source_key':'later','title':'cardiac cycle','page_refs':[292],'locator':'fixture'}],{})
+        build(self.db)
+        r=select(self.db,['cardiovascular-04','cardiovascular-03','cardiovascular-01'])
+        self.assertEqual(r['selected_unit_ids'][:2],['cardiovascular-03','cardiovascular-04'])
+        self.assertEqual([s['page'] for s in r['reading_sequence']],[289,292])
+        self.assertEqual(r['unresolved_unit_ids'],['cardiovascular-01'])
+
+    def test_noncontiguous_units_do_not_backtrack_or_duplicate_crosslinks(self):
+        video={'item_id':'v','resource_id':'bnb','page_refs':[]}
+        question={'question_id':'q'}
+        units=[{'id':'z','title':'First','system':'one','firstaid_index_pages':[183,563],
+                'resource_candidates':[video],'question_candidates':[question]},
+               {'id':'a','title':'Second','system':'two','firstaid_index_pages':[200],
+                'resource_candidates':[video],'question_candidates':[question]}]
+        order_units(units);steps=reading_sequence(units)
+        self.assertEqual([s['page'] for s in steps],[183,200,563])
+        self.assertEqual([s['unit_ids'] for s in steps],[['z'],['a'],['z']])
+        self.assertEqual(sum(len(s['resource_candidates']) for s in steps),1)
+        self.assertEqual(sum(len(s['question_candidates']) for s in steps),1)
+
+    def test_page_step_does_not_pull_later_reading_forward(self):
+        fa={'item_id':'f','resource_id':'firstaid','page_refs':[183,563]}
+        units=[{'id':'u','firstaid_index_pages':[183,563],
+                'resource_candidates':[fa],'question_candidates':[]}]
+        steps=reading_sequence(units)
+        self.assertEqual([s['resource_candidates'][0]['page_refs'] for s in steps],[[183],[563]])

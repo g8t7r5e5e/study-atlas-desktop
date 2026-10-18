@@ -1,760 +1,11 @@
 {
-  "version": "study-units/v1",
+  "version": "study-units/v2",
   "status": "editorial_draft",
   "units": [
     {
-      "id": "cardiovascular-01",
-      "system": "Cardiovascular",
-      "sequence": 1,
-      "title": "Cardiac embryology",
-      "firstaid_pages": [
-        283,
-        329
-      ],
-      "bnb_modules": [
-        "Cardiology"
-      ],
-      "terms": [
-        "cardiac embryology"
-      ],
-      "firstaid_terms": [
-        "embryology",
-        "embryologic",
-        "embryological",
-        "cardiac looping"
-      ]
-    },
-    {
-      "id": "cardiovascular-02",
-      "system": "Cardiovascular",
-      "sequence": 2,
-      "title": "Cardiac anatomy",
-      "firstaid_pages": [
-        283,
-        329
-      ],
-      "bnb_modules": [
-        "Cardiology"
-      ],
-      "terms": [
-        "cardiac anatomy"
-      ],
-      "firstaid_terms": [
-        "anatomy"
-      ]
-    },
-    {
-      "id": "cardiovascular-03",
-      "system": "Cardiovascular",
-      "sequence": 3,
-      "title": "Cardiac physiology basics",
-      "firstaid_pages": [
-        283,
-        329
-      ],
-      "bnb_modules": [
-        "Cardiology"
-      ],
-      "terms": [
-        "cardiac physiology",
-        "blood flow mechanics"
-      ],
-      "firstaid_terms": [
-        "physiology",
-        "cardiac output",
-        "cardiac contractility",
-        "cardiac oxygen demand"
-      ]
-    },
-    {
-      "id": "cardiovascular-04",
-      "system": "Cardiovascular",
-      "sequence": 4,
-      "title": "Wiggers diagram",
-      "firstaid_pages": [
-        283,
-        329
-      ],
-      "bnb_modules": [
-        "Cardiology"
-      ],
-      "terms": [
-        "wiggers"
-      ],
-      "firstaid_terms": [
-        "wiggers",
-        "cardiac cycle"
-      ]
-    },
-    {
-      "id": "cardiovascular-05",
-      "system": "Cardiovascular",
-      "sequence": 5,
-      "title": "Pressure-volume loops and Starling curves",
-      "firstaid_pages": [
-        283,
-        329
-      ],
-      "bnb_modules": [
-        "Cardiology"
-      ],
-      "terms": [
-        "pv loops",
-        "starling"
-      ]
-    },
-    {
-      "id": "cardiovascular-06",
-      "system": "Cardiovascular",
-      "sequence": 6,
-      "title": "Blood pressure and exercise responses",
-      "firstaid_pages": [
-        283,
-        329
-      ],
-      "bnb_modules": [
-        "Cardiology"
-      ],
-      "terms": [
-        "regulation of blood pressure",
-        "response to exercise"
-      ]
-    },
-    {
-      "id": "cardiovascular-07",
-      "system": "Cardiovascular",
-      "sequence": 7,
-      "title": "Venous pressure and heart sounds",
-      "firstaid_pages": [
-        283,
-        329
-      ],
-      "bnb_modules": [
-        "Cardiology"
-      ],
-      "terms": [
-        "venous pressure",
-        "heart sounds"
-      ]
-    },
-    {
-      "id": "cardiovascular-08",
-      "system": "Cardiovascular",
-      "sequence": 8,
-      "title": "Murmurs and valve disease",
-      "firstaid_pages": [
-        283,
-        329
-      ],
-      "bnb_modules": [
-        "Cardiology"
-      ],
-      "terms": [
-        "murmurs",
-        "valve disease"
-      ]
-    },
-    {
-      "id": "cardiovascular-09",
-      "system": "Cardiovascular",
-      "sequence": 9,
-      "title": "Cardiac action potentials",
-      "firstaid_pages": [
-        283,
-        329
-      ],
-      "bnb_modules": [
-        "Cardiology"
-      ],
-      "terms": [
-        "cardiac action potentials"
-      ]
-    },
-    {
-      "id": "cardiovascular-10",
-      "system": "Cardiovascular",
-      "sequence": 10,
-      "title": "ECG interpretation",
-      "firstaid_pages": [
-        283,
-        329
-      ],
-      "bnb_modules": [
-        "Cardiology"
-      ],
-      "terms": [
-        "ekg",
-        "electrocardiogram",
-        "ekgs"
-      ]
-    },
-    {
-      "id": "cardiovascular-11",
-      "system": "Cardiovascular",
-      "sequence": 11,
-      "title": "Atrial arrhythmias",
-      "firstaid_pages": [
-        283,
-        329
-      ],
-      "bnb_modules": [
-        "Cardiology"
-      ],
-      "terms": [
-        "atrial fibrillation",
-        "flutter"
-      ]
-    },
-    {
-      "id": "cardiovascular-12",
-      "system": "Cardiovascular",
-      "sequence": 12,
-      "title": "Supraventricular tachycardia and pre-excitation",
-      "firstaid_pages": [
-        283,
-        329
-      ],
-      "bnb_modules": [
-        "Cardiology"
-      ],
-      "terms": [
-        "supraventricular tachycardia",
-        "wpw"
-      ]
-    },
-    {
-      "id": "cardiovascular-13",
-      "system": "Cardiovascular",
-      "sequence": 13,
-      "title": "Conduction blocks",
-      "firstaid_pages": [
-        283,
-        329
-      ],
-      "bnb_modules": [
-        "Cardiology"
-      ],
-      "terms": [
-        "bundle branch",
-        "av block"
-      ]
-    },
-    {
-      "id": "cardiovascular-14",
-      "system": "Cardiovascular",
-      "sequence": 14,
-      "title": "Antiarrhythmic pharmacology",
-      "firstaid_pages": [
-        283,
-        329
-      ],
-      "bnb_modules": [
-        "Cardiology"
-      ],
-      "terms": [
-        "antiarrhythmic"
-      ]
-    },
-    {
-      "id": "cardiovascular-15",
-      "system": "Cardiovascular",
-      "sequence": 15,
-      "title": "Atherosclerosis",
-      "firstaid_pages": [
-        283,
-        329
-      ],
-      "bnb_modules": [
-        "Cardiology"
-      ],
-      "terms": [
-        "atherosclerosis"
-      ]
-    },
-    {
-      "id": "cardiovascular-16",
-      "system": "Cardiovascular",
-      "sequence": 16,
-      "title": "Ischemia and stable angina",
-      "firstaid_pages": [
-        283,
-        329
-      ],
-      "bnb_modules": [
-        "Cardiology"
-      ],
-      "terms": [
-        "cardiac ischemia",
-        "stable angina"
-      ]
-    },
-    {
-      "id": "cardiovascular-17",
-      "system": "Cardiovascular",
-      "sequence": 17,
-      "title": "Acute coronary syndromes",
-      "firstaid_pages": [
-        283,
-        329
-      ],
-      "bnb_modules": [
-        "Cardiology"
-      ],
-      "terms": [
-        "stemi",
-        "nstemi",
-        "unstable angina"
-      ]
-    },
-    {
-      "id": "cardiovascular-18",
-      "system": "Cardiovascular",
-      "sequence": 18,
-      "title": "Heart failure mechanisms",
-      "firstaid_pages": [
-        283,
-        329
-      ],
-      "bnb_modules": [
-        "Cardiology"
-      ],
-      "terms": [
-        "heart failure basics",
-        "systolic and diastolic"
-      ]
-    },
-    {
-      "id": "cardiovascular-19",
-      "system": "Cardiovascular",
-      "sequence": 19,
-      "title": "Heart failure management",
-      "firstaid_pages": [
-        283,
-        329
-      ],
-      "bnb_modules": [
-        "Cardiology"
-      ],
-      "terms": [
-        "acute heart failure",
-        "chronic heart failure"
-      ]
-    },
-    {
-      "id": "cardiovascular-20",
-      "system": "Cardiovascular",
-      "sequence": 20,
-      "title": "Cardiomyopathies",
-      "firstaid_pages": [
-        283,
-        329
-      ],
-      "bnb_modules": [
-        "Cardiology"
-      ],
-      "terms": [
-        "cardiomyopathy"
-      ]
-    },
-    {
-      "id": "cardiovascular-21",
-      "system": "Cardiovascular",
-      "sequence": 21,
-      "title": "Hypertension and secondary causes",
-      "firstaid_pages": [
-        283,
-        329
-      ],
-      "bnb_modules": [
-        "Cardiology"
-      ],
-      "terms": [
-        "hypertension"
-      ]
-    },
-    {
-      "id": "cardiovascular-22",
-      "system": "Cardiovascular",
-      "sequence": 22,
-      "title": "Antihypertensive drugs",
-      "firstaid_pages": [
-        283,
-        329
-      ],
-      "bnb_modules": [
-        "Cardiology"
-      ],
-      "terms": [
-        "antihypertensives"
-      ]
-    },
-    {
-      "id": "cardiovascular-23",
-      "system": "Cardiovascular",
-      "sequence": 23,
-      "title": "Congenital shunts and cyanosis",
-      "firstaid_pages": [
-        283,
-        329
-      ],
-      "bnb_modules": [
-        "Cardiology"
-      ],
-      "terms": [
-        "shunts",
-        "cyanotic",
-        "coarctation"
-      ]
-    },
-    {
-      "id": "cardiovascular-24",
-      "system": "Cardiovascular",
-      "sequence": 24,
-      "title": "Aortic disease",
-      "firstaid_pages": [
-        283,
-        329
-      ],
-      "bnb_modules": [
-        "Cardiology"
-      ],
-      "terms": [
-        "aortic disease"
-      ]
-    },
-    {
-      "id": "cardiovascular-25",
-      "system": "Cardiovascular",
-      "sequence": 25,
-      "title": "Endocarditis",
-      "firstaid_pages": [
-        283,
-        329
-      ],
-      "bnb_modules": [
-        "Cardiology"
-      ],
-      "terms": [
-        "infective endocarditis"
-      ]
-    },
-    {
-      "id": "cardiovascular-26",
-      "system": "Cardiovascular",
-      "sequence": 26,
-      "title": "Pericardial disease",
-      "firstaid_pages": [
-        283,
-        329
-      ],
-      "bnb_modules": [
-        "Cardiology"
-      ],
-      "terms": [
-        "pericardial"
-      ]
-    },
-    {
-      "id": "cardiovascular-27",
-      "system": "Cardiovascular",
-      "sequence": 27,
-      "title": "Shock",
-      "firstaid_pages": [
-        283,
-        329
-      ],
-      "bnb_modules": [
-        "Cardiology"
-      ],
-      "terms": [
-        "shock"
-      ]
-    },
-    {
-      "id": "cardiovascular-28",
-      "system": "Cardiovascular",
-      "sequence": 28,
-      "title": "Cardiac tumors",
-      "firstaid_pages": [
-        283,
-        329
-      ],
-      "bnb_modules": [
-        "Cardiology"
-      ],
-      "terms": [
-        "cardiac tumors"
-      ]
-    },
-    {
-      "id": "biochemistry-01",
-      "system": "Biochemistry",
-      "sequence": 1,
-      "title": "Amino acids and nitrogen disposal",
-      "firstaid_pages": [
-        31,
-        93
-      ],
-      "bnb_modules": [
-        "Biochemistry",
-        "Genetics",
-        "Cell Biology"
-      ],
-      "terms": [
-        "amino acids",
-        "ammonia"
-      ]
-    },
-    {
-      "id": "biochemistry-02",
-      "system": "Biochemistry",
-      "sequence": 2,
-      "title": "Phenylalanine and tyrosine pathways",
-      "firstaid_pages": [
-        31,
-        93
-      ],
-      "bnb_modules": [
-        "Biochemistry",
-        "Genetics",
-        "Cell Biology"
-      ],
-      "terms": [
-        "phenylalanine",
-        "tyrosine"
-      ]
-    },
-    {
-      "id": "biochemistry-03",
-      "system": "Biochemistry",
-      "sequence": 3,
-      "title": "Glucose handling and glycolysis",
-      "firstaid_pages": [
-        31,
-        93
-      ],
-      "bnb_modules": [
-        "Biochemistry",
-        "Genetics",
-        "Cell Biology"
-      ],
-      "terms": [
-        "glucose",
-        "glycolysis"
-      ]
-    },
-    {
-      "id": "biochemistry-04",
-      "system": "Biochemistry",
-      "sequence": 4,
-      "title": "Pyruvate metabolism and TCA cycle",
-      "firstaid_pages": [
-        31,
-        93
-      ],
-      "bnb_modules": [
-        "Biochemistry",
-        "Genetics",
-        "Cell Biology"
-      ],
-      "terms": [
-        "pyruvate",
-        "tca cycle"
-      ]
-    },
-    {
-      "id": "biochemistry-05",
-      "system": "Biochemistry",
-      "sequence": 5,
-      "title": "Oxidative phosphorylation",
-      "firstaid_pages": [
-        31,
-        93
-      ],
-      "bnb_modules": [
-        "Biochemistry",
-        "Genetics",
-        "Cell Biology"
-      ],
-      "terms": [
-        "electron transport"
-      ]
-    },
-    {
-      "id": "biochemistry-06",
-      "system": "Biochemistry",
-      "sequence": 6,
-      "title": "Gluconeogenesis",
-      "firstaid_pages": [
-        31,
-        93
-      ],
-      "bnb_modules": [
-        "Biochemistry",
-        "Genetics",
-        "Cell Biology"
-      ],
-      "terms": [
-        "gluconeogenesis"
-      ]
-    },
-    {
-      "id": "biochemistry-07",
-      "system": "Biochemistry",
-      "sequence": 7,
-      "title": "Glycogen metabolism",
-      "firstaid_pages": [
-        31,
-        93
-      ],
-      "bnb_modules": [
-        "Biochemistry",
-        "Genetics",
-        "Cell Biology"
-      ],
-      "terms": [
-        "glycogen"
-      ]
-    },
-    {
-      "id": "biochemistry-08",
-      "system": "Biochemistry",
-      "sequence": 8,
-      "title": "Pentose phosphate pathway",
-      "firstaid_pages": [
-        31,
-        93
-      ],
-      "bnb_modules": [
-        "Biochemistry",
-        "Genetics",
-        "Cell Biology"
-      ],
-      "terms": [
-        "hmp shunt",
-        "pentose"
-      ]
-    },
-    {
-      "id": "biochemistry-09",
-      "system": "Biochemistry",
-      "sequence": 9,
-      "title": "Fructose and galactose metabolism",
-      "firstaid_pages": [
-        31,
-        93
-      ],
-      "bnb_modules": [
-        "Biochemistry",
-        "Genetics",
-        "Cell Biology"
-      ],
-      "terms": [
-        "fructose",
-        "galactose"
-      ]
-    },
-    {
-      "id": "biochemistry-10",
-      "system": "Biochemistry",
-      "sequence": 10,
-      "title": "Fatty acids and ketone bodies",
-      "firstaid_pages": [
-        31,
-        93
-      ],
-      "bnb_modules": [
-        "Biochemistry",
-        "Genetics",
-        "Cell Biology"
-      ],
-      "terms": [
-        "fatty acids",
-        "ketone"
-      ]
-    },
-    {
-      "id": "biochemistry-11",
-      "system": "Biochemistry",
-      "sequence": 11,
-      "title": "Lipid transport and disorders",
-      "firstaid_pages": [
-        31,
-        93
-      ],
-      "bnb_modules": [
-        "Biochemistry",
-        "Genetics",
-        "Cell Biology"
-      ],
-      "terms": [
-        "lipid metabolism",
-        "hyperlipidemia",
-        "lipid drugs"
-      ]
-    },
-    {
-      "id": "biochemistry-12",
-      "system": "Biochemistry",
-      "sequence": 12,
-      "title": "Fasting exercise and alcohol metabolism",
-      "firstaid_pages": [
-        31,
-        93
-      ],
-      "bnb_modules": [
-        "Biochemistry",
-        "Genetics",
-        "Cell Biology"
-      ],
-      "terms": [
-        "starvation",
-        "ethanol"
-      ]
-    },
-    {
-      "id": "biochemistry-13",
-      "system": "Biochemistry",
-      "sequence": 13,
-      "title": "Inborn errors and storage diseases",
-      "firstaid_pages": [
-        31,
-        93
-      ],
-      "bnb_modules": [
-        "Biochemistry",
-        "Genetics",
-        "Cell Biology"
-      ],
-      "terms": [
-        "inborn errors",
-        "lysosomal"
-      ]
-    },
-    {
-      "id": "biochemistry-14",
-      "system": "Biochemistry",
-      "sequence": 14,
-      "title": "Vitamins and cofactors",
-      "firstaid_pages": [
-        31,
-        93
-      ],
-      "bnb_modules": [
-        "Biochemistry",
-        "Genetics",
-        "Cell Biology"
-      ],
-      "terms": [
-        "vitamins",
-        "b12",
-        "folate"
-      ]
-    },
-    {
       "id": "biochemistry-15",
       "system": "Biochemistry",
-      "sequence": 15,
+      "sequence": 1,
       "title": "DNA structure and nucleotide synthesis",
       "firstaid_pages": [
         31,
@@ -774,7 +25,7 @@
     {
       "id": "biochemistry-16",
       "system": "Biochemistry",
-      "sequence": 16,
+      "sequence": 2,
       "title": "Replication repair and mutations",
       "firstaid_pages": [
         31,
@@ -794,7 +45,7 @@
     {
       "id": "biochemistry-17",
       "system": "Biochemistry",
-      "sequence": 17,
+      "sequence": 3,
       "title": "Transcription and translation",
       "firstaid_pages": [
         31,
@@ -811,9 +62,46 @@
       ]
     },
     {
+      "id": "biochemistry-19",
+      "system": "Biochemistry",
+      "sequence": 4,
+      "title": "Cell cycle",
+      "firstaid_pages": [
+        31,
+        93
+      ],
+      "bnb_modules": [
+        "Biochemistry",
+        "Genetics",
+        "Cell Biology"
+      ],
+      "terms": [
+        "cell cycle"
+      ]
+    },
+    {
+      "id": "biochemistry-13",
+      "system": "Biochemistry",
+      "sequence": 5,
+      "title": "Inborn errors and storage diseases",
+      "firstaid_pages": [
+        31,
+        93
+      ],
+      "bnb_modules": [
+        "Biochemistry",
+        "Genetics",
+        "Cell Biology"
+      ],
+      "terms": [
+        "inborn errors",
+        "lysosomal"
+      ]
+    },
+    {
       "id": "biochemistry-18",
       "system": "Biochemistry",
-      "sequence": 18,
+      "sequence": 6,
       "title": "Cell structure and cytoskeleton",
       "firstaid_pages": [
         31,
@@ -831,10 +119,10 @@
       ]
     },
     {
-      "id": "biochemistry-19",
+      "id": "biochemistry-10",
       "system": "Biochemistry",
-      "sequence": 19,
-      "title": "Cell cycle",
+      "sequence": 7,
+      "title": "Fatty acids and ketone bodies",
       "firstaid_pages": [
         31,
         93
@@ -845,13 +133,14 @@
         "Cell Biology"
       ],
       "terms": [
-        "cell cycle"
+        "fatty acids",
+        "ketone"
       ]
     },
     {
       "id": "biochemistry-20",
       "system": "Biochemistry",
-      "sequence": 20,
+      "sequence": 8,
       "title": "Laboratory molecular methods",
       "firstaid_pages": [
         31,
@@ -871,47 +160,9 @@
       ]
     },
     {
-      "id": "biochemistry-21",
-      "system": "Biochemistry",
-      "sequence": 21,
-      "title": "Mendelian inheritance and pedigrees",
-      "firstaid_pages": [
-        31,
-        93
-      ],
-      "bnb_modules": [
-        "Biochemistry",
-        "Genetics",
-        "Cell Biology"
-      ],
-      "terms": [
-        "genetic principles",
-        "pedigrees"
-      ]
-    },
-    {
-      "id": "biochemistry-22",
-      "system": "Biochemistry",
-      "sequence": 22,
-      "title": "Population genetics and linkage",
-      "firstaid_pages": [
-        31,
-        93
-      ],
-      "bnb_modules": [
-        "Biochemistry",
-        "Genetics",
-        "Cell Biology"
-      ],
-      "terms": [
-        "hardy weinberg",
-        "gene mapping"
-      ]
-    },
-    {
       "id": "biochemistry-23",
       "system": "Biochemistry",
-      "sequence": 23,
+      "sequence": 9,
       "title": "Meiosis and imprinting",
       "firstaid_pages": [
         31,
@@ -928,9 +179,47 @@
       ]
     },
     {
+      "id": "biochemistry-22",
+      "system": "Biochemistry",
+      "sequence": 10,
+      "title": "Population genetics and linkage",
+      "firstaid_pages": [
+        31,
+        93
+      ],
+      "bnb_modules": [
+        "Biochemistry",
+        "Genetics",
+        "Cell Biology"
+      ],
+      "terms": [
+        "hardy weinberg",
+        "gene mapping"
+      ]
+    },
+    {
+      "id": "biochemistry-25",
+      "system": "Biochemistry",
+      "sequence": 11,
+      "title": "Repeat expansion and muscular dystrophy",
+      "firstaid_pages": [
+        31,
+        93
+      ],
+      "bnb_modules": [
+        "Biochemistry",
+        "Genetics",
+        "Cell Biology"
+      ],
+      "terms": [
+        "trinucleotide",
+        "muscular dystrophy"
+      ]
+    },
+    {
       "id": "biochemistry-24",
       "system": "Biochemistry",
-      "sequence": 24,
+      "sequence": 12,
       "title": "Chromosomal disorders",
       "firstaid_pages": [
         31,
@@ -950,10 +239,10 @@
       ]
     },
     {
-      "id": "biochemistry-25",
+      "id": "biochemistry-14",
       "system": "Biochemistry",
-      "sequence": 25,
-      "title": "Repeat expansion and muscular dystrophy",
+      "sequence": 13,
+      "title": "Vitamins and cofactors",
       "firstaid_pages": [
         31,
         93
@@ -964,14 +253,236 @@
         "Cell Biology"
       ],
       "terms": [
-        "trinucleotide",
-        "muscular dystrophy"
+        "vitamins",
+        "b12",
+        "folate"
+      ]
+    },
+    {
+      "id": "biochemistry-01",
+      "system": "Biochemistry",
+      "sequence": 14,
+      "title": "Amino acids and nitrogen disposal",
+      "firstaid_pages": [
+        31,
+        93
+      ],
+      "bnb_modules": [
+        "Biochemistry",
+        "Genetics",
+        "Cell Biology"
+      ],
+      "terms": [
+        "amino acids",
+        "ammonia"
+      ]
+    },
+    {
+      "id": "biochemistry-04",
+      "system": "Biochemistry",
+      "sequence": 15,
+      "title": "Pyruvate metabolism and TCA cycle",
+      "firstaid_pages": [
+        31,
+        93
+      ],
+      "bnb_modules": [
+        "Biochemistry",
+        "Genetics",
+        "Cell Biology"
+      ],
+      "terms": [
+        "pyruvate",
+        "tca cycle"
+      ]
+    },
+    {
+      "id": "biochemistry-12",
+      "system": "Biochemistry",
+      "sequence": 16,
+      "title": "Fasting exercise and alcohol metabolism",
+      "firstaid_pages": [
+        31,
+        93
+      ],
+      "bnb_modules": [
+        "Biochemistry",
+        "Genetics",
+        "Cell Biology"
+      ],
+      "terms": [
+        "starvation",
+        "ethanol"
+      ]
+    },
+    {
+      "id": "biochemistry-09",
+      "system": "Biochemistry",
+      "sequence": 17,
+      "title": "Fructose and galactose metabolism",
+      "firstaid_pages": [
+        31,
+        93
+      ],
+      "bnb_modules": [
+        "Biochemistry",
+        "Genetics",
+        "Cell Biology"
+      ],
+      "terms": [
+        "fructose",
+        "galactose"
+      ]
+    },
+    {
+      "id": "biochemistry-06",
+      "system": "Biochemistry",
+      "sequence": 18,
+      "title": "Gluconeogenesis",
+      "firstaid_pages": [
+        31,
+        93
+      ],
+      "bnb_modules": [
+        "Biochemistry",
+        "Genetics",
+        "Cell Biology"
+      ],
+      "terms": [
+        "gluconeogenesis"
+      ]
+    },
+    {
+      "id": "biochemistry-08",
+      "system": "Biochemistry",
+      "sequence": 19,
+      "title": "Pentose phosphate pathway",
+      "firstaid_pages": [
+        31,
+        93
+      ],
+      "bnb_modules": [
+        "Biochemistry",
+        "Genetics",
+        "Cell Biology"
+      ],
+      "terms": [
+        "hmp shunt",
+        "pentose"
+      ]
+    },
+    {
+      "id": "biochemistry-03",
+      "system": "Biochemistry",
+      "sequence": 20,
+      "title": "Glucose handling and glycolysis",
+      "firstaid_pages": [
+        31,
+        93
+      ],
+      "bnb_modules": [
+        "Biochemistry",
+        "Genetics",
+        "Cell Biology"
+      ],
+      "terms": [
+        "glucose",
+        "glycolysis"
+      ]
+    },
+    {
+      "id": "biochemistry-05",
+      "system": "Biochemistry",
+      "sequence": 21,
+      "title": "Oxidative phosphorylation",
+      "firstaid_pages": [
+        31,
+        93
+      ],
+      "bnb_modules": [
+        "Biochemistry",
+        "Genetics",
+        "Cell Biology"
+      ],
+      "terms": [
+        "electron transport"
+      ]
+    },
+    {
+      "id": "biochemistry-02",
+      "system": "Biochemistry",
+      "sequence": 22,
+      "title": "Phenylalanine and tyrosine pathways",
+      "firstaid_pages": [
+        31,
+        93
+      ],
+      "bnb_modules": [
+        "Biochemistry",
+        "Genetics",
+        "Cell Biology"
+      ],
+      "terms": [
+        "phenylalanine",
+        "tyrosine"
+      ]
+    },
+    {
+      "id": "biochemistry-07",
+      "system": "Biochemistry",
+      "sequence": 23,
+      "title": "Glycogen metabolism",
+      "firstaid_pages": [
+        31,
+        93
+      ],
+      "bnb_modules": [
+        "Biochemistry",
+        "Genetics",
+        "Cell Biology"
+      ],
+      "terms": [
+        "glycogen"
+      ]
+    },
+    {
+      "id": "immunology-05",
+      "system": "Immunology",
+      "sequence": 1,
+      "title": "Lymphoid organs",
+      "firstaid_pages": [
+        93,
+        121
+      ],
+      "bnb_modules": [
+        "Immunology"
+      ],
+      "terms": [
+        "lymph nodes",
+        "spleen"
+      ]
+    },
+    {
+      "id": "immunology-10",
+      "system": "Immunology",
+      "sequence": 2,
+      "title": "Vaccination",
+      "firstaid_pages": [
+        93,
+        121
+      ],
+      "bnb_modules": [
+        "Immunology"
+      ],
+      "terms": [
+        "vaccine",
+        "vaccination"
       ]
     },
     {
       "id": "immunology-01",
       "system": "Immunology",
-      "sequence": 1,
+      "sequence": 3,
       "title": "Innate immunity",
       "firstaid_pages": [
         93,
@@ -987,7 +498,7 @@
     {
       "id": "immunology-02",
       "system": "Immunology",
-      "sequence": 2,
+      "sequence": 4,
       "title": "Antigen presentation and T cells",
       "firstaid_pages": [
         93,
@@ -1003,7 +514,7 @@
     {
       "id": "immunology-03",
       "system": "Immunology",
-      "sequence": 3,
+      "sequence": 5,
       "title": "B cells and antibodies",
       "firstaid_pages": [
         93,
@@ -1019,7 +530,7 @@
     {
       "id": "immunology-04",
       "system": "Immunology",
-      "sequence": 4,
+      "sequence": 6,
       "title": "Complement",
       "firstaid_pages": [
         93,
@@ -1033,26 +544,9 @@
       ]
     },
     {
-      "id": "immunology-05",
-      "system": "Immunology",
-      "sequence": 5,
-      "title": "Lymphoid organs",
-      "firstaid_pages": [
-        93,
-        121
-      ],
-      "bnb_modules": [
-        "Immunology"
-      ],
-      "terms": [
-        "lymph nodes",
-        "spleen"
-      ]
-    },
-    {
       "id": "immunology-06",
       "system": "Immunology",
-      "sequence": 6,
+      "sequence": 7,
       "title": "Hypersensitivity",
       "firstaid_pages": [
         93,
@@ -1068,7 +562,7 @@
     {
       "id": "immunology-07",
       "system": "Immunology",
-      "sequence": 7,
+      "sequence": 8,
       "title": "Immunodeficiency",
       "firstaid_pages": [
         93,
@@ -1085,7 +579,7 @@
     {
       "id": "immunology-08",
       "system": "Immunology",
-      "sequence": 8,
+      "sequence": 9,
       "title": "Transplantation",
       "firstaid_pages": [
         93,
@@ -1096,39 +590,6 @@
       ],
       "terms": [
         "transplants"
-      ]
-    },
-    {
-      "id": "immunology-09",
-      "system": "Immunology",
-      "sequence": 9,
-      "title": "Immunosuppressants",
-      "firstaid_pages": [
-        93,
-        121
-      ],
-      "bnb_modules": [
-        "Immunology"
-      ],
-      "terms": [
-        "immunosuppressive"
-      ]
-    },
-    {
-      "id": "immunology-10",
-      "system": "Immunology",
-      "sequence": 10,
-      "title": "Vaccination",
-      "firstaid_pages": [
-        93,
-        121
-      ],
-      "bnb_modules": [
-        "Immunology"
-      ],
-      "terms": [
-        "vaccine",
-        "vaccination"
       ]
     },
     {
@@ -1150,10 +611,10 @@
       ]
     },
     {
-      "id": "microbiology-02",
+      "id": "microbiology-05",
       "system": "Microbiology",
       "sequence": 2,
-      "title": "Culture and growth",
+      "title": "Streptococci",
       "firstaid_pages": [
         121,
         201
@@ -1162,9 +623,7 @@
         "Infectious Disease"
       ],
       "terms": [
-        "bacterial culture",
-        "special growth",
-        "growth and genetics"
+        "streptococci"
       ]
     },
     {
@@ -1184,105 +643,9 @@
       ]
     },
     {
-      "id": "microbiology-04",
-      "system": "Microbiology",
-      "sequence": 4,
-      "title": "Staphylococci",
-      "firstaid_pages": [
-        121,
-        201
-      ],
-      "bnb_modules": [
-        "Infectious Disease"
-      ],
-      "terms": [
-        "staphylococci"
-      ]
-    },
-    {
-      "id": "microbiology-05",
-      "system": "Microbiology",
-      "sequence": 5,
-      "title": "Streptococci",
-      "firstaid_pages": [
-        121,
-        201
-      ],
-      "bnb_modules": [
-        "Infectious Disease"
-      ],
-      "terms": [
-        "streptococci"
-      ]
-    },
-    {
-      "id": "microbiology-06",
-      "system": "Microbiology",
-      "sequence": 6,
-      "title": "Other gram-positive organisms",
-      "firstaid_pages": [
-        121,
-        201
-      ],
-      "bnb_modules": [
-        "Infectious Disease"
-      ],
-      "terms": [
-        "other gram positives"
-      ]
-    },
-    {
-      "id": "microbiology-07",
-      "system": "Microbiology",
-      "sequence": 7,
-      "title": "Gram-negative rods",
-      "firstaid_pages": [
-        121,
-        201
-      ],
-      "bnb_modules": [
-        "Infectious Disease"
-      ],
-      "terms": [
-        "gram negative rods"
-      ]
-    },
-    {
-      "id": "microbiology-08",
-      "system": "Microbiology",
-      "sequence": 8,
-      "title": "Other gram-negative organisms",
-      "firstaid_pages": [
-        121,
-        201
-      ],
-      "bnb_modules": [
-        "Infectious Disease"
-      ],
-      "terms": [
-        "other gram negatives"
-      ]
-    },
-    {
-      "id": "microbiology-09",
-      "system": "Microbiology",
-      "sequence": 9,
-      "title": "Spirochetes",
-      "firstaid_pages": [
-        121,
-        201
-      ],
-      "bnb_modules": [
-        "Infectious Disease"
-      ],
-      "terms": [
-        "spirochetes"
-      ]
-    },
-    {
       "id": "microbiology-10",
       "system": "Microbiology",
-      "sequence": 10,
+      "sequence": 4,
       "title": "Mycobacteria",
       "firstaid_pages": [
         121,
@@ -1296,9 +659,25 @@
       ]
     },
     {
+      "id": "microbiology-09",
+      "system": "Microbiology",
+      "sequence": 5,
+      "title": "Spirochetes",
+      "firstaid_pages": [
+        121,
+        201
+      ],
+      "bnb_modules": [
+        "Infectious Disease"
+      ],
+      "terms": [
+        "spirochetes"
+      ]
+    },
+    {
       "id": "microbiology-11",
       "system": "Microbiology",
-      "sequence": 11,
+      "sequence": 6,
       "title": "Zoonoses",
       "firstaid_pages": [
         121,
@@ -1312,9 +691,77 @@
       ]
     },
     {
+      "id": "microbiology-16",
+      "system": "Microbiology",
+      "sequence": 7,
+      "title": "Cutaneous and opportunistic fungi",
+      "firstaid_pages": [
+        121,
+        201
+      ],
+      "bnb_modules": [
+        "Infectious Disease"
+      ],
+      "terms": [
+        "fungal skin",
+        "opportunistic fungal"
+      ]
+    },
+    {
+      "id": "microbiology-18",
+      "system": "Microbiology",
+      "sequence": 8,
+      "title": "Protozoa and malaria",
+      "firstaid_pages": [
+        121,
+        201
+      ],
+      "bnb_modules": [
+        "Infectious Disease"
+      ],
+      "terms": [
+        "protozoa",
+        "malaria"
+      ]
+    },
+    {
+      "id": "microbiology-21",
+      "system": "Microbiology",
+      "sequence": 9,
+      "title": "DNA and herpes viruses",
+      "firstaid_pages": [
+        121,
+        201
+      ],
+      "bnb_modules": [
+        "Infectious Disease"
+      ],
+      "terms": [
+        "dna viruses",
+        "herpes viruses"
+      ]
+    },
+    {
+      "id": "microbiology-24",
+      "system": "Microbiology",
+      "sequence": 10,
+      "title": "HIV and opportunistic CNS infections",
+      "firstaid_pages": [
+        121,
+        201
+      ],
+      "bnb_modules": [
+        "Infectious Disease"
+      ],
+      "terms": [
+        "hiv",
+        "hiv cns"
+      ]
+    },
+    {
       "id": "microbiology-12",
       "system": "Microbiology",
-      "sequence": 12,
+      "sequence": 11,
       "title": "Penicillins and beta-lactams",
       "firstaid_pages": [
         121,
@@ -1331,7 +778,7 @@
     {
       "id": "microbiology-13",
       "system": "Microbiology",
-      "sequence": 13,
+      "sequence": 12,
       "title": "Protein synthesis inhibitors",
       "firstaid_pages": [
         121,
@@ -1347,7 +794,7 @@
     {
       "id": "microbiology-14",
       "system": "Microbiology",
-      "sequence": 14,
+      "sequence": 13,
       "title": "Other antibacterial drugs",
       "firstaid_pages": [
         121,
@@ -1362,42 +809,9 @@
       ]
     },
     {
-      "id": "microbiology-15",
-      "system": "Microbiology",
-      "sequence": 15,
-      "title": "Fungal respiratory infections",
-      "firstaid_pages": [
-        121,
-        201
-      ],
-      "bnb_modules": [
-        "Infectious Disease"
-      ],
-      "terms": [
-        "fungal pneumonias"
-      ]
-    },
-    {
-      "id": "microbiology-16",
-      "system": "Microbiology",
-      "sequence": 16,
-      "title": "Cutaneous and opportunistic fungi",
-      "firstaid_pages": [
-        121,
-        201
-      ],
-      "bnb_modules": [
-        "Infectious Disease"
-      ],
-      "terms": [
-        "fungal skin",
-        "opportunistic fungal"
-      ]
-    },
-    {
       "id": "microbiology-17",
       "system": "Microbiology",
-      "sequence": 17,
+      "sequence": 14,
       "title": "Antifungal drugs",
       "firstaid_pages": [
         121,
@@ -1408,138 +822,6 @@
       ],
       "terms": [
         "antifungal"
-      ]
-    },
-    {
-      "id": "microbiology-18",
-      "system": "Microbiology",
-      "sequence": 18,
-      "title": "Protozoa and malaria",
-      "firstaid_pages": [
-        121,
-        201
-      ],
-      "bnb_modules": [
-        "Infectious Disease"
-      ],
-      "terms": [
-        "protozoa",
-        "malaria"
-      ]
-    },
-    {
-      "id": "microbiology-19",
-      "system": "Microbiology",
-      "sequence": 19,
-      "title": "Helminths",
-      "firstaid_pages": [
-        121,
-        201
-      ],
-      "bnb_modules": [
-        "Infectious Disease"
-      ],
-      "terms": [
-        "helminths"
-      ]
-    },
-    {
-      "id": "microbiology-20",
-      "system": "Microbiology",
-      "sequence": 20,
-      "title": "Viral structure and replication",
-      "firstaid_pages": [
-        121,
-        201
-      ],
-      "bnb_modules": [
-        "Infectious Disease"
-      ],
-      "terms": [
-        "virus structures"
-      ]
-    },
-    {
-      "id": "microbiology-21",
-      "system": "Microbiology",
-      "sequence": 21,
-      "title": "DNA and herpes viruses",
-      "firstaid_pages": [
-        121,
-        201
-      ],
-      "bnb_modules": [
-        "Infectious Disease"
-      ],
-      "terms": [
-        "dna viruses",
-        "herpes viruses"
-      ]
-    },
-    {
-      "id": "microbiology-22",
-      "system": "Microbiology",
-      "sequence": 22,
-      "title": "RNA viruses",
-      "firstaid_pages": [
-        121,
-        201
-      ],
-      "bnb_modules": [
-        "Infectious Disease"
-      ],
-      "terms": [
-        "rna viruses"
-      ]
-    },
-    {
-      "id": "microbiology-23",
-      "system": "Microbiology",
-      "sequence": 23,
-      "title": "Hepatitis viruses",
-      "firstaid_pages": [
-        121,
-        201
-      ],
-      "bnb_modules": [
-        "Infectious Disease"
-      ],
-      "terms": [
-        "viral hepatitis"
-      ]
-    },
-    {
-      "id": "microbiology-24",
-      "system": "Microbiology",
-      "sequence": 24,
-      "title": "HIV and opportunistic CNS infections",
-      "firstaid_pages": [
-        121,
-        201
-      ],
-      "bnb_modules": [
-        "Infectious Disease"
-      ],
-      "terms": [
-        "hiv",
-        "hiv cns"
-      ]
-    },
-    {
-      "id": "microbiology-25",
-      "system": "Microbiology",
-      "sequence": 25,
-      "title": "Antiviral pharmacology",
-      "firstaid_pages": [
-        121,
-        201
-      ],
-      "bnb_modules": [
-        "Infectious Disease"
-      ],
-      "terms": [
-        "antiviral",
-        "hiv drugs"
       ]
     },
     {
@@ -1593,58 +875,9 @@
       ]
     },
     {
-      "id": "general-pathology-04",
-      "system": "General pathology",
-      "sequence": 4,
-      "title": "Calcification",
-      "firstaid_pages": [
-        201,
-        227
-      ],
-      "bnb_modules": [
-        "Pathology"
-      ],
-      "terms": [
-        "pathologic calcification"
-      ]
-    },
-    {
-      "id": "general-pathology-05",
-      "system": "General pathology",
-      "sequence": 5,
-      "title": "Acute and chronic inflammation",
-      "firstaid_pages": [
-        201,
-        227
-      ],
-      "bnb_modules": [
-        "Pathology"
-      ],
-      "terms": [
-        "inflammation principles",
-        "acute and chronic"
-      ]
-    },
-    {
-      "id": "general-pathology-06",
-      "system": "General pathology",
-      "sequence": 6,
-      "title": "Granulomatous inflammation",
-      "firstaid_pages": [
-        201,
-        227
-      ],
-      "bnb_modules": [
-        "Pathology"
-      ],
-      "terms": [
-        "granulomatous"
-      ]
-    },
-    {
       "id": "general-pathology-07",
       "system": "General pathology",
-      "sequence": 7,
+      "sequence": 4,
       "title": "Wound healing",
       "firstaid_pages": [
         201,
@@ -1658,9 +891,25 @@
       ]
     },
     {
+      "id": "general-pathology-06",
+      "system": "General pathology",
+      "sequence": 5,
+      "title": "Granulomatous inflammation",
+      "firstaid_pages": [
+        201,
+        227
+      ],
+      "bnb_modules": [
+        "Pathology"
+      ],
+      "terms": [
+        "granulomatous"
+      ]
+    },
+    {
       "id": "general-pathology-08",
       "system": "General pathology",
-      "sequence": 8,
+      "sequence": 6,
       "title": "Neoplasia principles",
       "firstaid_pages": [
         201,
@@ -1674,26 +923,9 @@
       ]
     },
     {
-      "id": "general-pharmacology-01",
-      "system": "General pharmacology",
-      "sequence": 1,
-      "title": "Pharmacokinetics",
-      "firstaid_pages": [
-        227,
-        255
-      ],
-      "bnb_modules": [
-        "Basic Pharmacology",
-        "Anesthesia"
-      ],
-      "terms": [
-        "pharmacokinetics"
-      ]
-    },
-    {
       "id": "general-pharmacology-02",
       "system": "General pharmacology",
-      "sequence": 2,
+      "sequence": 1,
       "title": "Drug elimination",
       "firstaid_pages": [
         227,
@@ -1708,164 +940,26 @@
       ]
     },
     {
-      "id": "general-pharmacology-03",
+      "id": "general-pharmacology-01",
       "system": "General pharmacology",
-      "sequence": 3,
-      "title": "Dose-response relationships",
-      "firstaid_pages": [
-        227,
-        255
-      ],
-      "bnb_modules": [
-        "Basic Pharmacology",
-        "Anesthesia"
-      ],
-      "terms": [
-        "dose response"
-      ]
-    },
-    {
-      "id": "general-pharmacology-04",
-      "system": "General pharmacology",
-      "sequence": 4,
-      "title": "Enzymes and inhibition",
-      "firstaid_pages": [
-        227,
-        255
-      ],
-      "bnb_modules": [
-        "Basic Pharmacology",
-        "Anesthesia"
-      ],
-      "terms": [
-        "enzymes",
-        "enzyme inhibitors"
-      ]
-    },
-    {
-      "id": "general-pharmacology-05",
-      "system": "General pharmacology",
-      "sequence": 5,
-      "title": "Inhaled anesthesia",
-      "firstaid_pages": [
-        227,
-        255
-      ],
-      "bnb_modules": [
-        "Basic Pharmacology",
-        "Anesthesia"
-      ],
-      "terms": [
-        "inhaled anesthetics"
-      ]
-    },
-    {
-      "id": "general-pharmacology-06",
-      "system": "General pharmacology",
-      "sequence": 6,
-      "title": "Intravenous anesthesia",
-      "firstaid_pages": [
-        227,
-        255
-      ],
-      "bnb_modules": [
-        "Basic Pharmacology",
-        "Anesthesia"
-      ],
-      "terms": [
-        "intravenous anesthetics"
-      ]
-    },
-    {
-      "id": "general-pharmacology-07",
-      "system": "General pharmacology",
-      "sequence": 7,
-      "title": "Local anesthesia",
-      "firstaid_pages": [
-        227,
-        255
-      ],
-      "bnb_modules": [
-        "Basic Pharmacology",
-        "Anesthesia"
-      ],
-      "terms": [
-        "local anesthetics"
-      ]
-    },
-    {
-      "id": "general-pharmacology-08",
-      "system": "General pharmacology",
-      "sequence": 8,
-      "title": "Neuromuscular blockade",
-      "firstaid_pages": [
-        227,
-        255
-      ],
-      "bnb_modules": [
-        "Basic Pharmacology",
-        "Anesthesia"
-      ],
-      "terms": [
-        "neuromuscular blockers"
-      ]
-    },
-    {
-      "id": "public-health-and-behavioral-science-01",
-      "system": "Public health and behavioral science",
-      "sequence": 1,
-      "title": "Descriptive statistics",
-      "firstaid_pages": [
-        255,
-        283
-      ],
-      "bnb_modules": [
-        "Biostats/Epi",
-        "Behavioral Science"
-      ],
-      "terms": [
-        "statistics"
-      ]
-    },
-    {
-      "id": "public-health-and-behavioral-science-02",
-      "system": "Public health and behavioral science",
       "sequence": 2,
-      "title": "Correlation",
+      "title": "Pharmacokinetics",
       "firstaid_pages": [
-        255,
-        283
+        227,
+        255
       ],
       "bnb_modules": [
-        "Biostats/Epi",
-        "Behavioral Science"
+        "Basic Pharmacology",
+        "Anesthesia"
       ],
       "terms": [
-        "correlations"
-      ]
-    },
-    {
-      "id": "public-health-and-behavioral-science-03",
-      "system": "Public health and behavioral science",
-      "sequence": 3,
-      "title": "Hypothesis testing and significance",
-      "firstaid_pages": [
-        255,
-        283
-      ],
-      "bnb_modules": [
-        "Biostats/Epi",
-        "Behavioral Science"
-      ],
-      "terms": [
-        "hypothesis testing",
-        "tests of significance"
+        "pharmacokinetics"
       ]
     },
     {
       "id": "public-health-and-behavioral-science-04",
       "system": "Public health and behavioral science",
-      "sequence": 4,
+      "sequence": 1,
       "title": "Study designs and trials",
       "firstaid_pages": [
         255,
@@ -1881,26 +975,9 @@
       ]
     },
     {
-      "id": "public-health-and-behavioral-science-05",
-      "system": "Public health and behavioral science",
-      "sequence": 5,
-      "title": "Bias and confounding",
-      "firstaid_pages": [
-        255,
-        283
-      ],
-      "bnb_modules": [
-        "Biostats/Epi",
-        "Behavioral Science"
-      ],
-      "terms": [
-        "bias"
-      ]
-    },
-    {
       "id": "public-health-and-behavioral-science-06",
       "system": "Public health and behavioral science",
-      "sequence": 6,
+      "sequence": 2,
       "title": "Risk and effect measures",
       "firstaid_pages": [
         255,
@@ -1915,27 +992,9 @@
       ]
     },
     {
-      "id": "public-health-and-behavioral-science-07",
-      "system": "Public health and behavioral science",
-      "sequence": 7,
-      "title": "Diagnostic test accuracy",
-      "firstaid_pages": [
-        255,
-        283
-      ],
-      "bnb_modules": [
-        "Biostats/Epi",
-        "Behavioral Science"
-      ],
-      "terms": [
-        "diagnostic tests",
-        "sensitivity and specificity"
-      ]
-    },
-    {
       "id": "public-health-and-behavioral-science-08",
       "system": "Public health and behavioral science",
-      "sequence": 8,
+      "sequence": 3,
       "title": "Predictive values",
       "firstaid_pages": [
         255,
@@ -1950,10 +1009,10 @@
       ]
     },
     {
-      "id": "public-health-and-behavioral-science-09",
+      "id": "public-health-and-behavioral-science-05",
       "system": "Public health and behavioral science",
-      "sequence": 9,
-      "title": "Evidence-based medicine",
+      "sequence": 4,
+      "title": "Bias and confounding",
       "firstaid_pages": [
         255,
         283
@@ -1963,14 +1022,14 @@
         "Behavioral Science"
       ],
       "terms": [
-        "evidence based medicine"
+        "bias"
       ]
     },
     {
-      "id": "public-health-and-behavioral-science-10",
+      "id": "public-health-and-behavioral-science-01",
       "system": "Public health and behavioral science",
-      "sequence": 10,
-      "title": "Ethical principles",
+      "sequence": 5,
+      "title": "Descriptive statistics",
       "firstaid_pages": [
         255,
         283
@@ -1980,13 +1039,31 @@
         "Behavioral Science"
       ],
       "terms": [
-        "ethics principles"
+        "statistics"
+      ]
+    },
+    {
+      "id": "public-health-and-behavioral-science-03",
+      "system": "Public health and behavioral science",
+      "sequence": 6,
+      "title": "Hypothesis testing and significance",
+      "firstaid_pages": [
+        255,
+        283
+      ],
+      "bnb_modules": [
+        "Biostats/Epi",
+        "Behavioral Science"
+      ],
+      "terms": [
+        "hypothesis testing",
+        "tests of significance"
       ]
     },
     {
       "id": "public-health-and-behavioral-science-11",
       "system": "Public health and behavioral science",
-      "sequence": 11,
+      "sequence": 7,
       "title": "Capacity and consent",
       "firstaid_pages": [
         255,
@@ -2004,7 +1081,7 @@
     {
       "id": "public-health-and-behavioral-science-12",
       "system": "Public health and behavioral science",
-      "sequence": 12,
+      "sequence": 8,
       "title": "Confidentiality",
       "firstaid_pages": [
         255,
@@ -2019,62 +1096,408 @@
       ]
     },
     {
-      "id": "public-health-and-behavioral-science-13",
-      "system": "Public health and behavioral science",
+      "id": "cardiovascular-01",
+      "system": "Cardiovascular",
+      "sequence": 1,
+      "title": "Cardiac embryology",
+      "firstaid_pages": [
+        283,
+        329
+      ],
+      "bnb_modules": [
+        "Cardiology"
+      ],
+      "terms": [
+        "cardiac embryology"
+      ],
+      "firstaid_terms": [
+        "embryology",
+        "embryologic",
+        "embryological",
+        "cardiac looping"
+      ]
+    },
+    {
+      "id": "cardiovascular-23",
+      "system": "Cardiovascular",
+      "sequence": 2,
+      "title": "Congenital shunts and cyanosis",
+      "firstaid_pages": [
+        283,
+        329
+      ],
+      "bnb_modules": [
+        "Cardiology"
+      ],
+      "terms": [
+        "shunts",
+        "cyanotic",
+        "coarctation"
+      ]
+    },
+    {
+      "id": "cardiovascular-02",
+      "system": "Cardiovascular",
+      "sequence": 3,
+      "title": "Cardiac anatomy",
+      "firstaid_pages": [
+        283,
+        329
+      ],
+      "bnb_modules": [
+        "Cardiology"
+      ],
+      "terms": [
+        "cardiac anatomy"
+      ],
+      "firstaid_terms": [
+        "anatomy"
+      ]
+    },
+    {
+      "id": "cardiovascular-03",
+      "system": "Cardiovascular",
+      "sequence": 4,
+      "title": "Cardiac physiology basics",
+      "firstaid_pages": [
+        283,
+        329
+      ],
+      "bnb_modules": [
+        "Cardiology"
+      ],
+      "terms": [
+        "cardiac physiology",
+        "blood flow mechanics"
+      ],
+      "firstaid_terms": [
+        "physiology",
+        "cardiac output",
+        "cardiac contractility",
+        "cardiac oxygen demand"
+      ]
+    },
+    {
+      "id": "cardiovascular-05",
+      "system": "Cardiovascular",
+      "sequence": 5,
+      "title": "Pressure-volume loops and Starling curves",
+      "firstaid_pages": [
+        283,
+        329
+      ],
+      "bnb_modules": [
+        "Cardiology"
+      ],
+      "terms": [
+        "pv loops",
+        "starling"
+      ]
+    },
+    {
+      "id": "cardiovascular-07",
+      "system": "Cardiovascular",
+      "sequence": 6,
+      "title": "Venous pressure and heart sounds",
+      "firstaid_pages": [
+        283,
+        329
+      ],
+      "bnb_modules": [
+        "Cardiology"
+      ],
+      "terms": [
+        "venous pressure",
+        "heart sounds"
+      ]
+    },
+    {
+      "id": "cardiovascular-04",
+      "system": "Cardiovascular",
+      "sequence": 7,
+      "title": "Wiggers diagram",
+      "firstaid_pages": [
+        283,
+        329
+      ],
+      "bnb_modules": [
+        "Cardiology"
+      ],
+      "terms": [
+        "wiggers"
+      ],
+      "firstaid_terms": [
+        "wiggers",
+        "cardiac cycle"
+      ]
+    },
+    {
+      "id": "cardiovascular-13",
+      "system": "Cardiovascular",
+      "sequence": 8,
+      "title": "Conduction blocks",
+      "firstaid_pages": [
+        283,
+        329
+      ],
+      "bnb_modules": [
+        "Cardiology"
+      ],
+      "terms": [
+        "bundle branch",
+        "av block"
+      ]
+    },
+    {
+      "id": "cardiovascular-08",
+      "system": "Cardiovascular",
+      "sequence": 9,
+      "title": "Murmurs and valve disease",
+      "firstaid_pages": [
+        283,
+        329
+      ],
+      "bnb_modules": [
+        "Cardiology"
+      ],
+      "terms": [
+        "murmurs",
+        "valve disease"
+      ]
+    },
+    {
+      "id": "cardiovascular-21",
+      "system": "Cardiovascular",
+      "sequence": 10,
+      "title": "Hypertension and secondary causes",
+      "firstaid_pages": [
+        283,
+        329
+      ],
+      "bnb_modules": [
+        "Cardiology"
+      ],
+      "terms": [
+        "hypertension"
+      ]
+    },
+    {
+      "id": "cardiovascular-15",
+      "system": "Cardiovascular",
+      "sequence": 11,
+      "title": "Atherosclerosis",
+      "firstaid_pages": [
+        283,
+        329
+      ],
+      "bnb_modules": [
+        "Cardiology"
+      ],
+      "terms": [
+        "atherosclerosis"
+      ]
+    },
+    {
+      "id": "cardiovascular-17",
+      "system": "Cardiovascular",
+      "sequence": 12,
+      "title": "Acute coronary syndromes",
+      "firstaid_pages": [
+        283,
+        329
+      ],
+      "bnb_modules": [
+        "Cardiology"
+      ],
+      "terms": [
+        "stemi",
+        "nstemi",
+        "unstable angina"
+      ]
+    },
+    {
+      "id": "cardiovascular-16",
+      "system": "Cardiovascular",
       "sequence": 13,
-      "title": "Patient safety and quality",
+      "title": "Ischemia and stable angina",
       "firstaid_pages": [
-        255,
-        283
+        283,
+        329
       ],
       "bnb_modules": [
-        "Biostats/Epi",
-        "Behavioral Science"
+        "Cardiology"
       ],
       "terms": [
-        "quality and safety"
+        "cardiac ischemia",
+        "stable angina"
       ]
     },
     {
-      "id": "public-health-and-behavioral-science-14",
-      "system": "Public health and behavioral science",
+      "id": "cardiovascular-12",
+      "system": "Cardiovascular",
       "sequence": 14,
-      "title": "Prevention and public health",
+      "title": "Supraventricular tachycardia and pre-excitation",
       "firstaid_pages": [
-        255,
-        283
+        283,
+        329
       ],
       "bnb_modules": [
-        "Biostats/Epi",
-        "Behavioral Science"
+        "Cardiology"
       ],
       "terms": [
-        "public health",
-        "healthy patient"
+        "supraventricular tachycardia",
+        "wpw"
       ]
     },
     {
-      "id": "public-health-and-behavioral-science-15",
-      "system": "Public health and behavioral science",
+      "id": "cardiovascular-26",
+      "system": "Cardiovascular",
       "sequence": 15,
-      "title": "Pediatric and geriatric care",
+      "title": "Pericardial disease",
       "firstaid_pages": [
-        255,
-        283
+        283,
+        329
       ],
       "bnb_modules": [
-        "Biostats/Epi",
-        "Behavioral Science"
+        "Cardiology"
       ],
       "terms": [
-        "pediatrics",
-        "geriatrics"
+        "pericardial"
+      ]
+    },
+    {
+      "id": "cardiovascular-20",
+      "system": "Cardiovascular",
+      "sequence": 16,
+      "title": "Cardiomyopathies",
+      "firstaid_pages": [
+        283,
+        329
+      ],
+      "bnb_modules": [
+        "Cardiology"
+      ],
+      "terms": [
+        "cardiomyopathy"
+      ]
+    },
+    {
+      "id": "cardiovascular-27",
+      "system": "Cardiovascular",
+      "sequence": 17,
+      "title": "Shock",
+      "firstaid_pages": [
+        283,
+        329
+      ],
+      "bnb_modules": [
+        "Cardiology"
+      ],
+      "terms": [
+        "shock"
+      ]
+    },
+    {
+      "id": "cardiovascular-25",
+      "system": "Cardiovascular",
+      "sequence": 18,
+      "title": "Endocarditis",
+      "firstaid_pages": [
+        283,
+        329
+      ],
+      "bnb_modules": [
+        "Cardiology"
+      ],
+      "terms": [
+        "infective endocarditis"
+      ]
+    },
+    {
+      "id": "cardiovascular-28",
+      "system": "Cardiovascular",
+      "sequence": 19,
+      "title": "Cardiac tumors",
+      "firstaid_pages": [
+        283,
+        329
+      ],
+      "bnb_modules": [
+        "Cardiology"
+      ],
+      "terms": [
+        "cardiac tumors"
+      ]
+    },
+    {
+      "id": "cardiovascular-14",
+      "system": "Cardiovascular",
+      "sequence": 20,
+      "title": "Antiarrhythmic pharmacology",
+      "firstaid_pages": [
+        283,
+        329
+      ],
+      "bnb_modules": [
+        "Cardiology"
+      ],
+      "terms": [
+        "antiarrhythmic"
+      ]
+    },
+    {
+      "id": "endocrine-19",
+      "system": "Endocrine",
+      "sequence": 1,
+      "title": "Glucagon and hypoglycemia",
+      "firstaid_pages": [
+        329,
+        363
+      ],
+      "bnb_modules": [
+        "Endocrinology"
+      ],
+      "terms": [
+        "glucagon",
+        "hypoglycemia"
+      ]
+    },
+    {
+      "id": "endocrine-18",
+      "system": "Endocrine",
+      "sequence": 2,
+      "title": "Insulin and glucose regulation",
+      "firstaid_pages": [
+        329,
+        363
+      ],
+      "bnb_modules": [
+        "Endocrinology"
+      ],
+      "terms": [
+        "insulin"
+      ]
+    },
+    {
+      "id": "endocrine-13",
+      "system": "Endocrine",
+      "sequence": 3,
+      "title": "Congenital adrenal hyperplasia",
+      "firstaid_pages": [
+        329,
+        363
+      ],
+      "bnb_modules": [
+        "Endocrinology"
+      ],
+      "terms": [
+        "congenital adrenal"
       ]
     },
     {
       "id": "endocrine-01",
       "system": "Endocrine",
-      "sequence": 1,
+      "sequence": 4,
       "title": "Hormone signaling",
       "firstaid_pages": [
         329,
@@ -2088,73 +1511,9 @@
       ]
     },
     {
-      "id": "endocrine-02",
-      "system": "Endocrine",
-      "sequence": 2,
-      "title": "Pituitary anatomy and physiology",
-      "firstaid_pages": [
-        329,
-        363
-      ],
-      "bnb_modules": [
-        "Endocrinology"
-      ],
-      "terms": [
-        "pituitary anatomy"
-      ]
-    },
-    {
-      "id": "endocrine-03",
-      "system": "Endocrine",
-      "sequence": 3,
-      "title": "Pituitary disorders",
-      "firstaid_pages": [
-        329,
-        363
-      ],
-      "bnb_modules": [
-        "Endocrinology"
-      ],
-      "terms": [
-        "pituitary pathology"
-      ]
-    },
-    {
-      "id": "endocrine-04",
-      "system": "Endocrine",
-      "sequence": 4,
-      "title": "Thyroid anatomy and physiology",
-      "firstaid_pages": [
-        329,
-        363
-      ],
-      "bnb_modules": [
-        "Endocrinology"
-      ],
-      "terms": [
-        "thyroid anatomy"
-      ]
-    },
-    {
-      "id": "endocrine-05",
-      "system": "Endocrine",
-      "sequence": 5,
-      "title": "Thyroid synthesis and laboratory tests",
-      "firstaid_pages": [
-        329,
-        363
-      ],
-      "bnb_modules": [
-        "Endocrinology"
-      ],
-      "terms": [
-        "thyroid hormone synthesis"
-      ]
-    },
-    {
       "id": "endocrine-06",
       "system": "Endocrine",
-      "sequence": 6,
+      "sequence": 5,
       "title": "Hyperthyroidism",
       "firstaid_pages": [
         329,
@@ -2170,7 +1529,7 @@
     {
       "id": "endocrine-07",
       "system": "Endocrine",
-      "sequence": 7,
+      "sequence": 6,
       "title": "Hypothyroidism and thyroiditis",
       "firstaid_pages": [
         329,
@@ -2187,7 +1546,7 @@
     {
       "id": "endocrine-08",
       "system": "Endocrine",
-      "sequence": 8,
+      "sequence": 7,
       "title": "Thyroid neoplasia",
       "firstaid_pages": [
         329,
@@ -2201,89 +1560,9 @@
       ]
     },
     {
-      "id": "endocrine-09",
-      "system": "Endocrine",
-      "sequence": 9,
-      "title": "Parathyroid physiology",
-      "firstaid_pages": [
-        329,
-        363
-      ],
-      "bnb_modules": [
-        "Endocrinology"
-      ],
-      "terms": [
-        "parathyroid glands"
-      ]
-    },
-    {
-      "id": "endocrine-10",
-      "system": "Endocrine",
-      "sequence": 10,
-      "title": "Parathyroid disorders",
-      "firstaid_pages": [
-        329,
-        363
-      ],
-      "bnb_modules": [
-        "Endocrinology"
-      ],
-      "terms": [
-        "parathyroid pathology"
-      ]
-    },
-    {
-      "id": "endocrine-11",
-      "system": "Endocrine",
-      "sequence": 11,
-      "title": "Adrenal physiology",
-      "firstaid_pages": [
-        329,
-        363
-      ],
-      "bnb_modules": [
-        "Endocrinology"
-      ],
-      "terms": [
-        "adrenal glands"
-      ]
-    },
-    {
-      "id": "endocrine-12",
-      "system": "Endocrine",
-      "sequence": 12,
-      "title": "Adrenal insufficiency",
-      "firstaid_pages": [
-        329,
-        363
-      ],
-      "bnb_modules": [
-        "Endocrinology"
-      ],
-      "terms": [
-        "adrenal insufficiency"
-      ]
-    },
-    {
-      "id": "endocrine-13",
-      "system": "Endocrine",
-      "sequence": 13,
-      "title": "Congenital adrenal hyperplasia",
-      "firstaid_pages": [
-        329,
-        363
-      ],
-      "bnb_modules": [
-        "Endocrinology"
-      ],
-      "terms": [
-        "congenital adrenal"
-      ]
-    },
-    {
       "id": "endocrine-14",
       "system": "Endocrine",
-      "sequence": 14,
+      "sequence": 8,
       "title": "Cushing syndrome",
       "firstaid_pages": [
         329,
@@ -2297,9 +1576,25 @@
       ]
     },
     {
+      "id": "endocrine-12",
+      "system": "Endocrine",
+      "sequence": 9,
+      "title": "Adrenal insufficiency",
+      "firstaid_pages": [
+        329,
+        363
+      ],
+      "bnb_modules": [
+        "Endocrinology"
+      ],
+      "terms": [
+        "adrenal insufficiency"
+      ]
+    },
+    {
       "id": "endocrine-15",
       "system": "Endocrine",
-      "sequence": 15,
+      "sequence": 10,
       "title": "Hyperaldosteronism",
       "firstaid_pages": [
         329,
@@ -2313,109 +1608,10 @@
       ]
     },
     {
-      "id": "endocrine-16",
-      "system": "Endocrine",
-      "sequence": 16,
-      "title": "Adrenal tumors",
-      "firstaid_pages": [
-        329,
-        363
-      ],
-      "bnb_modules": [
-        "Endocrinology"
-      ],
-      "terms": [
-        "adrenal tumors"
-      ]
-    },
-    {
-      "id": "endocrine-17",
-      "system": "Endocrine",
-      "sequence": 17,
-      "title": "Multiple endocrine neoplasia",
-      "firstaid_pages": [
-        329,
-        363
-      ],
-      "bnb_modules": [
-        "Endocrinology"
-      ],
-      "terms": [
-        "men syndromes"
-      ]
-    },
-    {
-      "id": "endocrine-18",
-      "system": "Endocrine",
-      "sequence": 18,
-      "title": "Insulin and glucose regulation",
-      "firstaid_pages": [
-        329,
-        363
-      ],
-      "bnb_modules": [
-        "Endocrinology"
-      ],
-      "terms": [
-        "insulin"
-      ]
-    },
-    {
-      "id": "endocrine-19",
-      "system": "Endocrine",
-      "sequence": 19,
-      "title": "Glucagon and hypoglycemia",
-      "firstaid_pages": [
-        329,
-        363
-      ],
-      "bnb_modules": [
-        "Endocrinology"
-      ],
-      "terms": [
-        "glucagon",
-        "hypoglycemia"
-      ]
-    },
-    {
-      "id": "endocrine-20",
-      "system": "Endocrine",
-      "sequence": 20,
-      "title": "Diabetes mechanisms",
-      "firstaid_pages": [
-        329,
-        363
-      ],
-      "bnb_modules": [
-        "Endocrinology"
-      ],
-      "terms": [
-        "type i diabetes",
-        "type ii diabetes"
-      ]
-    },
-    {
-      "id": "endocrine-21",
-      "system": "Endocrine",
-      "sequence": 21,
-      "title": "Diabetes pharmacotherapy",
-      "firstaid_pages": [
-        329,
-        363
-      ],
-      "bnb_modules": [
-        "Endocrinology"
-      ],
-      "terms": [
-        "treatment of diabetes",
-        "insulin medications"
-      ]
-    },
-    {
-      "id": "gastrointestinal-01",
+      "id": "gastrointestinal-09",
       "system": "Gastrointestinal",
       "sequence": 1,
-      "title": "GI embryology",
+      "title": "Esophageal disorders",
       "firstaid_pages": [
         363,
         409
@@ -2424,13 +1620,29 @@
         "Gastroenterology"
       ],
       "terms": [
-        "gastrointestinal embryology"
+        "esophageal"
+      ]
+    },
+    {
+      "id": "gastrointestinal-10",
+      "system": "Gastrointestinal",
+      "sequence": 2,
+      "title": "Gastric disorders",
+      "firstaid_pages": [
+        363,
+        409
+      ],
+      "bnb_modules": [
+        "Gastroenterology"
+      ],
+      "terms": [
+        "gastric"
       ]
     },
     {
       "id": "gastrointestinal-02",
       "system": "Gastrointestinal",
-      "sequence": 2,
+      "sequence": 3,
       "title": "GI anatomy and blood supply",
       "firstaid_pages": [
         363,
@@ -2445,9 +1657,43 @@
       ]
     },
     {
+      "id": "gastrointestinal-07",
+      "system": "Gastrointestinal",
+      "sequence": 4,
+      "title": "Bile and bilirubin",
+      "firstaid_pages": [
+        363,
+        409
+      ],
+      "bnb_modules": [
+        "Gastroenterology"
+      ],
+      "terms": [
+        "bile",
+        "bilirubin"
+      ]
+    },
+    {
+      "id": "gastrointestinal-18",
+      "system": "Gastrointestinal",
+      "sequence": 5,
+      "title": "Gallstones and biliary disease",
+      "firstaid_pages": [
+        363,
+        409
+      ],
+      "bnb_modules": [
+        "Gastroenterology"
+      ],
+      "terms": [
+        "gallstones",
+        "biliary disorders"
+      ]
+    },
+    {
       "id": "gastrointestinal-03",
       "system": "Gastrointestinal",
-      "sequence": 3,
+      "sequence": 6,
       "title": "GI tract and hernias",
       "firstaid_pages": [
         363,
@@ -2464,7 +1710,7 @@
     {
       "id": "gastrointestinal-04",
       "system": "Gastrointestinal",
-      "sequence": 4,
+      "sequence": 7,
       "title": "Salivary glands",
       "firstaid_pages": [
         363,
@@ -2478,123 +1724,9 @@
       ]
     },
     {
-      "id": "gastrointestinal-05",
-      "system": "Gastrointestinal",
-      "sequence": 5,
-      "title": "Hepatobiliary and pancreatic anatomy",
-      "firstaid_pages": [
-        363,
-        409
-      ],
-      "bnb_modules": [
-        "Gastroenterology"
-      ],
-      "terms": [
-        "liver gallbladder and pancreas"
-      ]
-    },
-    {
-      "id": "gastrointestinal-06",
-      "system": "Gastrointestinal",
-      "sequence": 6,
-      "title": "GI hormones and secretions",
-      "firstaid_pages": [
-        363,
-        409
-      ],
-      "bnb_modules": [
-        "Gastroenterology"
-      ],
-      "terms": [
-        "gastrointestinal hormones",
-        "gastrointestinal secretions"
-      ]
-    },
-    {
-      "id": "gastrointestinal-07",
-      "system": "Gastrointestinal",
-      "sequence": 7,
-      "title": "Bile and bilirubin",
-      "firstaid_pages": [
-        363,
-        409
-      ],
-      "bnb_modules": [
-        "Gastroenterology"
-      ],
-      "terms": [
-        "bile",
-        "bilirubin"
-      ]
-    },
-    {
-      "id": "gastrointestinal-08",
-      "system": "Gastrointestinal",
-      "sequence": 8,
-      "title": "Exocrine pancreas",
-      "firstaid_pages": [
-        363,
-        409
-      ],
-      "bnb_modules": [
-        "Gastroenterology"
-      ],
-      "terms": [
-        "exocrine pancreas"
-      ]
-    },
-    {
-      "id": "gastrointestinal-09",
-      "system": "Gastrointestinal",
-      "sequence": 9,
-      "title": "Esophageal disorders",
-      "firstaid_pages": [
-        363,
-        409
-      ],
-      "bnb_modules": [
-        "Gastroenterology"
-      ],
-      "terms": [
-        "esophageal"
-      ]
-    },
-    {
-      "id": "gastrointestinal-10",
-      "system": "Gastrointestinal",
-      "sequence": 10,
-      "title": "Gastric disorders",
-      "firstaid_pages": [
-        363,
-        409
-      ],
-      "bnb_modules": [
-        "Gastroenterology"
-      ],
-      "terms": [
-        "gastric"
-      ]
-    },
-    {
-      "id": "gastrointestinal-11",
-      "system": "Gastrointestinal",
-      "sequence": 11,
-      "title": "Intestinal disorders",
-      "firstaid_pages": [
-        363,
-        409
-      ],
-      "bnb_modules": [
-        "Gastroenterology"
-      ],
-      "terms": [
-        "intestinal disorders"
-      ]
-    },
-    {
       "id": "gastrointestinal-12",
       "system": "Gastrointestinal",
-      "sequence": 12,
+      "sequence": 8,
       "title": "Malabsorption",
       "firstaid_pages": [
         363,
@@ -2610,7 +1742,7 @@
     {
       "id": "gastrointestinal-13",
       "system": "Gastrointestinal",
-      "sequence": 13,
+      "sequence": 9,
       "title": "Inflammatory bowel disease",
       "firstaid_pages": [
         363,
@@ -2624,9 +1756,25 @@
       ]
     },
     {
+      "id": "gastrointestinal-11",
+      "system": "Gastrointestinal",
+      "sequence": 10,
+      "title": "Intestinal disorders",
+      "firstaid_pages": [
+        363,
+        409
+      ],
+      "bnb_modules": [
+        "Gastroenterology"
+      ],
+      "terms": [
+        "intestinal disorders"
+      ]
+    },
+    {
       "id": "gastrointestinal-14",
       "system": "Gastrointestinal",
-      "sequence": 14,
+      "sequence": 11,
       "title": "Colorectal cancer",
       "firstaid_pages": [
         363,
@@ -2640,10 +1788,10 @@
       ]
     },
     {
-      "id": "gastrointestinal-15",
+      "id": "gastrointestinal-19",
       "system": "Gastrointestinal",
-      "sequence": 15,
-      "title": "Neuroendocrine tumors",
+      "sequence": 12,
+      "title": "Liver injury and cirrhosis",
       "firstaid_pages": [
         363,
         409
@@ -2652,13 +1800,47 @@
         "Gastroenterology"
       ],
       "terms": [
-        "carcinoid"
+        "liver disease",
+        "cirrhosis"
+      ]
+    },
+    {
+      "id": "gastrointestinal-21",
+      "system": "Gastrointestinal",
+      "sequence": 13,
+      "title": "Hepatic tumors",
+      "firstaid_pages": [
+        363,
+        409
+      ],
+      "bnb_modules": [
+        "Gastroenterology"
+      ],
+      "terms": [
+        "liver tumors"
+      ]
+    },
+    {
+      "id": "gastrointestinal-20",
+      "system": "Gastrointestinal",
+      "sequence": 14,
+      "title": "Inherited liver disease",
+      "firstaid_pages": [
+        363,
+        409
+      ],
+      "bnb_modules": [
+        "Gastroenterology"
+      ],
+      "terms": [
+        "wilson",
+        "hemochromatosis"
       ]
     },
     {
       "id": "gastrointestinal-16",
       "system": "Gastrointestinal",
-      "sequence": 16,
+      "sequence": 15,
       "title": "Acute pancreatitis",
       "firstaid_pages": [
         363,
@@ -2674,7 +1856,7 @@
     {
       "id": "gastrointestinal-17",
       "system": "Gastrointestinal",
-      "sequence": 17,
+      "sequence": 16,
       "title": "Chronic pancreatitis and pancreatic cancer",
       "firstaid_pages": [
         363,
@@ -2686,89 +1868,6 @@
       "terms": [
         "chronic pancreatitis",
         "pancreatic cancer"
-      ]
-    },
-    {
-      "id": "gastrointestinal-18",
-      "system": "Gastrointestinal",
-      "sequence": 18,
-      "title": "Gallstones and biliary disease",
-      "firstaid_pages": [
-        363,
-        409
-      ],
-      "bnb_modules": [
-        "Gastroenterology"
-      ],
-      "terms": [
-        "gallstones",
-        "biliary disorders"
-      ]
-    },
-    {
-      "id": "gastrointestinal-19",
-      "system": "Gastrointestinal",
-      "sequence": 19,
-      "title": "Liver injury and cirrhosis",
-      "firstaid_pages": [
-        363,
-        409
-      ],
-      "bnb_modules": [
-        "Gastroenterology"
-      ],
-      "terms": [
-        "liver disease",
-        "cirrhosis"
-      ]
-    },
-    {
-      "id": "gastrointestinal-20",
-      "system": "Gastrointestinal",
-      "sequence": 20,
-      "title": "Inherited liver disease",
-      "firstaid_pages": [
-        363,
-        409
-      ],
-      "bnb_modules": [
-        "Gastroenterology"
-      ],
-      "terms": [
-        "wilson",
-        "hemochromatosis"
-      ]
-    },
-    {
-      "id": "gastrointestinal-21",
-      "system": "Gastrointestinal",
-      "sequence": 21,
-      "title": "Hepatic tumors",
-      "firstaid_pages": [
-        363,
-        409
-      ],
-      "bnb_modules": [
-        "Gastroenterology"
-      ],
-      "terms": [
-        "liver tumors"
-      ]
-    },
-    {
-      "id": "gastrointestinal-22",
-      "system": "Gastrointestinal",
-      "sequence": 22,
-      "title": "GI pharmacotherapy",
-      "firstaid_pages": [
-        363,
-        409
-      ],
-      "bnb_modules": [
-        "Gastroenterology"
-      ],
-      "terms": [
-        "gastrointestinal pharmacology"
       ]
     },
     {
@@ -2789,9 +1888,58 @@
       ]
     },
     {
-      "id": "hematology-and-oncology-02",
+      "id": "hematology-and-oncology-10",
       "system": "Hematology and oncology",
       "sequence": 2,
+      "title": "Platelet physiology",
+      "firstaid_pages": [
+        409,
+        449
+      ],
+      "bnb_modules": [
+        "Hematology"
+      ],
+      "terms": [
+        "platelets"
+      ]
+    },
+    {
+      "id": "hematology-and-oncology-21",
+      "system": "Hematology and oncology",
+      "sequence": 3,
+      "title": "Plasma cell disorders and amyloid",
+      "firstaid_pages": [
+        409,
+        449
+      ],
+      "bnb_modules": [
+        "Hematology"
+      ],
+      "terms": [
+        "plasma cell",
+        "amyloidosis"
+      ]
+    },
+    {
+      "id": "hematology-and-oncology-12",
+      "system": "Hematology and oncology",
+      "sequence": 4,
+      "title": "Coagulation pathways",
+      "firstaid_pages": [
+        409,
+        449
+      ],
+      "bnb_modules": [
+        "Hematology"
+      ],
+      "terms": [
+        "coagulation"
+      ]
+    },
+    {
+      "id": "hematology-and-oncology-02",
+      "system": "Hematology and oncology",
+      "sequence": 5,
       "title": "Microcytic anemia",
       "firstaid_pages": [
         409,
@@ -2807,7 +1955,7 @@
     {
       "id": "hematology-and-oncology-03",
       "system": "Hematology and oncology",
-      "sequence": 3,
+      "sequence": 6,
       "title": "Thalassemias",
       "firstaid_pages": [
         409,
@@ -2823,7 +1971,7 @@
     {
       "id": "hematology-and-oncology-04",
       "system": "Hematology and oncology",
-      "sequence": 4,
+      "sequence": 7,
       "title": "Sickle cell disease",
       "firstaid_pages": [
         409,
@@ -2837,73 +1985,9 @@
       ]
     },
     {
-      "id": "hematology-and-oncology-05",
-      "system": "Hematology and oncology",
-      "sequence": 5,
-      "title": "Hemolysis mechanisms",
-      "firstaid_pages": [
-        409,
-        449
-      ],
-      "bnb_modules": [
-        "Hematology"
-      ],
-      "terms": [
-        "hemolysis basics"
-      ]
-    },
-    {
-      "id": "hematology-and-oncology-06",
-      "system": "Hematology and oncology",
-      "sequence": 6,
-      "title": "Intrinsic hemolysis",
-      "firstaid_pages": [
-        409,
-        449
-      ],
-      "bnb_modules": [
-        "Hematology"
-      ],
-      "terms": [
-        "intrinsic hemolysis"
-      ]
-    },
-    {
-      "id": "hematology-and-oncology-07",
-      "system": "Hematology and oncology",
-      "sequence": 7,
-      "title": "Extrinsic hemolysis",
-      "firstaid_pages": [
-        409,
-        449
-      ],
-      "bnb_modules": [
-        "Hematology"
-      ],
-      "terms": [
-        "extrinsic hemolysis"
-      ]
-    },
-    {
-      "id": "hematology-and-oncology-08",
-      "system": "Hematology and oncology",
-      "sequence": 8,
-      "title": "Other anemias",
-      "firstaid_pages": [
-        409,
-        449
-      ],
-      "bnb_modules": [
-        "Hematology"
-      ],
-      "terms": [
-        "other anemias"
-      ]
-    },
-    {
       "id": "hematology-and-oncology-09",
       "system": "Hematology and oncology",
-      "sequence": 9,
+      "sequence": 8,
       "title": "Porphyrias",
       "firstaid_pages": [
         409,
@@ -2917,25 +2001,9 @@
       ]
     },
     {
-      "id": "hematology-and-oncology-10",
-      "system": "Hematology and oncology",
-      "sequence": 10,
-      "title": "Platelet physiology",
-      "firstaid_pages": [
-        409,
-        449
-      ],
-      "bnb_modules": [
-        "Hematology"
-      ],
-      "terms": [
-        "platelets"
-      ]
-    },
-    {
       "id": "hematology-and-oncology-11",
       "system": "Hematology and oncology",
-      "sequence": 11,
+      "sequence": 9,
       "title": "Platelet disorders and microangiopathy",
       "firstaid_pages": [
         409,
@@ -2950,137 +2018,9 @@
       ]
     },
     {
-      "id": "hematology-and-oncology-12",
-      "system": "Hematology and oncology",
-      "sequence": 12,
-      "title": "Coagulation pathways",
-      "firstaid_pages": [
-        409,
-        449
-      ],
-      "bnb_modules": [
-        "Hematology"
-      ],
-      "terms": [
-        "coagulation"
-      ]
-    },
-    {
-      "id": "hematology-and-oncology-13",
-      "system": "Hematology and oncology",
-      "sequence": 13,
-      "title": "Coagulopathies",
-      "firstaid_pages": [
-        409,
-        449
-      ],
-      "bnb_modules": [
-        "Hematology"
-      ],
-      "terms": [
-        "coagulopathies"
-      ]
-    },
-    {
-      "id": "hematology-and-oncology-14",
-      "system": "Hematology and oncology",
-      "sequence": 14,
-      "title": "Thrombophilia",
-      "firstaid_pages": [
-        409,
-        449
-      ],
-      "bnb_modules": [
-        "Hematology"
-      ],
-      "terms": [
-        "hypercoagulable"
-      ]
-    },
-    {
-      "id": "hematology-and-oncology-15",
-      "system": "Hematology and oncology",
-      "sequence": 15,
-      "title": "Antiplatelet drugs",
-      "firstaid_pages": [
-        409,
-        449
-      ],
-      "bnb_modules": [
-        "Hematology"
-      ],
-      "terms": [
-        "antiplatelets"
-      ]
-    },
-    {
-      "id": "hematology-and-oncology-16",
-      "system": "Hematology and oncology",
-      "sequence": 16,
-      "title": "Anticoagulants",
-      "firstaid_pages": [
-        409,
-        449
-      ],
-      "bnb_modules": [
-        "Hematology"
-      ],
-      "terms": [
-        "anticoagulants"
-      ]
-    },
-    {
-      "id": "hematology-and-oncology-17",
-      "system": "Hematology and oncology",
-      "sequence": 17,
-      "title": "Acute leukemias",
-      "firstaid_pages": [
-        409,
-        449
-      ],
-      "bnb_modules": [
-        "Hematology"
-      ],
-      "terms": [
-        "acute leukemias"
-      ]
-    },
-    {
-      "id": "hematology-and-oncology-18",
-      "system": "Hematology and oncology",
-      "sequence": 18,
-      "title": "Chronic leukemias",
-      "firstaid_pages": [
-        409,
-        449
-      ],
-      "bnb_modules": [
-        "Hematology"
-      ],
-      "terms": [
-        "chronic leukemias"
-      ]
-    },
-    {
-      "id": "hematology-and-oncology-19",
-      "system": "Hematology and oncology",
-      "sequence": 19,
-      "title": "Myeloproliferative disease",
-      "firstaid_pages": [
-        409,
-        449
-      ],
-      "bnb_modules": [
-        "Hematology"
-      ],
-      "terms": [
-        "myeloproliferative"
-      ]
-    },
-    {
       "id": "hematology-and-oncology-20",
       "system": "Hematology and oncology",
-      "sequence": 20,
+      "sequence": 10,
       "title": "Lymphomas",
       "firstaid_pages": [
         409,
@@ -3094,10 +2034,10 @@
       ]
     },
     {
-      "id": "hematology-and-oncology-21",
+      "id": "hematology-and-oncology-19",
       "system": "Hematology and oncology",
-      "sequence": 21,
-      "title": "Plasma cell disorders and amyloid",
+      "sequence": 11,
+      "title": "Myeloproliferative disease",
       "firstaid_pages": [
         409,
         449
@@ -3106,30 +2046,13 @@
         "Hematology"
       ],
       "terms": [
-        "plasma cell",
-        "amyloidosis"
-      ]
-    },
-    {
-      "id": "hematology-and-oncology-22",
-      "system": "Hematology and oncology",
-      "sequence": 22,
-      "title": "Alkylating and platinum drugs",
-      "firstaid_pages": [
-        409,
-        449
-      ],
-      "bnb_modules": [
-        "Hematology"
-      ],
-      "terms": [
-        "alkylating"
+        "myeloproliferative"
       ]
     },
     {
       "id": "hematology-and-oncology-23",
       "system": "Hematology and oncology",
-      "sequence": 23,
+      "sequence": 12,
       "title": "Antimetabolites",
       "firstaid_pages": [
         409,
@@ -3145,7 +2068,7 @@
     {
       "id": "hematology-and-oncology-24",
       "system": "Hematology and oncology",
-      "sequence": 24,
+      "sequence": 13,
       "title": "Antitumor antibiotics and topoisomerase inhibitors",
       "firstaid_pages": [
         409,
@@ -3159,9 +2082,25 @@
       ]
     },
     {
+      "id": "hematology-and-oncology-22",
+      "system": "Hematology and oncology",
+      "sequence": 14,
+      "title": "Alkylating and platinum drugs",
+      "firstaid_pages": [
+        409,
+        449
+      ],
+      "bnb_modules": [
+        "Hematology"
+      ],
+      "terms": [
+        "alkylating"
+      ]
+    },
+    {
       "id": "hematology-and-oncology-25",
       "system": "Hematology and oncology",
-      "sequence": 25,
+      "sequence": 15,
       "title": "Microtubule and other cancer drugs",
       "firstaid_pages": [
         409,
@@ -3176,10 +2115,10 @@
       ]
     },
     {
-      "id": "musculoskeletal-and-skin-01",
+      "id": "musculoskeletal-and-skin-04",
       "system": "Musculoskeletal and skin",
       "sequence": 1,
-      "title": "Bone biology",
+      "title": "Hand and wrist",
       "firstaid_pages": [
         449,
         499
@@ -3190,14 +2129,15 @@
         "Immunology"
       ],
       "terms": [
-        "bone"
+        "hand",
+        "wrist"
       ]
     },
     {
-      "id": "musculoskeletal-and-skin-02",
+      "id": "musculoskeletal-and-skin-18",
       "system": "Musculoskeletal and skin",
       "sequence": 2,
-      "title": "Muscle physiology",
+      "title": "Skin structure",
       "firstaid_pages": [
         449,
         499
@@ -3208,9 +2148,8 @@
         "Immunology"
       ],
       "terms": [
-        "skeletal muscle",
-        "smooth muscle",
-        "cardiac muscle"
+        "skin",
+        "epithelial cells"
       ]
     },
     {
@@ -3233,10 +2172,10 @@
       ]
     },
     {
-      "id": "musculoskeletal-and-skin-04",
+      "id": "musculoskeletal-and-skin-01",
       "system": "Musculoskeletal and skin",
       "sequence": 4,
-      "title": "Hand and wrist",
+      "title": "Bone biology",
       "firstaid_pages": [
         449,
         499
@@ -3247,33 +2186,13 @@
         "Immunology"
       ],
       "terms": [
-        "hand",
-        "wrist"
-      ]
-    },
-    {
-      "id": "musculoskeletal-and-skin-05",
-      "system": "Musculoskeletal and skin",
-      "sequence": 5,
-      "title": "Lower limb plexus and radiculopathy",
-      "firstaid_pages": [
-        449,
-        499
-      ],
-      "bnb_modules": [
-        "Musculoskeletal",
-        "Dermatology",
-        "Immunology"
-      ],
-      "terms": [
-        "lumbosacral plexus",
-        "lumbar radiculopathy"
+        "bone"
       ]
     },
     {
       "id": "musculoskeletal-and-skin-06",
       "system": "Musculoskeletal and skin",
-      "sequence": 6,
+      "sequence": 5,
       "title": "Hip and knee",
       "firstaid_pages": [
         449,
@@ -3287,6 +2206,26 @@
       "terms": [
         "hip",
         "knee"
+      ]
+    },
+    {
+      "id": "musculoskeletal-and-skin-02",
+      "system": "Musculoskeletal and skin",
+      "sequence": 6,
+      "title": "Muscle physiology",
+      "firstaid_pages": [
+        449,
+        499
+      ],
+      "bnb_modules": [
+        "Musculoskeletal",
+        "Dermatology",
+        "Immunology"
+      ],
+      "terms": [
+        "skeletal muscle",
+        "smooth muscle",
+        "cardiac muscle"
       ]
     },
     {
@@ -3327,27 +2266,9 @@
       ]
     },
     {
-      "id": "musculoskeletal-and-skin-09",
-      "system": "Musculoskeletal and skin",
-      "sequence": 9,
-      "title": "Muscle disorders",
-      "firstaid_pages": [
-        449,
-        499
-      ],
-      "bnb_modules": [
-        "Musculoskeletal",
-        "Dermatology",
-        "Immunology"
-      ],
-      "terms": [
-        "muscle disorders"
-      ]
-    },
-    {
       "id": "musculoskeletal-and-skin-10",
       "system": "Musculoskeletal and skin",
-      "sequence": 10,
+      "sequence": 9,
       "title": "Arthritis and common MSK conditions",
       "firstaid_pages": [
         449,
@@ -3366,7 +2287,7 @@
     {
       "id": "musculoskeletal-and-skin-11",
       "system": "Musculoskeletal and skin",
-      "sequence": 11,
+      "sequence": 10,
       "title": "Rheumatoid arthritis",
       "firstaid_pages": [
         449,
@@ -3382,10 +2303,10 @@
       ]
     },
     {
-      "id": "musculoskeletal-and-skin-12",
+      "id": "musculoskeletal-and-skin-16",
       "system": "Musculoskeletal and skin",
-      "sequence": 12,
-      "title": "Lupus",
+      "sequence": 11,
+      "title": "Crystal arthropathies",
       "firstaid_pages": [
         449,
         499
@@ -3396,7 +2317,26 @@
         "Immunology"
       ],
       "terms": [
-        "systemic lupus"
+        "gout",
+        "cppd"
+      ]
+    },
+    {
+      "id": "musculoskeletal-and-skin-14",
+      "system": "Musculoskeletal and skin",
+      "sequence": 12,
+      "title": "Seronegative spondyloarthropathies",
+      "firstaid_pages": [
+        449,
+        499
+      ],
+      "bnb_modules": [
+        "Musculoskeletal",
+        "Dermatology",
+        "Immunology"
+      ],
+      "terms": [
+        "seronegative"
       ]
     },
     {
@@ -3419,10 +2359,10 @@
       ]
     },
     {
-      "id": "musculoskeletal-and-skin-14",
+      "id": "musculoskeletal-and-skin-19",
       "system": "Musculoskeletal and skin",
       "sequence": 14,
-      "title": "Seronegative spondyloarthropathies",
+      "title": "Inflammatory skin disorders",
       "firstaid_pages": [
         449,
         499
@@ -3433,14 +2373,15 @@
         "Immunology"
       ],
       "terms": [
-        "seronegative"
+        "skin disorders",
+        "hypersensitivity disorders"
       ]
     },
     {
-      "id": "musculoskeletal-and-skin-15",
+      "id": "musculoskeletal-and-skin-20",
       "system": "Musculoskeletal and skin",
       "sequence": 15,
-      "title": "Vasculitis",
+      "title": "Blistering disorders",
       "firstaid_pages": [
         449,
         499
@@ -3451,14 +2392,14 @@
         "Immunology"
       ],
       "terms": [
-        "vasculitis"
+        "blistering"
       ]
     },
     {
-      "id": "musculoskeletal-and-skin-16",
+      "id": "musculoskeletal-and-skin-22",
       "system": "Musculoskeletal and skin",
       "sequence": 16,
-      "title": "Crystal arthropathies",
+      "title": "Skin infections",
       "firstaid_pages": [
         449,
         499
@@ -3469,8 +2410,7 @@
         "Immunology"
       ],
       "terms": [
-        "gout",
-        "cppd"
+        "skin infections"
       ]
     },
     {
@@ -3493,139 +2433,10 @@
       ]
     },
     {
-      "id": "musculoskeletal-and-skin-18",
-      "system": "Musculoskeletal and skin",
-      "sequence": 18,
-      "title": "Skin structure",
-      "firstaid_pages": [
-        449,
-        499
-      ],
-      "bnb_modules": [
-        "Musculoskeletal",
-        "Dermatology",
-        "Immunology"
-      ],
-      "terms": [
-        "skin",
-        "epithelial cells"
-      ]
-    },
-    {
-      "id": "musculoskeletal-and-skin-19",
-      "system": "Musculoskeletal and skin",
-      "sequence": 19,
-      "title": "Inflammatory skin disorders",
-      "firstaid_pages": [
-        449,
-        499
-      ],
-      "bnb_modules": [
-        "Musculoskeletal",
-        "Dermatology",
-        "Immunology"
-      ],
-      "terms": [
-        "skin disorders",
-        "hypersensitivity disorders"
-      ]
-    },
-    {
-      "id": "musculoskeletal-and-skin-20",
-      "system": "Musculoskeletal and skin",
-      "sequence": 20,
-      "title": "Blistering disorders",
-      "firstaid_pages": [
-        449,
-        499
-      ],
-      "bnb_modules": [
-        "Musculoskeletal",
-        "Dermatology",
-        "Immunology"
-      ],
-      "terms": [
-        "blistering"
-      ]
-    },
-    {
-      "id": "musculoskeletal-and-skin-21",
-      "system": "Musculoskeletal and skin",
-      "sequence": 21,
-      "title": "Pigment disorders",
-      "firstaid_pages": [
-        449,
-        499
-      ],
-      "bnb_modules": [
-        "Musculoskeletal",
-        "Dermatology",
-        "Immunology"
-      ],
-      "terms": [
-        "pigment"
-      ]
-    },
-    {
-      "id": "musculoskeletal-and-skin-22",
-      "system": "Musculoskeletal and skin",
-      "sequence": 22,
-      "title": "Skin infections",
-      "firstaid_pages": [
-        449,
-        499
-      ],
-      "bnb_modules": [
-        "Musculoskeletal",
-        "Dermatology",
-        "Immunology"
-      ],
-      "terms": [
-        "skin infections"
-      ]
-    },
-    {
-      "id": "musculoskeletal-and-skin-23",
-      "system": "Musculoskeletal and skin",
-      "sequence": 23,
-      "title": "Skin cancer",
-      "firstaid_pages": [
-        449,
-        499
-      ],
-      "bnb_modules": [
-        "Musculoskeletal",
-        "Dermatology",
-        "Immunology"
-      ],
-      "terms": [
-        "skin cancer"
-      ]
-    },
-    {
-      "id": "musculoskeletal-and-skin-24",
-      "system": "Musculoskeletal and skin",
-      "sequence": 24,
-      "title": "Vascular and neurocutaneous lesions",
-      "firstaid_pages": [
-        449,
-        499
-      ],
-      "bnb_modules": [
-        "Musculoskeletal",
-        "Dermatology",
-        "Immunology"
-      ],
-      "terms": [
-        "vascular lesions",
-        "neurocutaneous"
-      ]
-    },
-    {
-      "id": "neurology-and-special-senses-01",
+      "id": "neurology-and-special-senses-15",
       "system": "Neurology and special senses",
       "sequence": 1,
-      "title": "Neuroembryology",
+      "title": "Trauma and herniation",
       "firstaid_pages": [
         499,
         569
@@ -3635,7 +2446,8 @@
         "Ophthalmology"
       ],
       "terms": [
-        "neuroembryology"
+        "brain injury",
+        "herniation"
       ]
     },
     {
@@ -3657,10 +2469,10 @@
       ]
     },
     {
-      "id": "neurology-and-special-senses-03",
+      "id": "neurology-and-special-senses-22",
       "system": "Neurology and special senses",
       "sequence": 3,
-      "title": "Neurotransmitters",
+      "title": "Delirium and dementia",
       "firstaid_pages": [
         499,
         569
@@ -3670,14 +2482,15 @@
         "Ophthalmology"
       ],
       "terms": [
-        "neurotransmitters"
+        "delirium",
+        "dementia"
       ]
     },
     {
-      "id": "neurology-and-special-senses-04",
+      "id": "neurology-and-special-senses-11",
       "system": "Neurology and special senses",
       "sequence": 4,
-      "title": "Autonomic physiology",
+      "title": "Auditory system",
       "firstaid_pages": [
         499,
         569
@@ -3687,32 +2500,13 @@
         "Ophthalmology"
       ],
       "terms": [
-        "autonomic nervous system",
-        "autonomic receptors"
-      ]
-    },
-    {
-      "id": "neurology-and-special-senses-05",
-      "system": "Neurology and special senses",
-      "sequence": 5,
-      "title": "Autonomic pharmacology",
-      "firstaid_pages": [
-        499,
-        569
-      ],
-      "bnb_modules": [
-        "Neurology",
-        "Ophthalmology"
-      ],
-      "terms": [
-        "adrenergic drugs",
-        "cholinergic"
+        "auditory"
       ]
     },
     {
       "id": "neurology-and-special-senses-06",
       "system": "Neurology and special senses",
-      "sequence": 6,
+      "sequence": 5,
       "title": "Cerebral cortex and deep nuclei",
       "firstaid_pages": [
         499,
@@ -3731,7 +2525,7 @@
     {
       "id": "neurology-and-special-senses-07",
       "system": "Neurology and special senses",
-      "sequence": 7,
+      "sequence": 6,
       "title": "Brainstem and cranial nerves",
       "firstaid_pages": [
         499,
@@ -3748,26 +2542,9 @@
       ]
     },
     {
-      "id": "neurology-and-special-senses-08",
-      "system": "Neurology and special senses",
-      "sequence": 8,
-      "title": "Spinal cord and syndromes",
-      "firstaid_pages": [
-        499,
-        569
-      ],
-      "bnb_modules": [
-        "Neurology",
-        "Ophthalmology"
-      ],
-      "terms": [
-        "spinal cord"
-      ]
-    },
-    {
       "id": "neurology-and-special-senses-09",
       "system": "Neurology and special senses",
-      "sequence": 9,
+      "sequence": 7,
       "title": "Peripheral nerves and reflexes",
       "firstaid_pages": [
         499,
@@ -3785,7 +2562,7 @@
     {
       "id": "neurology-and-special-senses-10",
       "system": "Neurology and special senses",
-      "sequence": 10,
+      "sequence": 8,
       "title": "Cerebellum and vestibular system",
       "firstaid_pages": [
         499,
@@ -3801,292 +2578,9 @@
       ]
     },
     {
-      "id": "neurology-and-special-senses-11",
-      "system": "Neurology and special senses",
-      "sequence": 11,
-      "title": "Auditory system",
-      "firstaid_pages": [
-        499,
-        569
-      ],
-      "bnb_modules": [
-        "Neurology",
-        "Ophthalmology"
-      ],
-      "terms": [
-        "auditory"
-      ]
-    },
-    {
-      "id": "neurology-and-special-senses-12",
-      "system": "Neurology and special senses",
-      "sequence": 12,
-      "title": "CSF ventricles and sinuses",
-      "firstaid_pages": [
-        499,
-        569
-      ],
-      "bnb_modules": [
-        "Neurology",
-        "Ophthalmology"
-      ],
-      "terms": [
-        "ventricles and sinuses"
-      ]
-    },
-    {
-      "id": "neurology-and-special-senses-13",
-      "system": "Neurology and special senses",
-      "sequence": 13,
-      "title": "Ischemic stroke",
-      "firstaid_pages": [
-        499,
-        569
-      ],
-      "bnb_modules": [
-        "Neurology",
-        "Ophthalmology"
-      ],
-      "terms": [
-        "cerebral strokes",
-        "vertebral basilar",
-        "treatment of tia"
-      ]
-    },
-    {
-      "id": "neurology-and-special-senses-14",
-      "system": "Neurology and special senses",
-      "sequence": 14,
-      "title": "Hemorrhage and aneurysms",
-      "firstaid_pages": [
-        499,
-        569
-      ],
-      "bnb_modules": [
-        "Neurology",
-        "Ophthalmology"
-      ],
-      "terms": [
-        "intracranial bleeding",
-        "intracranial aneurysms"
-      ]
-    },
-    {
-      "id": "neurology-and-special-senses-15",
-      "system": "Neurology and special senses",
-      "sequence": 15,
-      "title": "Trauma and herniation",
-      "firstaid_pages": [
-        499,
-        569
-      ],
-      "bnb_modules": [
-        "Neurology",
-        "Ophthalmology"
-      ],
-      "terms": [
-        "brain injury",
-        "herniation"
-      ]
-    },
-    {
-      "id": "neurology-and-special-senses-16",
-      "system": "Neurology and special senses",
-      "sequence": 16,
-      "title": "Brain tumors",
-      "firstaid_pages": [
-        499,
-        569
-      ],
-      "bnb_modules": [
-        "Neurology",
-        "Ophthalmology"
-      ],
-      "terms": [
-        "brain tumors"
-      ]
-    },
-    {
-      "id": "neurology-and-special-senses-17",
-      "system": "Neurology and special senses",
-      "sequence": 17,
-      "title": "Seizures and anticonvulsants",
-      "firstaid_pages": [
-        499,
-        569
-      ],
-      "bnb_modules": [
-        "Neurology",
-        "Ophthalmology"
-      ],
-      "terms": [
-        "seizures",
-        "anticonvulsants"
-      ]
-    },
-    {
-      "id": "neurology-and-special-senses-18",
-      "system": "Neurology and special senses",
-      "sequence": 18,
-      "title": "Meningitis",
-      "firstaid_pages": [
-        499,
-        569
-      ],
-      "bnb_modules": [
-        "Neurology",
-        "Ophthalmology"
-      ],
-      "terms": [
-        "meningitis"
-      ]
-    },
-    {
-      "id": "neurology-and-special-senses-19",
-      "system": "Neurology and special senses",
-      "sequence": 19,
-      "title": "Demyelination",
-      "firstaid_pages": [
-        499,
-        569
-      ],
-      "bnb_modules": [
-        "Neurology",
-        "Ophthalmology"
-      ],
-      "terms": [
-        "demyelinating",
-        "multiple sclerosis"
-      ]
-    },
-    {
-      "id": "neurology-and-special-senses-20",
-      "system": "Neurology and special senses",
-      "sequence": 20,
-      "title": "Movement disorders",
-      "firstaid_pages": [
-        499,
-        569
-      ],
-      "bnb_modules": [
-        "Neurology",
-        "Ophthalmology"
-      ],
-      "terms": [
-        "movement disorders",
-        "parkinson"
-      ]
-    },
-    {
-      "id": "neurology-and-special-senses-21",
-      "system": "Neurology and special senses",
-      "sequence": 21,
-      "title": "Neuromuscular junction disorders",
-      "firstaid_pages": [
-        499,
-        569
-      ],
-      "bnb_modules": [
-        "Neurology",
-        "Ophthalmology"
-      ],
-      "terms": [
-        "neuromuscular junction"
-      ]
-    },
-    {
-      "id": "neurology-and-special-senses-22",
-      "system": "Neurology and special senses",
-      "sequence": 22,
-      "title": "Delirium and dementia",
-      "firstaid_pages": [
-        499,
-        569
-      ],
-      "bnb_modules": [
-        "Neurology",
-        "Ophthalmology"
-      ],
-      "terms": [
-        "delirium",
-        "dementia"
-      ]
-    },
-    {
-      "id": "neurology-and-special-senses-23",
-      "system": "Neurology and special senses",
-      "sequence": 23,
-      "title": "Headaches",
-      "firstaid_pages": [
-        499,
-        569
-      ],
-      "bnb_modules": [
-        "Neurology",
-        "Ophthalmology"
-      ],
-      "terms": [
-        "headaches"
-      ]
-    },
-    {
-      "id": "neurology-and-special-senses-24",
-      "system": "Neurology and special senses",
-      "sequence": 24,
-      "title": "Sleep physiology and disorders",
-      "firstaid_pages": [
-        499,
-        569
-      ],
-      "bnb_modules": [
-        "Neurology",
-        "Ophthalmology"
-      ],
-      "terms": [
-        "sleep physiology",
-        "sleep disorders"
-      ]
-    },
-    {
-      "id": "neurology-and-special-senses-25",
-      "system": "Neurology and special senses",
-      "sequence": 25,
-      "title": "Eye anatomy and lens",
-      "firstaid_pages": [
-        499,
-        569
-      ],
-      "bnb_modules": [
-        "Neurology",
-        "Ophthalmology"
-      ],
-      "terms": [
-        "eye anatomy",
-        "lens"
-      ]
-    },
-    {
-      "id": "neurology-and-special-senses-26",
-      "system": "Neurology and special senses",
-      "sequence": 26,
-      "title": "Retina and retinal disorders",
-      "firstaid_pages": [
-        499,
-        569
-      ],
-      "bnb_modules": [
-        "Neurology",
-        "Ophthalmology"
-      ],
-      "terms": [
-        "retina",
-        "retinal"
-      ]
-    },
-    {
       "id": "neurology-and-special-senses-27",
       "system": "Neurology and special senses",
-      "sequence": 27,
+      "sequence": 9,
       "title": "Optic pathways and visual fields",
       "firstaid_pages": [
         499,
@@ -4102,9 +2596,97 @@
       ]
     },
     {
+      "id": "neurology-and-special-senses-17",
+      "system": "Neurology and special senses",
+      "sequence": 10,
+      "title": "Seizures and anticonvulsants",
+      "firstaid_pages": [
+        499,
+        569
+      ],
+      "bnb_modules": [
+        "Neurology",
+        "Ophthalmology"
+      ],
+      "terms": [
+        "seizures",
+        "anticonvulsants"
+      ]
+    },
+    {
+      "id": "neurology-and-special-senses-23",
+      "system": "Neurology and special senses",
+      "sequence": 11,
+      "title": "Headaches",
+      "firstaid_pages": [
+        499,
+        569
+      ],
+      "bnb_modules": [
+        "Neurology",
+        "Ophthalmology"
+      ],
+      "terms": [
+        "headaches"
+      ]
+    },
+    {
+      "id": "neurology-and-special-senses-20",
+      "system": "Neurology and special senses",
+      "sequence": 12,
+      "title": "Movement disorders",
+      "firstaid_pages": [
+        499,
+        569
+      ],
+      "bnb_modules": [
+        "Neurology",
+        "Ophthalmology"
+      ],
+      "terms": [
+        "movement disorders",
+        "parkinson"
+      ]
+    },
+    {
+      "id": "neurology-and-special-senses-19",
+      "system": "Neurology and special senses",
+      "sequence": 13,
+      "title": "Demyelination",
+      "firstaid_pages": [
+        499,
+        569
+      ],
+      "bnb_modules": [
+        "Neurology",
+        "Ophthalmology"
+      ],
+      "terms": [
+        "demyelinating",
+        "multiple sclerosis"
+      ]
+    },
+    {
+      "id": "neurology-and-special-senses-16",
+      "system": "Neurology and special senses",
+      "sequence": 14,
+      "title": "Brain tumors",
+      "firstaid_pages": [
+        499,
+        569
+      ],
+      "bnb_modules": [
+        "Neurology",
+        "Ophthalmology"
+      ],
+      "terms": [
+        "brain tumors"
+      ]
+    },
+    {
       "id": "neurology-and-special-senses-28",
       "system": "Neurology and special senses",
-      "sequence": 28,
+      "sequence": 15,
       "title": "Gaze disorders",
       "firstaid_pages": [
         499,
@@ -4119,9 +2701,44 @@
       ]
     },
     {
+      "id": "neurology-and-special-senses-08",
+      "system": "Neurology and special senses",
+      "sequence": 16,
+      "title": "Spinal cord and syndromes",
+      "firstaid_pages": [
+        499,
+        569
+      ],
+      "bnb_modules": [
+        "Neurology",
+        "Ophthalmology"
+      ],
+      "terms": [
+        "spinal cord"
+      ]
+    },
+    {
+      "id": "neurology-and-special-senses-25",
+      "system": "Neurology and special senses",
+      "sequence": 17,
+      "title": "Eye anatomy and lens",
+      "firstaid_pages": [
+        499,
+        569
+      ],
+      "bnb_modules": [
+        "Neurology",
+        "Ophthalmology"
+      ],
+      "terms": [
+        "eye anatomy",
+        "lens"
+      ]
+    },
+    {
       "id": "neurology-and-special-senses-29",
       "system": "Neurology and special senses",
-      "sequence": 29,
+      "sequence": 18,
       "title": "Glaucoma and other eye disorders",
       "firstaid_pages": [
         499,
@@ -4137,25 +2754,27 @@
       ]
     },
     {
-      "id": "psychiatry-01",
-      "system": "Psychiatry",
-      "sequence": 1,
-      "title": "Learning and conditioning",
+      "id": "neurology-and-special-senses-26",
+      "system": "Neurology and special senses",
+      "sequence": 19,
+      "title": "Retina and retinal disorders",
       "firstaid_pages": [
-        569,
-        595
+        499,
+        569
       ],
       "bnb_modules": [
-        "Psychiatry"
+        "Neurology",
+        "Ophthalmology"
       ],
       "terms": [
-        "conditioning"
+        "retina",
+        "retinal"
       ]
     },
     {
       "id": "psychiatry-02",
       "system": "Psychiatry",
-      "sequence": 2,
+      "sequence": 1,
       "title": "Ego defenses",
       "firstaid_pages": [
         569,
@@ -4169,10 +2788,10 @@
       ]
     },
     {
-      "id": "psychiatry-03",
+      "id": "psychiatry-01",
       "system": "Psychiatry",
-      "sequence": 3,
-      "title": "Mood disorders",
+      "sequence": 2,
+      "title": "Learning and conditioning",
       "firstaid_pages": [
         569,
         595
@@ -4181,158 +2800,13 @@
         "Psychiatry"
       ],
       "terms": [
-        "mood disorders"
-      ]
-    },
-    {
-      "id": "psychiatry-04",
-      "system": "Psychiatry",
-      "sequence": 4,
-      "title": "Antidepressants",
-      "firstaid_pages": [
-        569,
-        595
-      ],
-      "bnb_modules": [
-        "Psychiatry"
-      ],
-      "terms": [
-        "antidepressants"
-      ]
-    },
-    {
-      "id": "psychiatry-05",
-      "system": "Psychiatry",
-      "sequence": 5,
-      "title": "Lithium",
-      "firstaid_pages": [
-        569,
-        595
-      ],
-      "bnb_modules": [
-        "Psychiatry"
-      ],
-      "terms": [
-        "lithium"
-      ]
-    },
-    {
-      "id": "psychiatry-06",
-      "system": "Psychiatry",
-      "sequence": 6,
-      "title": "Psychosis",
-      "firstaid_pages": [
-        569,
-        595
-      ],
-      "bnb_modules": [
-        "Psychiatry"
-      ],
-      "terms": [
-        "psychosis",
-        "psychotic disorders"
-      ]
-    },
-    {
-      "id": "psychiatry-07",
-      "system": "Psychiatry",
-      "sequence": 7,
-      "title": "Antipsychotics",
-      "firstaid_pages": [
-        569,
-        595
-      ],
-      "bnb_modules": [
-        "Psychiatry"
-      ],
-      "terms": [
-        "antipsychotics"
-      ]
-    },
-    {
-      "id": "psychiatry-08",
-      "system": "Psychiatry",
-      "sequence": 8,
-      "title": "Anxiety",
-      "firstaid_pages": [
-        569,
-        595
-      ],
-      "bnb_modules": [
-        "Psychiatry"
-      ],
-      "terms": [
-        "anxiety"
-      ]
-    },
-    {
-      "id": "psychiatry-09",
-      "system": "Psychiatry",
-      "sequence": 9,
-      "title": "Personality disorders",
-      "firstaid_pages": [
-        569,
-        595
-      ],
-      "bnb_modules": [
-        "Psychiatry"
-      ],
-      "terms": [
-        "personality"
-      ]
-    },
-    {
-      "id": "psychiatry-10",
-      "system": "Psychiatry",
-      "sequence": 10,
-      "title": "Somatic and factitious disorders",
-      "firstaid_pages": [
-        569,
-        595
-      ],
-      "bnb_modules": [
-        "Psychiatry"
-      ],
-      "terms": [
-        "somatic and factitious"
-      ]
-    },
-    {
-      "id": "psychiatry-11",
-      "system": "Psychiatry",
-      "sequence": 11,
-      "title": "Dissociative disorders",
-      "firstaid_pages": [
-        569,
-        595
-      ],
-      "bnb_modules": [
-        "Psychiatry"
-      ],
-      "terms": [
-        "dissociative"
-      ]
-    },
-    {
-      "id": "psychiatry-12",
-      "system": "Psychiatry",
-      "sequence": 12,
-      "title": "Eating disorders",
-      "firstaid_pages": [
-        569,
-        595
-      ],
-      "bnb_modules": [
-        "Psychiatry"
-      ],
-      "terms": [
-        "eating"
+        "conditioning"
       ]
     },
     {
       "id": "psychiatry-13",
       "system": "Psychiatry",
-      "sequence": 13,
+      "sequence": 3,
       "title": "ADHD and autism",
       "firstaid_pages": [
         569,
@@ -4347,10 +2821,10 @@
       ]
     },
     {
-      "id": "psychiatry-14",
+      "id": "psychiatry-08",
       "system": "Psychiatry",
-      "sequence": 14,
-      "title": "Other childhood disorders",
+      "sequence": 4,
+      "title": "Anxiety",
       "firstaid_pages": [
         569,
         595
@@ -4359,14 +2833,14 @@
         "Psychiatry"
       ],
       "terms": [
-        "childhood disorders"
+        "anxiety"
       ]
     },
     {
-      "id": "psychiatry-15",
+      "id": "psychiatry-11",
       "system": "Psychiatry",
-      "sequence": 15,
-      "title": "Abuse and neglect",
+      "sequence": 5,
+      "title": "Dissociative disorders",
       "firstaid_pages": [
         569,
         595
@@ -4375,14 +2849,14 @@
         "Psychiatry"
       ],
       "terms": [
-        "child abuse"
+        "dissociative"
       ]
     },
     {
-      "id": "psychiatry-16",
+      "id": "psychiatry-09",
       "system": "Psychiatry",
-      "sequence": 16,
-      "title": "Cognitive disorders",
+      "sequence": 6,
+      "title": "Personality disorders",
       "firstaid_pages": [
         569,
         595
@@ -4391,14 +2865,14 @@
         "Psychiatry"
       ],
       "terms": [
-        "cognitive disorders"
+        "personality"
       ]
     },
     {
-      "id": "psychiatry-17",
+      "id": "psychiatry-06",
       "system": "Psychiatry",
-      "sequence": 17,
-      "title": "Alcohol and sedatives",
+      "sequence": 7,
+      "title": "Psychosis",
       "firstaid_pages": [
         569,
         595
@@ -4407,13 +2881,46 @@
         "Psychiatry"
       ],
       "terms": [
-        "alcohol and cns"
+        "psychosis",
+        "psychotic disorders"
+      ]
+    },
+    {
+      "id": "psychiatry-12",
+      "system": "Psychiatry",
+      "sequence": 8,
+      "title": "Eating disorders",
+      "firstaid_pages": [
+        569,
+        595
+      ],
+      "bnb_modules": [
+        "Psychiatry"
+      ],
+      "terms": [
+        "eating"
+      ]
+    },
+    {
+      "id": "psychiatry-05",
+      "system": "Psychiatry",
+      "sequence": 9,
+      "title": "Lithium",
+      "firstaid_pages": [
+        569,
+        595
+      ],
+      "bnb_modules": [
+        "Psychiatry"
+      ],
+      "terms": [
+        "lithium"
       ]
     },
     {
       "id": "psychiatry-18",
       "system": "Psychiatry",
-      "sequence": 18,
+      "sequence": 10,
       "title": "Opioids",
       "firstaid_pages": [
         569,
@@ -4429,7 +2936,7 @@
     {
       "id": "psychiatry-19",
       "system": "Psychiatry",
-      "sequence": 19,
+      "sequence": 11,
       "title": "Stimulants",
       "firstaid_pages": [
         569,
@@ -4443,10 +2950,10 @@
       ]
     },
     {
-      "id": "psychiatry-20",
+      "id": "psychiatry-07",
       "system": "Psychiatry",
-      "sequence": 20,
-      "title": "Other substances",
+      "sequence": 12,
+      "title": "Antipsychotics",
       "firstaid_pages": [
         569,
         595
@@ -4455,45 +2962,29 @@
         "Psychiatry"
       ],
       "terms": [
-        "other drugs"
+        "antipsychotics"
       ]
     },
     {
-      "id": "renal-01",
-      "system": "Renal",
-      "sequence": 1,
-      "title": "Renal embryology",
+      "id": "psychiatry-04",
+      "system": "Psychiatry",
+      "sequence": 13,
+      "title": "Antidepressants",
       "firstaid_pages": [
-        595,
-        629
+        569,
+        595
       ],
       "bnb_modules": [
-        "Renal"
+        "Psychiatry"
       ],
       "terms": [
-        "renal embryology"
-      ]
-    },
-    {
-      "id": "renal-02",
-      "system": "Renal",
-      "sequence": 2,
-      "title": "Renal anatomy",
-      "firstaid_pages": [
-        595,
-        629
-      ],
-      "bnb_modules": [
-        "Renal"
-      ],
-      "terms": [
-        "renal anatomy"
+        "antidepressants"
       ]
     },
     {
       "id": "renal-03",
       "system": "Renal",
-      "sequence": 3,
+      "sequence": 1,
       "title": "Fluid compartments",
       "firstaid_pages": [
         595,
@@ -4509,7 +3000,7 @@
     {
       "id": "renal-04",
       "system": "Renal",
-      "sequence": 4,
+      "sequence": 2,
       "title": "Glomerular filtration and clearance",
       "firstaid_pages": [
         595,
@@ -4524,10 +3015,43 @@
       ]
     },
     {
-      "id": "renal-05",
+      "id": "renal-15",
+      "system": "Renal",
+      "sequence": 3,
+      "title": "Renal tubular acidosis",
+      "firstaid_pages": [
+        595,
+        629
+      ],
+      "bnb_modules": [
+        "Renal"
+      ],
+      "terms": [
+        "renal tubular acidosis"
+      ]
+    },
+    {
+      "id": "renal-21",
+      "system": "Renal",
+      "sequence": 4,
+      "title": "Nephritic disorders",
+      "firstaid_pages": [
+        595,
+        629
+      ],
+      "bnb_modules": [
+        "Renal"
+      ],
+      "terms": [
+        "nephritic",
+        "mpgn"
+      ]
+    },
+    {
+      "id": "renal-22",
       "system": "Renal",
       "sequence": 5,
-      "title": "Tubular transport",
+      "title": "Nephrotic disorders",
       "firstaid_pages": [
         595,
         629
@@ -4536,14 +3060,14 @@
         "Renal"
       ],
       "terms": [
-        "secretion and absorption"
+        "nephrotic"
       ]
     },
     {
-      "id": "renal-06",
+      "id": "renal-26",
       "system": "Renal",
       "sequence": 6,
-      "title": "Proximal tubule",
+      "title": "Nephrolithiasis",
       "firstaid_pages": [
         595,
         629
@@ -4552,14 +3076,14 @@
         "Renal"
       ],
       "terms": [
-        "proximal tubule"
+        "kidney stones"
       ]
     },
     {
-      "id": "renal-07",
+      "id": "renal-23",
       "system": "Renal",
       "sequence": 7,
-      "title": "Loop and distal tubule",
+      "title": "Renal failure",
       "firstaid_pages": [
         595,
         629
@@ -4568,14 +3092,14 @@
         "Renal"
       ],
       "terms": [
-        "loop of henle"
+        "renal failure"
       ]
     },
     {
-      "id": "renal-08",
+      "id": "renal-24",
       "system": "Renal",
       "sequence": 8,
-      "title": "Collecting duct",
+      "title": "Tubulointerstitial disease",
       "firstaid_pages": [
         595,
         629
@@ -4584,14 +3108,14 @@
         "Renal"
       ],
       "terms": [
-        "collecting duct"
+        "tubulointerstitial"
       ]
     },
     {
-      "id": "renal-09",
+      "id": "renal-25",
       "system": "Renal",
       "sequence": 9,
-      "title": "RAAS",
+      "title": "Cystic kidney disease",
       "firstaid_pages": [
         595,
         629
@@ -4600,7 +3124,7 @@
         "Renal"
       ],
       "terms": [
-        "renin angiotensin"
+        "cystic kidney"
       ]
     },
     {
@@ -4620,122 +3144,9 @@
       ]
     },
     {
-      "id": "renal-11",
-      "system": "Renal",
-      "sequence": 11,
-      "title": "Acid-base principles",
-      "firstaid_pages": [
-        595,
-        629
-      ],
-      "bnb_modules": [
-        "Renal"
-      ],
-      "terms": [
-        "acid base principles"
-      ]
-    },
-    {
-      "id": "renal-12",
-      "system": "Renal",
-      "sequence": 12,
-      "title": "Renal acid excretion",
-      "firstaid_pages": [
-        595,
-        629
-      ],
-      "bnb_modules": [
-        "Renal"
-      ],
-      "terms": [
-        "acid excretion"
-      ]
-    },
-    {
-      "id": "renal-13",
-      "system": "Renal",
-      "sequence": 13,
-      "title": "Metabolic acidosis",
-      "firstaid_pages": [
-        595,
-        629
-      ],
-      "bnb_modules": [
-        "Renal"
-      ],
-      "terms": [
-        "metabolic acidosis"
-      ]
-    },
-    {
-      "id": "renal-14",
-      "system": "Renal",
-      "sequence": 14,
-      "title": "Metabolic alkalosis",
-      "firstaid_pages": [
-        595,
-        629
-      ],
-      "bnb_modules": [
-        "Renal"
-      ],
-      "terms": [
-        "metabolic alkalosis"
-      ]
-    },
-    {
-      "id": "renal-15",
-      "system": "Renal",
-      "sequence": 15,
-      "title": "Renal tubular acidosis",
-      "firstaid_pages": [
-        595,
-        629
-      ],
-      "bnb_modules": [
-        "Renal"
-      ],
-      "terms": [
-        "renal tubular acidosis"
-      ]
-    },
-    {
-      "id": "renal-16",
-      "system": "Renal",
-      "sequence": 16,
-      "title": "Respiratory acid-base disorders",
-      "firstaid_pages": [
-        595,
-        629
-      ],
-      "bnb_modules": [
-        "Renal"
-      ],
-      "terms": [
-        "respiratory acid base"
-      ]
-    },
-    {
-      "id": "renal-17",
-      "system": "Renal",
-      "sequence": 17,
-      "title": "Sodium and water disorders",
-      "firstaid_pages": [
-        595,
-        629
-      ],
-      "bnb_modules": [
-        "Renal"
-      ],
-      "terms": [
-        "hyponatremia",
-        "diabetes insipidus"
-      ]
-    },
-    {
       "id": "renal-18",
       "system": "Renal",
-      "sequence": 18,
+      "sequence": 11,
       "title": "Potassium disorders",
       "firstaid_pages": [
         595,
@@ -4749,155 +3160,10 @@
       ]
     },
     {
-      "id": "renal-19",
-      "system": "Renal",
-      "sequence": 19,
-      "title": "Calcium phosphate and magnesium",
-      "firstaid_pages": [
-        595,
-        629
-      ],
-      "bnb_modules": [
-        "Renal"
-      ],
-      "terms": [
-        "calcium phosphate and magnesium"
-      ]
-    },
-    {
-      "id": "renal-20",
-      "system": "Renal",
-      "sequence": 20,
-      "title": "Glomerular disease foundations",
-      "firstaid_pages": [
-        595,
-        629
-      ],
-      "bnb_modules": [
-        "Renal"
-      ],
-      "terms": [
-        "glomerular disease principles"
-      ]
-    },
-    {
-      "id": "renal-21",
-      "system": "Renal",
-      "sequence": 21,
-      "title": "Nephritic disorders",
-      "firstaid_pages": [
-        595,
-        629
-      ],
-      "bnb_modules": [
-        "Renal"
-      ],
-      "terms": [
-        "nephritic",
-        "mpgn"
-      ]
-    },
-    {
-      "id": "renal-22",
-      "system": "Renal",
-      "sequence": 22,
-      "title": "Nephrotic disorders",
-      "firstaid_pages": [
-        595,
-        629
-      ],
-      "bnb_modules": [
-        "Renal"
-      ],
-      "terms": [
-        "nephrotic"
-      ]
-    },
-    {
-      "id": "renal-23",
-      "system": "Renal",
-      "sequence": 23,
-      "title": "Renal failure",
-      "firstaid_pages": [
-        595,
-        629
-      ],
-      "bnb_modules": [
-        "Renal"
-      ],
-      "terms": [
-        "renal failure"
-      ]
-    },
-    {
-      "id": "renal-24",
-      "system": "Renal",
-      "sequence": 24,
-      "title": "Tubulointerstitial disease",
-      "firstaid_pages": [
-        595,
-        629
-      ],
-      "bnb_modules": [
-        "Renal"
-      ],
-      "terms": [
-        "tubulointerstitial"
-      ]
-    },
-    {
-      "id": "renal-25",
-      "system": "Renal",
-      "sequence": 25,
-      "title": "Cystic kidney disease",
-      "firstaid_pages": [
-        595,
-        629
-      ],
-      "bnb_modules": [
-        "Renal"
-      ],
-      "terms": [
-        "cystic kidney"
-      ]
-    },
-    {
-      "id": "renal-26",
-      "system": "Renal",
-      "sequence": 26,
-      "title": "Nephrolithiasis",
-      "firstaid_pages": [
-        595,
-        629
-      ],
-      "bnb_modules": [
-        "Renal"
-      ],
-      "terms": [
-        "kidney stones"
-      ]
-    },
-    {
-      "id": "renal-27",
-      "system": "Renal",
-      "sequence": 27,
-      "title": "Urinary tract tumors",
-      "firstaid_pages": [
-        595,
-        629
-      ],
-      "bnb_modules": [
-        "Renal"
-      ],
-      "terms": [
-        "renal and bladder tumors"
-      ]
-    },
-    {
-      "id": "reproductive-01",
+      "id": "reproductive-04",
       "system": "Reproductive",
       "sequence": 1,
-      "title": "Early embryogenesis",
+      "title": "Teratogens",
       "firstaid_pages": [
         629,
         677
@@ -4907,15 +3173,66 @@
         "Endocrinology"
       ],
       "terms": [
-        "embryogenesis",
-        "embryonic genes",
-        "germ layers"
+        "teratogens"
+      ]
+    },
+    {
+      "id": "reproductive-22",
+      "system": "Reproductive",
+      "sequence": 2,
+      "title": "Placenta and complications",
+      "firstaid_pages": [
+        629,
+        677
+      ],
+      "bnb_modules": [
+        "Reproductive",
+        "Endocrinology"
+      ],
+      "terms": [
+        "placenta",
+        "placental complications"
+      ]
+    },
+    {
+      "id": "reproductive-21",
+      "system": "Reproductive",
+      "sequence": 3,
+      "title": "Pregnancy and twins",
+      "firstaid_pages": [
+        629,
+        677
+      ],
+      "bnb_modules": [
+        "Reproductive",
+        "Endocrinology"
+      ],
+      "terms": [
+        "pregnancy",
+        "twins"
+      ]
+    },
+    {
+      "id": "reproductive-03",
+      "system": "Reproductive",
+      "sequence": 4,
+      "title": "Pharyngeal apparatus",
+      "firstaid_pages": [
+        629,
+        677
+      ],
+      "bnb_modules": [
+        "Reproductive",
+        "Endocrinology"
+      ],
+      "terms": [
+        "pharyngeal"
       ]
     },
     {
       "id": "reproductive-02",
       "system": "Reproductive",
-      "sequence": 2,
+      "sequence": 5,
       "title": "Developmental malformations",
       "firstaid_pages": [
         629,
@@ -4931,43 +3248,9 @@
       ]
     },
     {
-      "id": "reproductive-03",
-      "system": "Reproductive",
-      "sequence": 3,
-      "title": "Pharyngeal apparatus",
-      "firstaid_pages": [
-        629,
-        677
-      ],
-      "bnb_modules": [
-        "Reproductive",
-        "Endocrinology"
-      ],
-      "terms": [
-        "pharyngeal"
-      ]
-    },
-    {
-      "id": "reproductive-04",
-      "system": "Reproductive",
-      "sequence": 4,
-      "title": "Teratogens",
-      "firstaid_pages": [
-        629,
-        677
-      ],
-      "bnb_modules": [
-        "Reproductive",
-        "Endocrinology"
-      ],
-      "terms": [
-        "teratogens"
-      ]
-    },
-    {
       "id": "reproductive-05",
       "system": "Reproductive",
-      "sequence": 5,
+      "sequence": 6,
       "title": "Genital development",
       "firstaid_pages": [
         629,
@@ -4983,43 +3266,9 @@
       ]
     },
     {
-      "id": "reproductive-06",
-      "system": "Reproductive",
-      "sequence": 6,
-      "title": "Gametogenesis",
-      "firstaid_pages": [
-        629,
-        677
-      ],
-      "bnb_modules": [
-        "Reproductive",
-        "Endocrinology"
-      ],
-      "terms": [
-        "spermatogenesis and oogenesis"
-      ]
-    },
-    {
-      "id": "reproductive-07",
-      "system": "Reproductive",
-      "sequence": 7,
-      "title": "Reproductive hormonal physiology",
-      "firstaid_pages": [
-        629,
-        677
-      ],
-      "bnb_modules": [
-        "Reproductive",
-        "Endocrinology"
-      ],
-      "terms": [
-        "reproductive hormones"
-      ]
-    },
-    {
       "id": "reproductive-08",
       "system": "Reproductive",
-      "sequence": 8,
+      "sequence": 7,
       "title": "Menstrual cycle",
       "firstaid_pages": [
         629,
@@ -5036,7 +3285,7 @@
     {
       "id": "reproductive-09",
       "system": "Reproductive",
-      "sequence": 9,
+      "sequence": 8,
       "title": "Amenorrhea and hypogonadism",
       "firstaid_pages": [
         629,
@@ -5052,238 +3301,9 @@
       ]
     },
     {
-      "id": "reproductive-10",
-      "system": "Reproductive",
-      "sequence": 10,
-      "title": "Contraception",
-      "firstaid_pages": [
-        629,
-        677
-      ],
-      "bnb_modules": [
-        "Reproductive",
-        "Endocrinology"
-      ],
-      "terms": [
-        "contraceptives"
-      ]
-    },
-    {
-      "id": "reproductive-11",
-      "system": "Reproductive",
-      "sequence": 11,
-      "title": "Penile and scrotal disorders",
-      "firstaid_pages": [
-        629,
-        677
-      ],
-      "bnb_modules": [
-        "Reproductive",
-        "Endocrinology"
-      ],
-      "terms": [
-        "penile disorders",
-        "scrotal disorders"
-      ]
-    },
-    {
-      "id": "reproductive-12",
-      "system": "Reproductive",
-      "sequence": 12,
-      "title": "Prostate",
-      "firstaid_pages": [
-        629,
-        677
-      ],
-      "bnb_modules": [
-        "Reproductive",
-        "Endocrinology"
-      ],
-      "terms": [
-        "prostate"
-      ]
-    },
-    {
-      "id": "reproductive-13",
-      "system": "Reproductive",
-      "sequence": 13,
-      "title": "Testicular cancer",
-      "firstaid_pages": [
-        629,
-        677
-      ],
-      "bnb_modules": [
-        "Reproductive",
-        "Endocrinology"
-      ],
-      "terms": [
-        "testicular cancer"
-      ]
-    },
-    {
-      "id": "reproductive-14",
-      "system": "Reproductive",
-      "sequence": 14,
-      "title": "Ovarian cysts",
-      "firstaid_pages": [
-        629,
-        677
-      ],
-      "bnb_modules": [
-        "Reproductive",
-        "Endocrinology"
-      ],
-      "terms": [
-        "ovarian cysts"
-      ]
-    },
-    {
-      "id": "reproductive-15",
-      "system": "Reproductive",
-      "sequence": 15,
-      "title": "Ovarian epithelial tumors",
-      "firstaid_pages": [
-        629,
-        677
-      ],
-      "bnb_modules": [
-        "Reproductive",
-        "Endocrinology"
-      ],
-      "terms": [
-        "ovarian epithelial"
-      ]
-    },
-    {
-      "id": "reproductive-16",
-      "system": "Reproductive",
-      "sequence": 16,
-      "title": "Ovarian germ cell and stromal tumors",
-      "firstaid_pages": [
-        629,
-        677
-      ],
-      "bnb_modules": [
-        "Reproductive",
-        "Endocrinology"
-      ],
-      "terms": [
-        "ovarian germ cell",
-        "ovarian stromal"
-      ]
-    },
-    {
-      "id": "reproductive-17",
-      "system": "Reproductive",
-      "sequence": 17,
-      "title": "Endometrial disorders and endometriosis",
-      "firstaid_pages": [
-        629,
-        677
-      ],
-      "bnb_modules": [
-        "Reproductive",
-        "Endocrinology"
-      ],
-      "terms": [
-        "endometrial disorders",
-        "endometriosis"
-      ]
-    },
-    {
-      "id": "reproductive-18",
-      "system": "Reproductive",
-      "sequence": 18,
-      "title": "Gynecologic cancers",
-      "firstaid_pages": [
-        629,
-        677
-      ],
-      "bnb_modules": [
-        "Reproductive",
-        "Endocrinology"
-      ],
-      "terms": [
-        "cervical cancer",
-        "endometrial cancer",
-        "vaginal cancer"
-      ]
-    },
-    {
-      "id": "reproductive-19",
-      "system": "Reproductive",
-      "sequence": 19,
-      "title": "Breast physiology and benign disease",
-      "firstaid_pages": [
-        629,
-        677
-      ],
-      "bnb_modules": [
-        "Reproductive",
-        "Endocrinology"
-      ],
-      "terms": [
-        "breast tissue",
-        "breast disorders"
-      ]
-    },
-    {
-      "id": "reproductive-20",
-      "system": "Reproductive",
-      "sequence": 20,
-      "title": "Breast carcinoma",
-      "firstaid_pages": [
-        629,
-        677
-      ],
-      "bnb_modules": [
-        "Reproductive",
-        "Endocrinology"
-      ],
-      "terms": [
-        "breast carcinoma"
-      ]
-    },
-    {
-      "id": "reproductive-21",
-      "system": "Reproductive",
-      "sequence": 21,
-      "title": "Pregnancy and twins",
-      "firstaid_pages": [
-        629,
-        677
-      ],
-      "bnb_modules": [
-        "Reproductive",
-        "Endocrinology"
-      ],
-      "terms": [
-        "pregnancy",
-        "twins"
-      ]
-    },
-    {
-      "id": "reproductive-22",
-      "system": "Reproductive",
-      "sequence": 22,
-      "title": "Placenta and complications",
-      "firstaid_pages": [
-        629,
-        677
-      ],
-      "bnb_modules": [
-        "Reproductive",
-        "Endocrinology"
-      ],
-      "terms": [
-        "placenta",
-        "placental complications"
-      ]
-    },
-    {
       "id": "reproductive-23",
       "system": "Reproductive",
-      "sequence": 23,
+      "sequence": 9,
       "title": "Maternal-fetal complications",
       "firstaid_pages": [
         629,
@@ -5299,10 +3319,10 @@
       ]
     },
     {
-      "id": "reproductive-24",
+      "id": "reproductive-14",
       "system": "Reproductive",
-      "sequence": 24,
-      "title": "Congenital infections",
+      "sequence": 10,
+      "title": "Ovarian cysts",
       "firstaid_pages": [
         629,
         677
@@ -5312,14 +3332,14 @@
         "Endocrinology"
       ],
       "terms": [
-        "torch infections"
+        "ovarian cysts"
       ]
     },
     {
-      "id": "reproductive-25",
+      "id": "reproductive-07",
       "system": "Reproductive",
-      "sequence": 25,
-      "title": "Gestational tumors",
+      "sequence": 11,
+      "title": "Reproductive hormonal physiology",
       "firstaid_pages": [
         629,
         677
@@ -5329,78 +3349,13 @@
         "Endocrinology"
       ],
       "terms": [
-        "gestational tumors"
-      ]
-    },
-    {
-      "id": "respiratory-01",
-      "system": "Respiratory",
-      "sequence": 1,
-      "title": "Pulmonary embryology",
-      "firstaid_pages": [
-        677,
-        707
-      ],
-      "bnb_modules": [
-        "Pulmonary"
-      ],
-      "terms": [
-        "pulmonary embryology"
-      ]
-    },
-    {
-      "id": "respiratory-02",
-      "system": "Respiratory",
-      "sequence": 2,
-      "title": "Pulmonary anatomy",
-      "firstaid_pages": [
-        677,
-        707
-      ],
-      "bnb_modules": [
-        "Pulmonary"
-      ],
-      "terms": [
-        "pulmonary anatomy"
-      ]
-    },
-    {
-      "id": "respiratory-03",
-      "system": "Respiratory",
-      "sequence": 3,
-      "title": "Respiratory mechanics",
-      "firstaid_pages": [
-        677,
-        707
-      ],
-      "bnb_modules": [
-        "Pulmonary"
-      ],
-      "terms": [
-        "pulmonary physiology"
-      ]
-    },
-    {
-      "id": "respiratory-04",
-      "system": "Respiratory",
-      "sequence": 4,
-      "title": "Gas transport",
-      "firstaid_pages": [
-        677,
-        707
-      ],
-      "bnb_modules": [
-        "Pulmonary"
-      ],
-      "terms": [
-        "hemoglobin",
-        "carbon dioxide"
+        "reproductive hormones"
       ]
     },
     {
       "id": "respiratory-05",
       "system": "Respiratory",
-      "sequence": 5,
+      "sequence": 1,
       "title": "Ventilation perfusion and dead space",
       "firstaid_pages": [
         677,
@@ -5417,7 +3372,7 @@
     {
       "id": "respiratory-06",
       "system": "Respiratory",
-      "sequence": 6,
+      "sequence": 2,
       "title": "Hypoxia and hypoxemia",
       "firstaid_pages": [
         677,
@@ -5432,10 +3387,10 @@
       ]
     },
     {
-      "id": "respiratory-07",
+      "id": "respiratory-04",
       "system": "Respiratory",
-      "sequence": 7,
-      "title": "Pulmonary circulation",
+      "sequence": 3,
+      "title": "Gas transport",
       "firstaid_pages": [
         677,
         707
@@ -5444,13 +3399,46 @@
         "Pulmonary"
       ],
       "terms": [
-        "pulmonary circulation"
+        "hemoglobin",
+        "carbon dioxide"
+      ]
+    },
+    {
+      "id": "respiratory-14",
+      "system": "Respiratory",
+      "sequence": 4,
+      "title": "Restrictive lung disease",
+      "firstaid_pages": [
+        677,
+        707
+      ],
+      "bnb_modules": [
+        "Pulmonary"
+      ],
+      "terms": [
+        "restrictive lung"
+      ]
+    },
+    {
+      "id": "respiratory-19",
+      "system": "Respiratory",
+      "sequence": 5,
+      "title": "Sarcoidosis",
+      "firstaid_pages": [
+        677,
+        707
+      ],
+      "bnb_modules": [
+        "Pulmonary"
+      ],
+      "terms": [
+        "sarcoidosis"
       ]
     },
     {
       "id": "respiratory-08",
       "system": "Respiratory",
-      "sequence": 8,
+      "sequence": 6,
       "title": "Pulmonary hypertension",
       "firstaid_pages": [
         677,
@@ -5464,10 +3452,10 @@
       ]
     },
     {
-      "id": "respiratory-09",
+      "id": "respiratory-22",
       "system": "Respiratory",
-      "sequence": 9,
-      "title": "Examination and imaging",
+      "sequence": 7,
+      "title": "Sleep apnea",
       "firstaid_pages": [
         677,
         707
@@ -5476,15 +3464,14 @@
         "Pulmonary"
       ],
       "terms": [
-        "physical exam",
-        "chest x rays"
+        "sleep apnea"
       ]
     },
     {
-      "id": "respiratory-10",
+      "id": "respiratory-17",
       "system": "Respiratory",
-      "sequence": 10,
-      "title": "Pulmonary function tests",
+      "sequence": 8,
+      "title": "Pneumonia",
       "firstaid_pages": [
         677,
         707
@@ -5493,13 +3480,223 @@
         "Pulmonary"
       ],
       "terms": [
-        "pulmonary function"
+        "pneumonia"
+      ]
+    },
+    {
+      "id": "respiratory-21",
+      "system": "Respiratory",
+      "sequence": 9,
+      "title": "Lung cancer",
+      "firstaid_pages": [
+        677,
+        707
+      ],
+      "bnb_modules": [
+        "Pulmonary"
+      ],
+      "terms": [
+        "lung cancer"
+      ]
+    },
+    {
+      "id": "psychiatry-15",
+      "system": "Psychiatry",
+      "sequence": 0,
+      "title": "Abuse and neglect",
+      "firstaid_pages": [
+        569,
+        595
+      ],
+      "bnb_modules": [
+        "Psychiatry"
+      ],
+      "terms": [
+        "child abuse"
+      ]
+    },
+    {
+      "id": "renal-11",
+      "system": "Renal",
+      "sequence": 0,
+      "title": "Acid-base principles",
+      "firstaid_pages": [
+        595,
+        629
+      ],
+      "bnb_modules": [
+        "Renal"
+      ],
+      "terms": [
+        "acid base principles"
+      ]
+    },
+    {
+      "id": "general-pathology-05",
+      "system": "General pathology",
+      "sequence": 0,
+      "title": "Acute and chronic inflammation",
+      "firstaid_pages": [
+        201,
+        227
+      ],
+      "bnb_modules": [
+        "Pathology"
+      ],
+      "terms": [
+        "inflammation principles",
+        "acute and chronic"
+      ]
+    },
+    {
+      "id": "hematology-and-oncology-17",
+      "system": "Hematology and oncology",
+      "sequence": 0,
+      "title": "Acute leukemias",
+      "firstaid_pages": [
+        409,
+        449
+      ],
+      "bnb_modules": [
+        "Hematology"
+      ],
+      "terms": [
+        "acute leukemias"
+      ]
+    },
+    {
+      "id": "endocrine-11",
+      "system": "Endocrine",
+      "sequence": 0,
+      "title": "Adrenal physiology",
+      "firstaid_pages": [
+        329,
+        363
+      ],
+      "bnb_modules": [
+        "Endocrinology"
+      ],
+      "terms": [
+        "adrenal glands"
+      ]
+    },
+    {
+      "id": "endocrine-16",
+      "system": "Endocrine",
+      "sequence": 0,
+      "title": "Adrenal tumors",
+      "firstaid_pages": [
+        329,
+        363
+      ],
+      "bnb_modules": [
+        "Endocrinology"
+      ],
+      "terms": [
+        "adrenal tumors"
+      ]
+    },
+    {
+      "id": "psychiatry-17",
+      "system": "Psychiatry",
+      "sequence": 0,
+      "title": "Alcohol and sedatives",
+      "firstaid_pages": [
+        569,
+        595
+      ],
+      "bnb_modules": [
+        "Psychiatry"
+      ],
+      "terms": [
+        "alcohol and cns"
+      ]
+    },
+    {
+      "id": "hematology-and-oncology-16",
+      "system": "Hematology and oncology",
+      "sequence": 0,
+      "title": "Anticoagulants",
+      "firstaid_pages": [
+        409,
+        449
+      ],
+      "bnb_modules": [
+        "Hematology"
+      ],
+      "terms": [
+        "anticoagulants"
+      ]
+    },
+    {
+      "id": "cardiovascular-22",
+      "system": "Cardiovascular",
+      "sequence": 0,
+      "title": "Antihypertensive drugs",
+      "firstaid_pages": [
+        283,
+        329
+      ],
+      "bnb_modules": [
+        "Cardiology"
+      ],
+      "terms": [
+        "antihypertensives"
+      ]
+    },
+    {
+      "id": "hematology-and-oncology-15",
+      "system": "Hematology and oncology",
+      "sequence": 0,
+      "title": "Antiplatelet drugs",
+      "firstaid_pages": [
+        409,
+        449
+      ],
+      "bnb_modules": [
+        "Hematology"
+      ],
+      "terms": [
+        "antiplatelets"
+      ]
+    },
+    {
+      "id": "microbiology-25",
+      "system": "Microbiology",
+      "sequence": 0,
+      "title": "Antiviral pharmacology",
+      "firstaid_pages": [
+        121,
+        201
+      ],
+      "bnb_modules": [
+        "Infectious Disease"
+      ],
+      "terms": [
+        "antiviral",
+        "hiv drugs"
+      ]
+    },
+    {
+      "id": "cardiovascular-24",
+      "system": "Cardiovascular",
+      "sequence": 0,
+      "title": "Aortic disease",
+      "firstaid_pages": [
+        283,
+        329
+      ],
+      "bnb_modules": [
+        "Cardiology"
+      ],
+      "terms": [
+        "aortic disease"
       ]
     },
     {
       "id": "respiratory-11",
       "system": "Respiratory",
-      "sequence": 11,
+      "sequence": 0,
       "title": "Asthma and bronchiectasis",
       "firstaid_pages": [
         677,
@@ -5514,9 +3711,114 @@
       ]
     },
     {
+      "id": "cardiovascular-11",
+      "system": "Cardiovascular",
+      "sequence": 0,
+      "title": "Atrial arrhythmias",
+      "firstaid_pages": [
+        283,
+        329
+      ],
+      "bnb_modules": [
+        "Cardiology"
+      ],
+      "terms": [
+        "atrial fibrillation",
+        "flutter"
+      ]
+    },
+    {
+      "id": "neurology-and-special-senses-05",
+      "system": "Neurology and special senses",
+      "sequence": 0,
+      "title": "Autonomic pharmacology",
+      "firstaid_pages": [
+        499,
+        569
+      ],
+      "bnb_modules": [
+        "Neurology",
+        "Ophthalmology"
+      ],
+      "terms": [
+        "adrenergic drugs",
+        "cholinergic"
+      ]
+    },
+    {
+      "id": "neurology-and-special-senses-04",
+      "system": "Neurology and special senses",
+      "sequence": 0,
+      "title": "Autonomic physiology",
+      "firstaid_pages": [
+        499,
+        569
+      ],
+      "bnb_modules": [
+        "Neurology",
+        "Ophthalmology"
+      ],
+      "terms": [
+        "autonomic nervous system",
+        "autonomic receptors"
+      ]
+    },
+    {
+      "id": "cardiovascular-06",
+      "system": "Cardiovascular",
+      "sequence": 0,
+      "title": "Blood pressure and exercise responses",
+      "firstaid_pages": [
+        283,
+        329
+      ],
+      "bnb_modules": [
+        "Cardiology"
+      ],
+      "terms": [
+        "regulation of blood pressure",
+        "response to exercise"
+      ]
+    },
+    {
+      "id": "reproductive-20",
+      "system": "Reproductive",
+      "sequence": 0,
+      "title": "Breast carcinoma",
+      "firstaid_pages": [
+        629,
+        677
+      ],
+      "bnb_modules": [
+        "Reproductive",
+        "Endocrinology"
+      ],
+      "terms": [
+        "breast carcinoma"
+      ]
+    },
+    {
+      "id": "reproductive-19",
+      "system": "Reproductive",
+      "sequence": 0,
+      "title": "Breast physiology and benign disease",
+      "firstaid_pages": [
+        629,
+        677
+      ],
+      "bnb_modules": [
+        "Reproductive",
+        "Endocrinology"
+      ],
+      "terms": [
+        "breast tissue",
+        "breast disorders"
+      ]
+    },
+    {
       "id": "respiratory-12",
       "system": "Respiratory",
-      "sequence": 12,
+      "sequence": 0,
       "title": "COPD",
       "firstaid_pages": [
         677,
@@ -5530,41 +3832,207 @@
       ]
     },
     {
-      "id": "respiratory-13",
-      "system": "Respiratory",
-      "sequence": 13,
-      "title": "Obstructive disease treatment",
+      "id": "neurology-and-special-senses-12",
+      "system": "Neurology and special senses",
+      "sequence": 0,
+      "title": "CSF ventricles and sinuses",
       "firstaid_pages": [
-        677,
-        707
+        499,
+        569
       ],
       "bnb_modules": [
-        "Pulmonary"
+        "Neurology",
+        "Ophthalmology"
       ],
       "terms": [
-        "treatment of copd and asthma"
+        "ventricles and sinuses"
       ]
     },
     {
-      "id": "respiratory-14",
-      "system": "Respiratory",
-      "sequence": 14,
-      "title": "Restrictive lung disease",
+      "id": "general-pathology-04",
+      "system": "General pathology",
+      "sequence": 0,
+      "title": "Calcification",
       "firstaid_pages": [
-        677,
-        707
+        201,
+        227
       ],
       "bnb_modules": [
-        "Pulmonary"
+        "Pathology"
       ],
       "terms": [
-        "restrictive lung"
+        "pathologic calcification"
+      ]
+    },
+    {
+      "id": "renal-19",
+      "system": "Renal",
+      "sequence": 0,
+      "title": "Calcium phosphate and magnesium",
+      "firstaid_pages": [
+        595,
+        629
+      ],
+      "bnb_modules": [
+        "Renal"
+      ],
+      "terms": [
+        "calcium phosphate and magnesium"
+      ]
+    },
+    {
+      "id": "cardiovascular-09",
+      "system": "Cardiovascular",
+      "sequence": 0,
+      "title": "Cardiac action potentials",
+      "firstaid_pages": [
+        283,
+        329
+      ],
+      "bnb_modules": [
+        "Cardiology"
+      ],
+      "terms": [
+        "cardiac action potentials"
+      ]
+    },
+    {
+      "id": "hematology-and-oncology-18",
+      "system": "Hematology and oncology",
+      "sequence": 0,
+      "title": "Chronic leukemias",
+      "firstaid_pages": [
+        409,
+        449
+      ],
+      "bnb_modules": [
+        "Hematology"
+      ],
+      "terms": [
+        "chronic leukemias"
+      ]
+    },
+    {
+      "id": "hematology-and-oncology-13",
+      "system": "Hematology and oncology",
+      "sequence": 0,
+      "title": "Coagulopathies",
+      "firstaid_pages": [
+        409,
+        449
+      ],
+      "bnb_modules": [
+        "Hematology"
+      ],
+      "terms": [
+        "coagulopathies"
+      ]
+    },
+    {
+      "id": "psychiatry-16",
+      "system": "Psychiatry",
+      "sequence": 0,
+      "title": "Cognitive disorders",
+      "firstaid_pages": [
+        569,
+        595
+      ],
+      "bnb_modules": [
+        "Psychiatry"
+      ],
+      "terms": [
+        "cognitive disorders"
+      ]
+    },
+    {
+      "id": "renal-08",
+      "system": "Renal",
+      "sequence": 0,
+      "title": "Collecting duct",
+      "firstaid_pages": [
+        595,
+        629
+      ],
+      "bnb_modules": [
+        "Renal"
+      ],
+      "terms": [
+        "collecting duct"
+      ]
+    },
+    {
+      "id": "reproductive-24",
+      "system": "Reproductive",
+      "sequence": 0,
+      "title": "Congenital infections",
+      "firstaid_pages": [
+        629,
+        677
+      ],
+      "bnb_modules": [
+        "Reproductive",
+        "Endocrinology"
+      ],
+      "terms": [
+        "torch infections"
+      ]
+    },
+    {
+      "id": "reproductive-10",
+      "system": "Reproductive",
+      "sequence": 0,
+      "title": "Contraception",
+      "firstaid_pages": [
+        629,
+        677
+      ],
+      "bnb_modules": [
+        "Reproductive",
+        "Endocrinology"
+      ],
+      "terms": [
+        "contraceptives"
+      ]
+    },
+    {
+      "id": "public-health-and-behavioral-science-02",
+      "system": "Public health and behavioral science",
+      "sequence": 0,
+      "title": "Correlation",
+      "firstaid_pages": [
+        255,
+        283
+      ],
+      "bnb_modules": [
+        "Biostats/Epi",
+        "Behavioral Science"
+      ],
+      "terms": [
+        "correlations"
+      ]
+    },
+    {
+      "id": "microbiology-02",
+      "system": "Microbiology",
+      "sequence": 0,
+      "title": "Culture and growth",
+      "firstaid_pages": [
+        121,
+        201
+      ],
+      "bnb_modules": [
+        "Infectious Disease"
+      ],
+      "terms": [
+        "bacterial culture",
+        "special growth",
+        "growth and genetics"
       ]
     },
     {
       "id": "respiratory-15",
       "system": "Respiratory",
-      "sequence": 15,
+      "sequence": 0,
       "title": "Cystic fibrosis",
       "firstaid_pages": [
         677,
@@ -5578,9 +4046,1242 @@
       ]
     },
     {
+      "id": "endocrine-20",
+      "system": "Endocrine",
+      "sequence": 0,
+      "title": "Diabetes mechanisms",
+      "firstaid_pages": [
+        329,
+        363
+      ],
+      "bnb_modules": [
+        "Endocrinology"
+      ],
+      "terms": [
+        "type i diabetes",
+        "type ii diabetes"
+      ]
+    },
+    {
+      "id": "endocrine-21",
+      "system": "Endocrine",
+      "sequence": 0,
+      "title": "Diabetes pharmacotherapy",
+      "firstaid_pages": [
+        329,
+        363
+      ],
+      "bnb_modules": [
+        "Endocrinology"
+      ],
+      "terms": [
+        "treatment of diabetes",
+        "insulin medications"
+      ]
+    },
+    {
+      "id": "public-health-and-behavioral-science-07",
+      "system": "Public health and behavioral science",
+      "sequence": 0,
+      "title": "Diagnostic test accuracy",
+      "firstaid_pages": [
+        255,
+        283
+      ],
+      "bnb_modules": [
+        "Biostats/Epi",
+        "Behavioral Science"
+      ],
+      "terms": [
+        "diagnostic tests",
+        "sensitivity and specificity"
+      ]
+    },
+    {
+      "id": "general-pharmacology-03",
+      "system": "General pharmacology",
+      "sequence": 0,
+      "title": "Dose-response relationships",
+      "firstaid_pages": [
+        227,
+        255
+      ],
+      "bnb_modules": [
+        "Basic Pharmacology",
+        "Anesthesia"
+      ],
+      "terms": [
+        "dose response"
+      ]
+    },
+    {
+      "id": "cardiovascular-10",
+      "system": "Cardiovascular",
+      "sequence": 0,
+      "title": "ECG interpretation",
+      "firstaid_pages": [
+        283,
+        329
+      ],
+      "bnb_modules": [
+        "Cardiology"
+      ],
+      "terms": [
+        "ekg",
+        "electrocardiogram",
+        "ekgs"
+      ]
+    },
+    {
+      "id": "reproductive-01",
+      "system": "Reproductive",
+      "sequence": 0,
+      "title": "Early embryogenesis",
+      "firstaid_pages": [
+        629,
+        677
+      ],
+      "bnb_modules": [
+        "Reproductive",
+        "Endocrinology"
+      ],
+      "terms": [
+        "embryogenesis",
+        "embryonic genes",
+        "germ layers"
+      ]
+    },
+    {
+      "id": "reproductive-17",
+      "system": "Reproductive",
+      "sequence": 0,
+      "title": "Endometrial disorders and endometriosis",
+      "firstaid_pages": [
+        629,
+        677
+      ],
+      "bnb_modules": [
+        "Reproductive",
+        "Endocrinology"
+      ],
+      "terms": [
+        "endometrial disorders",
+        "endometriosis"
+      ]
+    },
+    {
+      "id": "general-pharmacology-04",
+      "system": "General pharmacology",
+      "sequence": 0,
+      "title": "Enzymes and inhibition",
+      "firstaid_pages": [
+        227,
+        255
+      ],
+      "bnb_modules": [
+        "Basic Pharmacology",
+        "Anesthesia"
+      ],
+      "terms": [
+        "enzymes",
+        "enzyme inhibitors"
+      ]
+    },
+    {
+      "id": "public-health-and-behavioral-science-10",
+      "system": "Public health and behavioral science",
+      "sequence": 0,
+      "title": "Ethical principles",
+      "firstaid_pages": [
+        255,
+        283
+      ],
+      "bnb_modules": [
+        "Biostats/Epi",
+        "Behavioral Science"
+      ],
+      "terms": [
+        "ethics principles"
+      ]
+    },
+    {
+      "id": "public-health-and-behavioral-science-09",
+      "system": "Public health and behavioral science",
+      "sequence": 0,
+      "title": "Evidence-based medicine",
+      "firstaid_pages": [
+        255,
+        283
+      ],
+      "bnb_modules": [
+        "Biostats/Epi",
+        "Behavioral Science"
+      ],
+      "terms": [
+        "evidence based medicine"
+      ]
+    },
+    {
+      "id": "respiratory-09",
+      "system": "Respiratory",
+      "sequence": 0,
+      "title": "Examination and imaging",
+      "firstaid_pages": [
+        677,
+        707
+      ],
+      "bnb_modules": [
+        "Pulmonary"
+      ],
+      "terms": [
+        "physical exam",
+        "chest x rays"
+      ]
+    },
+    {
+      "id": "gastrointestinal-08",
+      "system": "Gastrointestinal",
+      "sequence": 0,
+      "title": "Exocrine pancreas",
+      "firstaid_pages": [
+        363,
+        409
+      ],
+      "bnb_modules": [
+        "Gastroenterology"
+      ],
+      "terms": [
+        "exocrine pancreas"
+      ]
+    },
+    {
+      "id": "hematology-and-oncology-07",
+      "system": "Hematology and oncology",
+      "sequence": 0,
+      "title": "Extrinsic hemolysis",
+      "firstaid_pages": [
+        409,
+        449
+      ],
+      "bnb_modules": [
+        "Hematology"
+      ],
+      "terms": [
+        "extrinsic hemolysis"
+      ]
+    },
+    {
+      "id": "microbiology-15",
+      "system": "Microbiology",
+      "sequence": 0,
+      "title": "Fungal respiratory infections",
+      "firstaid_pages": [
+        121,
+        201
+      ],
+      "bnb_modules": [
+        "Infectious Disease"
+      ],
+      "terms": [
+        "fungal pneumonias"
+      ]
+    },
+    {
+      "id": "gastrointestinal-01",
+      "system": "Gastrointestinal",
+      "sequence": 0,
+      "title": "GI embryology",
+      "firstaid_pages": [
+        363,
+        409
+      ],
+      "bnb_modules": [
+        "Gastroenterology"
+      ],
+      "terms": [
+        "gastrointestinal embryology"
+      ]
+    },
+    {
+      "id": "gastrointestinal-06",
+      "system": "Gastrointestinal",
+      "sequence": 0,
+      "title": "GI hormones and secretions",
+      "firstaid_pages": [
+        363,
+        409
+      ],
+      "bnb_modules": [
+        "Gastroenterology"
+      ],
+      "terms": [
+        "gastrointestinal hormones",
+        "gastrointestinal secretions"
+      ]
+    },
+    {
+      "id": "gastrointestinal-22",
+      "system": "Gastrointestinal",
+      "sequence": 0,
+      "title": "GI pharmacotherapy",
+      "firstaid_pages": [
+        363,
+        409
+      ],
+      "bnb_modules": [
+        "Gastroenterology"
+      ],
+      "terms": [
+        "gastrointestinal pharmacology"
+      ]
+    },
+    {
+      "id": "reproductive-06",
+      "system": "Reproductive",
+      "sequence": 0,
+      "title": "Gametogenesis",
+      "firstaid_pages": [
+        629,
+        677
+      ],
+      "bnb_modules": [
+        "Reproductive",
+        "Endocrinology"
+      ],
+      "terms": [
+        "spermatogenesis and oogenesis"
+      ]
+    },
+    {
+      "id": "reproductive-25",
+      "system": "Reproductive",
+      "sequence": 0,
+      "title": "Gestational tumors",
+      "firstaid_pages": [
+        629,
+        677
+      ],
+      "bnb_modules": [
+        "Reproductive",
+        "Endocrinology"
+      ],
+      "terms": [
+        "gestational tumors"
+      ]
+    },
+    {
+      "id": "renal-20",
+      "system": "Renal",
+      "sequence": 0,
+      "title": "Glomerular disease foundations",
+      "firstaid_pages": [
+        595,
+        629
+      ],
+      "bnb_modules": [
+        "Renal"
+      ],
+      "terms": [
+        "glomerular disease principles"
+      ]
+    },
+    {
+      "id": "microbiology-07",
+      "system": "Microbiology",
+      "sequence": 0,
+      "title": "Gram-negative rods",
+      "firstaid_pages": [
+        121,
+        201
+      ],
+      "bnb_modules": [
+        "Infectious Disease"
+      ],
+      "terms": [
+        "gram negative rods"
+      ]
+    },
+    {
+      "id": "reproductive-18",
+      "system": "Reproductive",
+      "sequence": 0,
+      "title": "Gynecologic cancers",
+      "firstaid_pages": [
+        629,
+        677
+      ],
+      "bnb_modules": [
+        "Reproductive",
+        "Endocrinology"
+      ],
+      "terms": [
+        "cervical cancer",
+        "endometrial cancer",
+        "vaginal cancer"
+      ]
+    },
+    {
+      "id": "cardiovascular-19",
+      "system": "Cardiovascular",
+      "sequence": 0,
+      "title": "Heart failure management",
+      "firstaid_pages": [
+        283,
+        329
+      ],
+      "bnb_modules": [
+        "Cardiology"
+      ],
+      "terms": [
+        "acute heart failure",
+        "chronic heart failure"
+      ]
+    },
+    {
+      "id": "cardiovascular-18",
+      "system": "Cardiovascular",
+      "sequence": 0,
+      "title": "Heart failure mechanisms",
+      "firstaid_pages": [
+        283,
+        329
+      ],
+      "bnb_modules": [
+        "Cardiology"
+      ],
+      "terms": [
+        "heart failure basics",
+        "systolic and diastolic"
+      ]
+    },
+    {
+      "id": "microbiology-19",
+      "system": "Microbiology",
+      "sequence": 0,
+      "title": "Helminths",
+      "firstaid_pages": [
+        121,
+        201
+      ],
+      "bnb_modules": [
+        "Infectious Disease"
+      ],
+      "terms": [
+        "helminths"
+      ]
+    },
+    {
+      "id": "hematology-and-oncology-05",
+      "system": "Hematology and oncology",
+      "sequence": 0,
+      "title": "Hemolysis mechanisms",
+      "firstaid_pages": [
+        409,
+        449
+      ],
+      "bnb_modules": [
+        "Hematology"
+      ],
+      "terms": [
+        "hemolysis basics"
+      ]
+    },
+    {
+      "id": "neurology-and-special-senses-14",
+      "system": "Neurology and special senses",
+      "sequence": 0,
+      "title": "Hemorrhage and aneurysms",
+      "firstaid_pages": [
+        499,
+        569
+      ],
+      "bnb_modules": [
+        "Neurology",
+        "Ophthalmology"
+      ],
+      "terms": [
+        "intracranial bleeding",
+        "intracranial aneurysms"
+      ]
+    },
+    {
+      "id": "microbiology-23",
+      "system": "Microbiology",
+      "sequence": 0,
+      "title": "Hepatitis viruses",
+      "firstaid_pages": [
+        121,
+        201
+      ],
+      "bnb_modules": [
+        "Infectious Disease"
+      ],
+      "terms": [
+        "viral hepatitis"
+      ]
+    },
+    {
+      "id": "gastrointestinal-05",
+      "system": "Gastrointestinal",
+      "sequence": 0,
+      "title": "Hepatobiliary and pancreatic anatomy",
+      "firstaid_pages": [
+        363,
+        409
+      ],
+      "bnb_modules": [
+        "Gastroenterology"
+      ],
+      "terms": [
+        "liver gallbladder and pancreas"
+      ]
+    },
+    {
+      "id": "immunology-09",
+      "system": "Immunology",
+      "sequence": 0,
+      "title": "Immunosuppressants",
+      "firstaid_pages": [
+        93,
+        121
+      ],
+      "bnb_modules": [
+        "Immunology"
+      ],
+      "terms": [
+        "immunosuppressive"
+      ]
+    },
+    {
+      "id": "general-pharmacology-05",
+      "system": "General pharmacology",
+      "sequence": 0,
+      "title": "Inhaled anesthesia",
+      "firstaid_pages": [
+        227,
+        255
+      ],
+      "bnb_modules": [
+        "Basic Pharmacology",
+        "Anesthesia"
+      ],
+      "terms": [
+        "inhaled anesthetics"
+      ]
+    },
+    {
+      "id": "general-pharmacology-06",
+      "system": "General pharmacology",
+      "sequence": 0,
+      "title": "Intravenous anesthesia",
+      "firstaid_pages": [
+        227,
+        255
+      ],
+      "bnb_modules": [
+        "Basic Pharmacology",
+        "Anesthesia"
+      ],
+      "terms": [
+        "intravenous anesthetics"
+      ]
+    },
+    {
+      "id": "hematology-and-oncology-06",
+      "system": "Hematology and oncology",
+      "sequence": 0,
+      "title": "Intrinsic hemolysis",
+      "firstaid_pages": [
+        409,
+        449
+      ],
+      "bnb_modules": [
+        "Hematology"
+      ],
+      "terms": [
+        "intrinsic hemolysis"
+      ]
+    },
+    {
+      "id": "neurology-and-special-senses-13",
+      "system": "Neurology and special senses",
+      "sequence": 0,
+      "title": "Ischemic stroke",
+      "firstaid_pages": [
+        499,
+        569
+      ],
+      "bnb_modules": [
+        "Neurology",
+        "Ophthalmology"
+      ],
+      "terms": [
+        "cerebral strokes",
+        "vertebral basilar",
+        "treatment of tia"
+      ]
+    },
+    {
+      "id": "biochemistry-11",
+      "system": "Biochemistry",
+      "sequence": 0,
+      "title": "Lipid transport and disorders",
+      "firstaid_pages": [
+        31,
+        93
+      ],
+      "bnb_modules": [
+        "Biochemistry",
+        "Genetics",
+        "Cell Biology"
+      ],
+      "terms": [
+        "lipid metabolism",
+        "hyperlipidemia",
+        "lipid drugs"
+      ]
+    },
+    {
+      "id": "general-pharmacology-07",
+      "system": "General pharmacology",
+      "sequence": 0,
+      "title": "Local anesthesia",
+      "firstaid_pages": [
+        227,
+        255
+      ],
+      "bnb_modules": [
+        "Basic Pharmacology",
+        "Anesthesia"
+      ],
+      "terms": [
+        "local anesthetics"
+      ]
+    },
+    {
+      "id": "renal-07",
+      "system": "Renal",
+      "sequence": 0,
+      "title": "Loop and distal tubule",
+      "firstaid_pages": [
+        595,
+        629
+      ],
+      "bnb_modules": [
+        "Renal"
+      ],
+      "terms": [
+        "loop of henle"
+      ]
+    },
+    {
+      "id": "musculoskeletal-and-skin-05",
+      "system": "Musculoskeletal and skin",
+      "sequence": 0,
+      "title": "Lower limb plexus and radiculopathy",
+      "firstaid_pages": [
+        449,
+        499
+      ],
+      "bnb_modules": [
+        "Musculoskeletal",
+        "Dermatology",
+        "Immunology"
+      ],
+      "terms": [
+        "lumbosacral plexus",
+        "lumbar radiculopathy"
+      ]
+    },
+    {
+      "id": "musculoskeletal-and-skin-12",
+      "system": "Musculoskeletal and skin",
+      "sequence": 0,
+      "title": "Lupus",
+      "firstaid_pages": [
+        449,
+        499
+      ],
+      "bnb_modules": [
+        "Musculoskeletal",
+        "Dermatology",
+        "Immunology"
+      ],
+      "terms": [
+        "systemic lupus"
+      ]
+    },
+    {
+      "id": "biochemistry-21",
+      "system": "Biochemistry",
+      "sequence": 0,
+      "title": "Mendelian inheritance and pedigrees",
+      "firstaid_pages": [
+        31,
+        93
+      ],
+      "bnb_modules": [
+        "Biochemistry",
+        "Genetics",
+        "Cell Biology"
+      ],
+      "terms": [
+        "genetic principles",
+        "pedigrees"
+      ]
+    },
+    {
+      "id": "neurology-and-special-senses-18",
+      "system": "Neurology and special senses",
+      "sequence": 0,
+      "title": "Meningitis",
+      "firstaid_pages": [
+        499,
+        569
+      ],
+      "bnb_modules": [
+        "Neurology",
+        "Ophthalmology"
+      ],
+      "terms": [
+        "meningitis"
+      ]
+    },
+    {
+      "id": "renal-13",
+      "system": "Renal",
+      "sequence": 0,
+      "title": "Metabolic acidosis",
+      "firstaid_pages": [
+        595,
+        629
+      ],
+      "bnb_modules": [
+        "Renal"
+      ],
+      "terms": [
+        "metabolic acidosis"
+      ]
+    },
+    {
+      "id": "renal-14",
+      "system": "Renal",
+      "sequence": 0,
+      "title": "Metabolic alkalosis",
+      "firstaid_pages": [
+        595,
+        629
+      ],
+      "bnb_modules": [
+        "Renal"
+      ],
+      "terms": [
+        "metabolic alkalosis"
+      ]
+    },
+    {
+      "id": "psychiatry-03",
+      "system": "Psychiatry",
+      "sequence": 0,
+      "title": "Mood disorders",
+      "firstaid_pages": [
+        569,
+        595
+      ],
+      "bnb_modules": [
+        "Psychiatry"
+      ],
+      "terms": [
+        "mood disorders"
+      ]
+    },
+    {
+      "id": "endocrine-17",
+      "system": "Endocrine",
+      "sequence": 0,
+      "title": "Multiple endocrine neoplasia",
+      "firstaid_pages": [
+        329,
+        363
+      ],
+      "bnb_modules": [
+        "Endocrinology"
+      ],
+      "terms": [
+        "men syndromes"
+      ]
+    },
+    {
+      "id": "musculoskeletal-and-skin-09",
+      "system": "Musculoskeletal and skin",
+      "sequence": 0,
+      "title": "Muscle disorders",
+      "firstaid_pages": [
+        449,
+        499
+      ],
+      "bnb_modules": [
+        "Musculoskeletal",
+        "Dermatology",
+        "Immunology"
+      ],
+      "terms": [
+        "muscle disorders"
+      ]
+    },
+    {
+      "id": "neurology-and-special-senses-01",
+      "system": "Neurology and special senses",
+      "sequence": 0,
+      "title": "Neuroembryology",
+      "firstaid_pages": [
+        499,
+        569
+      ],
+      "bnb_modules": [
+        "Neurology",
+        "Ophthalmology"
+      ],
+      "terms": [
+        "neuroembryology"
+      ]
+    },
+    {
+      "id": "gastrointestinal-15",
+      "system": "Gastrointestinal",
+      "sequence": 0,
+      "title": "Neuroendocrine tumors",
+      "firstaid_pages": [
+        363,
+        409
+      ],
+      "bnb_modules": [
+        "Gastroenterology"
+      ],
+      "terms": [
+        "carcinoid"
+      ]
+    },
+    {
+      "id": "general-pharmacology-08",
+      "system": "General pharmacology",
+      "sequence": 0,
+      "title": "Neuromuscular blockade",
+      "firstaid_pages": [
+        227,
+        255
+      ],
+      "bnb_modules": [
+        "Basic Pharmacology",
+        "Anesthesia"
+      ],
+      "terms": [
+        "neuromuscular blockers"
+      ]
+    },
+    {
+      "id": "neurology-and-special-senses-21",
+      "system": "Neurology and special senses",
+      "sequence": 0,
+      "title": "Neuromuscular junction disorders",
+      "firstaid_pages": [
+        499,
+        569
+      ],
+      "bnb_modules": [
+        "Neurology",
+        "Ophthalmology"
+      ],
+      "terms": [
+        "neuromuscular junction"
+      ]
+    },
+    {
+      "id": "neurology-and-special-senses-03",
+      "system": "Neurology and special senses",
+      "sequence": 0,
+      "title": "Neurotransmitters",
+      "firstaid_pages": [
+        499,
+        569
+      ],
+      "bnb_modules": [
+        "Neurology",
+        "Ophthalmology"
+      ],
+      "terms": [
+        "neurotransmitters"
+      ]
+    },
+    {
+      "id": "respiratory-13",
+      "system": "Respiratory",
+      "sequence": 0,
+      "title": "Obstructive disease treatment",
+      "firstaid_pages": [
+        677,
+        707
+      ],
+      "bnb_modules": [
+        "Pulmonary"
+      ],
+      "terms": [
+        "treatment of copd and asthma"
+      ]
+    },
+    {
+      "id": "hematology-and-oncology-08",
+      "system": "Hematology and oncology",
+      "sequence": 0,
+      "title": "Other anemias",
+      "firstaid_pages": [
+        409,
+        449
+      ],
+      "bnb_modules": [
+        "Hematology"
+      ],
+      "terms": [
+        "other anemias"
+      ]
+    },
+    {
+      "id": "psychiatry-14",
+      "system": "Psychiatry",
+      "sequence": 0,
+      "title": "Other childhood disorders",
+      "firstaid_pages": [
+        569,
+        595
+      ],
+      "bnb_modules": [
+        "Psychiatry"
+      ],
+      "terms": [
+        "childhood disorders"
+      ]
+    },
+    {
+      "id": "microbiology-08",
+      "system": "Microbiology",
+      "sequence": 0,
+      "title": "Other gram-negative organisms",
+      "firstaid_pages": [
+        121,
+        201
+      ],
+      "bnb_modules": [
+        "Infectious Disease"
+      ],
+      "terms": [
+        "other gram negatives"
+      ]
+    },
+    {
+      "id": "microbiology-06",
+      "system": "Microbiology",
+      "sequence": 0,
+      "title": "Other gram-positive organisms",
+      "firstaid_pages": [
+        121,
+        201
+      ],
+      "bnb_modules": [
+        "Infectious Disease"
+      ],
+      "terms": [
+        "other gram positives"
+      ]
+    },
+    {
+      "id": "psychiatry-20",
+      "system": "Psychiatry",
+      "sequence": 0,
+      "title": "Other substances",
+      "firstaid_pages": [
+        569,
+        595
+      ],
+      "bnb_modules": [
+        "Psychiatry"
+      ],
+      "terms": [
+        "other drugs"
+      ]
+    },
+    {
+      "id": "reproductive-15",
+      "system": "Reproductive",
+      "sequence": 0,
+      "title": "Ovarian epithelial tumors",
+      "firstaid_pages": [
+        629,
+        677
+      ],
+      "bnb_modules": [
+        "Reproductive",
+        "Endocrinology"
+      ],
+      "terms": [
+        "ovarian epithelial"
+      ]
+    },
+    {
+      "id": "reproductive-16",
+      "system": "Reproductive",
+      "sequence": 0,
+      "title": "Ovarian germ cell and stromal tumors",
+      "firstaid_pages": [
+        629,
+        677
+      ],
+      "bnb_modules": [
+        "Reproductive",
+        "Endocrinology"
+      ],
+      "terms": [
+        "ovarian germ cell",
+        "ovarian stromal"
+      ]
+    },
+    {
+      "id": "endocrine-10",
+      "system": "Endocrine",
+      "sequence": 0,
+      "title": "Parathyroid disorders",
+      "firstaid_pages": [
+        329,
+        363
+      ],
+      "bnb_modules": [
+        "Endocrinology"
+      ],
+      "terms": [
+        "parathyroid pathology"
+      ]
+    },
+    {
+      "id": "endocrine-09",
+      "system": "Endocrine",
+      "sequence": 0,
+      "title": "Parathyroid physiology",
+      "firstaid_pages": [
+        329,
+        363
+      ],
+      "bnb_modules": [
+        "Endocrinology"
+      ],
+      "terms": [
+        "parathyroid glands"
+      ]
+    },
+    {
+      "id": "public-health-and-behavioral-science-13",
+      "system": "Public health and behavioral science",
+      "sequence": 0,
+      "title": "Patient safety and quality",
+      "firstaid_pages": [
+        255,
+        283
+      ],
+      "bnb_modules": [
+        "Biostats/Epi",
+        "Behavioral Science"
+      ],
+      "terms": [
+        "quality and safety"
+      ]
+    },
+    {
+      "id": "public-health-and-behavioral-science-15",
+      "system": "Public health and behavioral science",
+      "sequence": 0,
+      "title": "Pediatric and geriatric care",
+      "firstaid_pages": [
+        255,
+        283
+      ],
+      "bnb_modules": [
+        "Biostats/Epi",
+        "Behavioral Science"
+      ],
+      "terms": [
+        "pediatrics",
+        "geriatrics"
+      ]
+    },
+    {
+      "id": "reproductive-11",
+      "system": "Reproductive",
+      "sequence": 0,
+      "title": "Penile and scrotal disorders",
+      "firstaid_pages": [
+        629,
+        677
+      ],
+      "bnb_modules": [
+        "Reproductive",
+        "Endocrinology"
+      ],
+      "terms": [
+        "penile disorders",
+        "scrotal disorders"
+      ]
+    },
+    {
+      "id": "musculoskeletal-and-skin-21",
+      "system": "Musculoskeletal and skin",
+      "sequence": 0,
+      "title": "Pigment disorders",
+      "firstaid_pages": [
+        449,
+        499
+      ],
+      "bnb_modules": [
+        "Musculoskeletal",
+        "Dermatology",
+        "Immunology"
+      ],
+      "terms": [
+        "pigment"
+      ]
+    },
+    {
+      "id": "endocrine-02",
+      "system": "Endocrine",
+      "sequence": 0,
+      "title": "Pituitary anatomy and physiology",
+      "firstaid_pages": [
+        329,
+        363
+      ],
+      "bnb_modules": [
+        "Endocrinology"
+      ],
+      "terms": [
+        "pituitary anatomy"
+      ]
+    },
+    {
+      "id": "endocrine-03",
+      "system": "Endocrine",
+      "sequence": 0,
+      "title": "Pituitary disorders",
+      "firstaid_pages": [
+        329,
+        363
+      ],
+      "bnb_modules": [
+        "Endocrinology"
+      ],
+      "terms": [
+        "pituitary pathology"
+      ]
+    },
+    {
+      "id": "respiratory-20",
+      "system": "Respiratory",
+      "sequence": 0,
+      "title": "Pleural disease",
+      "firstaid_pages": [
+        677,
+        707
+      ],
+      "bnb_modules": [
+        "Pulmonary"
+      ],
+      "terms": [
+        "pleural disease"
+      ]
+    },
+    {
+      "id": "public-health-and-behavioral-science-14",
+      "system": "Public health and behavioral science",
+      "sequence": 0,
+      "title": "Prevention and public health",
+      "firstaid_pages": [
+        255,
+        283
+      ],
+      "bnb_modules": [
+        "Biostats/Epi",
+        "Behavioral Science"
+      ],
+      "terms": [
+        "public health",
+        "healthy patient"
+      ]
+    },
+    {
+      "id": "reproductive-12",
+      "system": "Reproductive",
+      "sequence": 0,
+      "title": "Prostate",
+      "firstaid_pages": [
+        629,
+        677
+      ],
+      "bnb_modules": [
+        "Reproductive",
+        "Endocrinology"
+      ],
+      "terms": [
+        "prostate"
+      ]
+    },
+    {
+      "id": "renal-06",
+      "system": "Renal",
+      "sequence": 0,
+      "title": "Proximal tubule",
+      "firstaid_pages": [
+        595,
+        629
+      ],
+      "bnb_modules": [
+        "Renal"
+      ],
+      "terms": [
+        "proximal tubule"
+      ]
+    },
+    {
+      "id": "respiratory-02",
+      "system": "Respiratory",
+      "sequence": 0,
+      "title": "Pulmonary anatomy",
+      "firstaid_pages": [
+        677,
+        707
+      ],
+      "bnb_modules": [
+        "Pulmonary"
+      ],
+      "terms": [
+        "pulmonary anatomy"
+      ]
+    },
+    {
+      "id": "respiratory-07",
+      "system": "Respiratory",
+      "sequence": 0,
+      "title": "Pulmonary circulation",
+      "firstaid_pages": [
+        677,
+        707
+      ],
+      "bnb_modules": [
+        "Pulmonary"
+      ],
+      "terms": [
+        "pulmonary circulation"
+      ]
+    },
+    {
       "id": "respiratory-16",
       "system": "Respiratory",
-      "sequence": 16,
+      "sequence": 0,
       "title": "Pulmonary embolism",
       "firstaid_pages": [
         677,
@@ -5595,10 +5296,10 @@
       ]
     },
     {
-      "id": "respiratory-17",
+      "id": "respiratory-01",
       "system": "Respiratory",
-      "sequence": 17,
-      "title": "Pneumonia",
+      "sequence": 0,
+      "title": "Pulmonary embryology",
       "firstaid_pages": [
         677,
         707
@@ -5607,13 +5308,291 @@
         "Pulmonary"
       ],
       "terms": [
-        "pneumonia"
+        "pulmonary embryology"
+      ]
+    },
+    {
+      "id": "respiratory-10",
+      "system": "Respiratory",
+      "sequence": 0,
+      "title": "Pulmonary function tests",
+      "firstaid_pages": [
+        677,
+        707
+      ],
+      "bnb_modules": [
+        "Pulmonary"
+      ],
+      "terms": [
+        "pulmonary function"
+      ]
+    },
+    {
+      "id": "renal-09",
+      "system": "Renal",
+      "sequence": 0,
+      "title": "RAAS",
+      "firstaid_pages": [
+        595,
+        629
+      ],
+      "bnb_modules": [
+        "Renal"
+      ],
+      "terms": [
+        "renin angiotensin"
+      ]
+    },
+    {
+      "id": "microbiology-22",
+      "system": "Microbiology",
+      "sequence": 0,
+      "title": "RNA viruses",
+      "firstaid_pages": [
+        121,
+        201
+      ],
+      "bnb_modules": [
+        "Infectious Disease"
+      ],
+      "terms": [
+        "rna viruses"
+      ]
+    },
+    {
+      "id": "renal-12",
+      "system": "Renal",
+      "sequence": 0,
+      "title": "Renal acid excretion",
+      "firstaid_pages": [
+        595,
+        629
+      ],
+      "bnb_modules": [
+        "Renal"
+      ],
+      "terms": [
+        "acid excretion"
+      ]
+    },
+    {
+      "id": "renal-02",
+      "system": "Renal",
+      "sequence": 0,
+      "title": "Renal anatomy",
+      "firstaid_pages": [
+        595,
+        629
+      ],
+      "bnb_modules": [
+        "Renal"
+      ],
+      "terms": [
+        "renal anatomy"
+      ]
+    },
+    {
+      "id": "renal-01",
+      "system": "Renal",
+      "sequence": 0,
+      "title": "Renal embryology",
+      "firstaid_pages": [
+        595,
+        629
+      ],
+      "bnb_modules": [
+        "Renal"
+      ],
+      "terms": [
+        "renal embryology"
+      ]
+    },
+    {
+      "id": "renal-16",
+      "system": "Renal",
+      "sequence": 0,
+      "title": "Respiratory acid-base disorders",
+      "firstaid_pages": [
+        595,
+        629
+      ],
+      "bnb_modules": [
+        "Renal"
+      ],
+      "terms": [
+        "respiratory acid base"
+      ]
+    },
+    {
+      "id": "respiratory-03",
+      "system": "Respiratory",
+      "sequence": 0,
+      "title": "Respiratory mechanics",
+      "firstaid_pages": [
+        677,
+        707
+      ],
+      "bnb_modules": [
+        "Pulmonary"
+      ],
+      "terms": [
+        "pulmonary physiology"
+      ]
+    },
+    {
+      "id": "musculoskeletal-and-skin-23",
+      "system": "Musculoskeletal and skin",
+      "sequence": 0,
+      "title": "Skin cancer",
+      "firstaid_pages": [
+        449,
+        499
+      ],
+      "bnb_modules": [
+        "Musculoskeletal",
+        "Dermatology",
+        "Immunology"
+      ],
+      "terms": [
+        "skin cancer"
+      ]
+    },
+    {
+      "id": "neurology-and-special-senses-24",
+      "system": "Neurology and special senses",
+      "sequence": 0,
+      "title": "Sleep physiology and disorders",
+      "firstaid_pages": [
+        499,
+        569
+      ],
+      "bnb_modules": [
+        "Neurology",
+        "Ophthalmology"
+      ],
+      "terms": [
+        "sleep physiology",
+        "sleep disorders"
+      ]
+    },
+    {
+      "id": "renal-17",
+      "system": "Renal",
+      "sequence": 0,
+      "title": "Sodium and water disorders",
+      "firstaid_pages": [
+        595,
+        629
+      ],
+      "bnb_modules": [
+        "Renal"
+      ],
+      "terms": [
+        "hyponatremia",
+        "diabetes insipidus"
+      ]
+    },
+    {
+      "id": "psychiatry-10",
+      "system": "Psychiatry",
+      "sequence": 0,
+      "title": "Somatic and factitious disorders",
+      "firstaid_pages": [
+        569,
+        595
+      ],
+      "bnb_modules": [
+        "Psychiatry"
+      ],
+      "terms": [
+        "somatic and factitious"
+      ]
+    },
+    {
+      "id": "microbiology-04",
+      "system": "Microbiology",
+      "sequence": 0,
+      "title": "Staphylococci",
+      "firstaid_pages": [
+        121,
+        201
+      ],
+      "bnb_modules": [
+        "Infectious Disease"
+      ],
+      "terms": [
+        "staphylococci"
+      ]
+    },
+    {
+      "id": "reproductive-13",
+      "system": "Reproductive",
+      "sequence": 0,
+      "title": "Testicular cancer",
+      "firstaid_pages": [
+        629,
+        677
+      ],
+      "bnb_modules": [
+        "Reproductive",
+        "Endocrinology"
+      ],
+      "terms": [
+        "testicular cancer"
+      ]
+    },
+    {
+      "id": "hematology-and-oncology-14",
+      "system": "Hematology and oncology",
+      "sequence": 0,
+      "title": "Thrombophilia",
+      "firstaid_pages": [
+        409,
+        449
+      ],
+      "bnb_modules": [
+        "Hematology"
+      ],
+      "terms": [
+        "hypercoagulable"
+      ]
+    },
+    {
+      "id": "endocrine-04",
+      "system": "Endocrine",
+      "sequence": 0,
+      "title": "Thyroid anatomy and physiology",
+      "firstaid_pages": [
+        329,
+        363
+      ],
+      "bnb_modules": [
+        "Endocrinology"
+      ],
+      "terms": [
+        "thyroid anatomy"
+      ]
+    },
+    {
+      "id": "endocrine-05",
+      "system": "Endocrine",
+      "sequence": 0,
+      "title": "Thyroid synthesis and laboratory tests",
+      "firstaid_pages": [
+        329,
+        363
+      ],
+      "bnb_modules": [
+        "Endocrinology"
+      ],
+      "terms": [
+        "thyroid hormone synthesis"
       ]
     },
     {
       "id": "respiratory-18",
       "system": "Respiratory",
-      "sequence": 18,
+      "sequence": 0,
       "title": "Tuberculosis",
       "firstaid_pages": [
         677,
@@ -5627,68 +5606,90 @@
       ]
     },
     {
-      "id": "respiratory-19",
-      "system": "Respiratory",
-      "sequence": 19,
-      "title": "Sarcoidosis",
+      "id": "renal-05",
+      "system": "Renal",
+      "sequence": 0,
+      "title": "Tubular transport",
       "firstaid_pages": [
-        677,
-        707
+        595,
+        629
       ],
       "bnb_modules": [
-        "Pulmonary"
+        "Renal"
       ],
       "terms": [
-        "sarcoidosis"
+        "secretion and absorption"
       ]
     },
     {
-      "id": "respiratory-20",
-      "system": "Respiratory",
-      "sequence": 20,
-      "title": "Pleural disease",
+      "id": "renal-27",
+      "system": "Renal",
+      "sequence": 0,
+      "title": "Urinary tract tumors",
       "firstaid_pages": [
-        677,
-        707
+        595,
+        629
       ],
       "bnb_modules": [
-        "Pulmonary"
+        "Renal"
       ],
       "terms": [
-        "pleural disease"
+        "renal and bladder tumors"
       ]
     },
     {
-      "id": "respiratory-21",
-      "system": "Respiratory",
-      "sequence": 21,
-      "title": "Lung cancer",
+      "id": "musculoskeletal-and-skin-24",
+      "system": "Musculoskeletal and skin",
+      "sequence": 0,
+      "title": "Vascular and neurocutaneous lesions",
       "firstaid_pages": [
-        677,
-        707
+        449,
+        499
       ],
       "bnb_modules": [
-        "Pulmonary"
+        "Musculoskeletal",
+        "Dermatology",
+        "Immunology"
       ],
       "terms": [
-        "lung cancer"
+        "vascular lesions",
+        "neurocutaneous"
       ]
     },
     {
-      "id": "respiratory-22",
-      "system": "Respiratory",
-      "sequence": 22,
-      "title": "Sleep apnea",
+      "id": "musculoskeletal-and-skin-15",
+      "system": "Musculoskeletal and skin",
+      "sequence": 0,
+      "title": "Vasculitis",
       "firstaid_pages": [
-        677,
-        707
+        449,
+        499
       ],
       "bnb_modules": [
-        "Pulmonary"
+        "Musculoskeletal",
+        "Dermatology",
+        "Immunology"
       ],
       "terms": [
-        "sleep apnea"
+        "vasculitis"
+      ]
+    },
+    {
+      "id": "microbiology-20",
+      "system": "Microbiology",
+      "sequence": 0,
+      "title": "Viral structure and replication",
+      "firstaid_pages": [
+        121,
+        201
+      ],
+      "bnb_modules": [
+        "Infectious Disease"
+      ],
+      "terms": [
+        "virus structures"
       ]
     }
-  ]
+  ],
+  "ordering_policy": "current_firstaid_printed_pages; unresolved excluded; stable IDs never renumbered"
 }

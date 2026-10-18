@@ -1,14 +1,14 @@
 {
-  "definition_id": "curriculum:ef0174a62306cd7ca266d084",
+  "definition_id": "curriculum:c611ecc6450274450f9c20e3",
   "study_units": 334,
   "units_per_system": {
-    "Cardiovascular": 28,
     "Biochemistry": 25,
     "Immunology": 10,
     "Microbiology": 25,
     "General pathology": 8,
     "General pharmacology": 8,
     "Public health and behavioral science": 15,
+    "Cardiovascular": 28,
     "Endocrine": 21,
     "Gastrointestinal": 22,
     "Hematology and oncology": 25,
@@ -35,5 +35,9 @@
       "linked_candidates": 1259
     }
   },
-  "anki_unit_crosswalk_available": false
+  "anki_unit_crosswalk_available": false,
+  "units_with_page_order": 203,
+  "units_with_unresolved_order": 131,
+  "reading_page_steps": 336,
+  "backward_page_transitions": 0
 }

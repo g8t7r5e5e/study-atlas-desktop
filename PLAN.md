@@ -47,3 +47,17 @@ See docs/data/STUDY_UNITS.md for counts and remaining mapping gaps.
 Next: review missing page and question/card coverage, then the prompt's workload
 and feasibility model, algorithm comparison/baseline scheduler, questionnaire,
 3/6/12-month templates, AI-plan import preview, and calendar/app integration.
+
+## Latest authoritative correction: First Aid page sequence
+
+User requires strictly forward First Aid reading order across systems, topics and
+crosslinks, superseding the initial request's example numbering. Do not restore
+teaching order or use IDs as sort keys. STUDY_UNIT_CATALOG.md is now the ascending
+printed-page reading table. Export/select schema v2 uses reading_sequence page
+buckets so separated references cannot force backward reading. Stable unit IDs,
+BnB/MCQ relationships and all 334 units are retained. 203 units have matched page
+candidates; 131 have unresolved positions and are excluded from scheduling.
+336 page steps, zero backward transitions; 34 tests pass. Exact complete chapter
+heading order remains blocked by missing topic/page evidence, not solved by
+sorting. Do not represent the candidate index mapping as a fully verified book
+outline. Resolve this source gap before claiming exact order for all units.

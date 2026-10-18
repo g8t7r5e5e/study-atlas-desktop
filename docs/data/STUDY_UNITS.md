@@ -6,8 +6,8 @@ lookup/provenance layer; its 7,285 parent labels are not daily scheduling topics
 These groupings are an original draft curriculum, not official First Aid headings
 or a medically reviewed claim of exhaustive book coverage.
 
-Cardiovascular has 28 units. Its first four are cardiac embryology, cardiac
-anatomy, cardiac physiology basics and Wiggers diagram. Major organ-system groups
+Cardiovascular has 28 units. Ordering follows printed First Aid page evidence, including pressure-volume
+material before Wiggers when its referenced page is earlier. Major organ-system groups
 contain 20–29 units; smaller foundational disciplines are not padded to 20.
 The complete selectable list is in STUDY_UNIT_CATALOG.md.
 
@@ -52,8 +52,32 @@ They are not evidence of clinical equivalence or sufficient daily MCQ coverage.
 Remaining index entries are retained and listed privately as unassigned. The
 source index alone cannot establish complete First Aid reading coverage.
 
-31 Python tests pass, including chapter boundaries, selected-item deduplication,
+34 Python tests pass, including chapter boundaries, selected-item deduplication,
 active-catalog changes, missing workload values and invalid selection rejection.
 Source catalogs were reused without reimport. Raw counts and foreign keys remain
 intact. The shareable ZIP contains code, original curriculum definitions and
 aggregate coverage; private resource titles, QIDs and resolved links stay local.
+
+## Page-order correction (authoritative)
+
+The former manual teaching order is superseded. Export schema v2 sorts units by
+first matched printed page, retaining immutable IDs. Units without page evidence
+have null sequence/reading_order and are explicitly unresolved. Definition order
+is also corrected; its sequence 0 denotes unresolved, never a schedule position.
+Rebuilding recomputes position from active catalog evidence.
+
+**Scheduling must use `reading_sequence`, not whole units sorted by first page.**
+It emits 336 strictly ascending page buckets, with zero backward transitions.
+Noncontiguous references are split into their page positions. First Aid links in
+each bucket contain only that page; BnB and question candidates are carried at
+their first occurrence in the selected sequence, deduplicated by persistent ID.
+The unit-level crosslinks remain intact for lookup. This placement is provisional,
+not clinically reviewed equivalence. Unknown-position units never enter the page
+sequence and remain listed separately in both JSON and the catalog.
+
+This fixes order for the 203 units with matched index references. The other 131
+need reliable heading/page evidence; the supplied index does not currently yield
+that mapping. Exact within-page heading order and complete topic reading spans
+cannot be established from this index alone. Do not claim all 334 are now exactly
+matched to the book. Full chapter headings with printed pages would resolve this
+remaining source gap. No original import or mapping evidence was discarded.
