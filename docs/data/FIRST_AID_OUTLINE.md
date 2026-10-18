@@ -1,5 +1,8 @@
 # First Aid topic/subtopic organization
 
+Planning now uses the 334 compact units in [STUDY_UNITS.md](STUDY_UNITS.md).
+This detailed outline is retained for lookup and provenance.
+
 The supplied index now has a separate, versioned outline for selecting study work.
 It retains the original 13,247 raw catalog entries and does not replace the
 shared clinical topic taxonomy with book-index headings.

@@ -34,3 +34,16 @@ chapter/search browsing, raw-entry traceability and deduplicated selections.
 CONTINUE.md saves user decisions and the first unfinished step for resumption;
 docs/data/NEXT_RESOURCES_AND_PLANNER.md records incoming resources and future
 algorithm research. Calendar/UI activation remains a later checkpoint.
+
+## Compact curriculum correction
+
+Completed: 334 original study units in 16 groups; major organ-system groups have
+20–29 units. Detailed index nodes remain lookup metadata. Cardiac embryology,
+anatomy, physiology basics and Wiggers diagram are separate units 1–4.
+Versioned SQLite definitions, scoped candidate links, private export and deduped
+selection are implemented. 31 tests pass; original source imports were reused.
+See docs/data/STUDY_UNITS.md for counts and remaining mapping gaps.
+
+Next: review missing page and question/card coverage, then the prompt's workload
+and feasibility model, algorithm comparison/baseline scheduler, questionnaire,
+3/6/12-month templates, AI-plan import preview, and calendar/app integration.

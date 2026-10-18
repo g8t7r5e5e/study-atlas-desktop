@@ -28,6 +28,8 @@ def main(argv=None):
     o = sub.add_parser('outline-export'); o.add_argument('out')
     o = sub.add_parser('outline-browse'); o.add_argument('--chapter'); o.add_argument('--query',default=''); o.add_argument('--limit',type=int,default=100)
     o = sub.add_parser('outline-select'); o.add_argument('node_ids',nargs='+'); o.add_argument('--out',required=True)
+    o = sub.add_parser('study-units'); o.add_argument('--out',required=True)
+    o = sub.add_parser('study-units-select'); o.add_argument('unit_ids',nargs='+'); o.add_argument('--out',required=True)
     a = sub.add_parser('anki')
     a.add_argument('path'); a.add_argument('--collection', required=True); a.add_argument('--confirmed-backup', action='store_true')
     r = sub.add_parser('report'); r.add_argument('--out')
@@ -68,6 +70,11 @@ def main(argv=None):
             from .firstaid_outline import linked_resources
             data=linked_resources(db,args.node_ids);write_json(args.out,data)
             result={'out':args.out,'referenced_pages':data['selection']['distinct_referenced_pages'],'requires_review':True}
+        elif args.command in ('study-units','study-units-select'):
+            from .study_units import build, select
+            data=build(db) if args.command=='study-units' else select(db,args.unit_ids)
+            write_json(args.out,data)
+            result={'out':args.out, **data.get('report',{'requires_review':True})}
         elif args.command == 'anki':
             from .anki import import_anki
             result = import_anki(db, args.path, collection=args.collection, confirmed_backup=args.confirmed_backup)

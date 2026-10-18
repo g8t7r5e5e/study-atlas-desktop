@@ -80,7 +80,7 @@ class OutlineTests(unittest.TestCase):
             db.execute('DROP TABLE '+table)
         db.execute('delete from schema_migrations where version=2');db.execute('pragma user_version=1');db.commit();db.close()
         db=connect(path)
-        self.assertEqual(db.execute('pragma user_version').fetchone()[0],2)
+        self.assertEqual(db.execute('pragma user_version').fetchone()[0],3)
         self.assertEqual(db.execute('select id from users').fetchone()[0],'existing');db.close()
 
     def test_browse_finds_children_under_chapter_and_caps_output(self):

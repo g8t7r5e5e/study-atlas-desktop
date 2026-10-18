@@ -85,6 +85,7 @@ def private_export(db, directory):
              'topic_question_mappings','topic_resource_mappings','resource_question_mappings',
              'resource_resource_mappings','mapping_evidence','review_queue','source_snapshots',
              'current_candidate_question_links']
+    names += ['study_unit_definitions','study_unit_resource_candidates']
     names += ['resource_outline_versions','resource_outline_nodes','resource_outline_entries','resource_outline_item_links']
     for name in names:
         cur = db.execute('SELECT * FROM ' + name)
@@ -110,4 +111,10 @@ def private_export(db, directory):
     except ValueError:
         tree=None
     if tree is not None:write_json(directory/'firstaid_outline.json',tree)
+    from .study_units import export as export_units
+    try:
+        units=export_units(db)
+    except ValueError:
+        units=None
+    if units is not None:write_json(directory/'study_units.json',units)
     (directory / 'PRIVATE_LOCAL_ONLY.txt').write_text('User-supplied metadata and review evidence. Do not upload, commit or redistribute. Original question bodies and explanations are excluded.\n')

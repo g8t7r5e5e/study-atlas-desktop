@@ -41,6 +41,8 @@ def run(db_path, config_path, export_dir):
         generate(db)
         from .firstaid_outline import build
         execute('firstaid-outline',lambda:build(db,config['firstaid']))
+        from .study_units import build as build_units
+        execute('study-units',lambda:build_units(db))
         private_export(db,export_dir)
         final=report(db)
         write_json(Path(export_dir)/'coverage.json',final)

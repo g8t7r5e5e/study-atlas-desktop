@@ -1,0 +1,39 @@
+{
+  "definition_id": "curriculum:ef0174a62306cd7ca266d084",
+  "study_units": 334,
+  "units_per_system": {
+    "Cardiovascular": 28,
+    "Biochemistry": 25,
+    "Immunology": 10,
+    "Microbiology": 25,
+    "General pathology": 8,
+    "General pharmacology": 8,
+    "Public health and behavioral science": 15,
+    "Endocrine": 21,
+    "Gastrointestinal": 22,
+    "Hematology and oncology": 25,
+    "Musculoskeletal and skin": 24,
+    "Neurology and special senses": 29,
+    "Psychiatry": 20,
+    "Renal": 27,
+    "Reproductive": 25,
+    "Respiratory": 22
+  },
+  "units_with_bnb_candidates": 333,
+  "units_with_firstaid_candidates": 203,
+  "units_with_question_candidates": 109,
+  "distinct_question_candidates": 696,
+  "reviewed_unit_question_links": 0,
+  "bnb_items_in_multiple_units": 12,
+  "resource_coverage": {
+    "bnb": {
+      "total": 496,
+      "linked_candidates": 496
+    },
+    "firstaid": {
+      "total": 13247,
+      "linked_candidates": 1259
+    }
+  },
+  "anki_unit_crosswalk_available": false
+}

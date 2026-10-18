@@ -47,13 +47,23 @@ commit and open PR state through GitHub before resuming, rather than relying on 
 remembered SHA. Package bytes/checksums change when code/docs change; read the
 tracked artifact sidecars for the current values. Do not merge automatically.
 
-First unfinished work: review the recovered First Aid hierarchy and mapping
-evidence, acquire numeric-code dictionaries and stable resource identities, then
-ingest the next real resources when supplied. Follow
-docs/data/NEXT_RESOURCES_AND_PLANNER.md for the saved resource-ingestion workflow
-and subsequent algorithm-comparison plan. No further resources have been invented
-or fetched just to appear complete. The scheduler, questionnaire and calendar/app
-integration remain future checkpoints. Continue from this state, not from scratch.
+Latest correction: the user wants a few hundred schedulable concepts, not index
+headings as tasks. Implemented 334 editorial study units, 28 cardiovascular units,
+and their requested first four topics. See docs/data/STUDY_UNITS.md and
+STUDY_UNIT_CATALOG.md. Schema 3 adds versioned definitions and scoped candidates;
+all 496 BnB videos have candidates, 203 units have First Aid pointers, 109 have
+candidate question links (696 distinct QIDs), and no Anki unit crosswalk exists.
+31 tests pass. Existing imports were reused; do not repeat source extraction.
+
+First unfinished work: review compact units and resolve missing First Aid page
+links, then validate MCQ/Anki crosswalks as sources become available. Do not turn
+candidate coverage into a claim of sufficient daily question/card workload.
+The next development plan follows the user's original prompt: compare relevant
+planner algorithms; implement calibrated workload/capacity and feasibility;
+build deterministic scheduling; questionnaire; 3/6/12-month templates; versioned
+external-AI JSON validation and preview; then calendar/app integration. Detailed
+steps are in docs/data/NEXT_RESOURCES_AND_PLANNER.md. No scheduler/UI is claimed.
+User requests minimal incremental work and no repeated costly audits.
 
 ## Private data recovery
 
