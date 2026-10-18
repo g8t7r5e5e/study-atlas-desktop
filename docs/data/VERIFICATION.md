@@ -24,6 +24,13 @@ openpyxl 3.1.5; Tesseract 5.5.0. Parser version 1.0.2.
 - Approved prototype file hashes still match the baseline manifest.
 - All 22 existing prototype route render checks pass.
 
+First Aid follow-up: all **27 tests** now pass (the original 18 plus nine outline
+tests), including a schema-1 upgrade with existing user data, heading/wrapped-line
+recovery, missing-page isolation, safe selections, idempotence and chapter/search
+browsing. The real outline links all 13,247 raw entries and passes SQLite integrity
+and foreign-key checks. Original raw counts and candidate mapping coverage remain
+unchanged. All outline nodes retain needs-review status.
+
 The ZIP builder additionally checks CRC, exact manifest membership, byte lengths
 and SHA-256 of every member before returning success. Its separate verification
 JSON and checksum file accompany the downloadable ZIP. A clean-extraction test

@@ -23,3 +23,14 @@ Actual results: 3,659 questions; 496 BnB rows; 110 Pathoma duration rows;
 13,247 candidate First Aid entries; 55.34% candidate question coverage and zero
 reviewed QID crosswalks. 18 Python tests, 22 reference routes and database integrity
 checks pass. See docs/data/CHECKPOINT1.md for the review gate and known gaps.
+
+## Approved follow-up
+
+The user explicitly approved GitHub upload and a draft PR. Checkpoint 1 was saved
+to feature/usmle-data-and-study-planner (GitHub commit a3b363f2). No private data
+was uploaded. The First Aid follow-up adds 7,285 topics and 8,309 subtopics, with
+chapter/search browsing, raw-entry traceability and deduplicated selections.
+27 unit tests pass. Schema 2 preserves the original catalog and user records.
+CONTINUE.md saves user decisions and the first unfinished step for resumption;
+docs/data/NEXT_RESOURCES_AND_PLANNER.md records incoming resources and future
+algorithm research. Calendar/UI activation remains a later checkpoint.

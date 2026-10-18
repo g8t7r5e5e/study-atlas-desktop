@@ -77,3 +77,12 @@ The complete granular topic hierarchy and missing resource catalogs remain open.
 
 The next checkpoint is intentionally not activated: this is the requested review
 point for actual counts and evidence, not a claim that all data is trustworthy.
+
+## Approved First Aid follow-up
+
+The user approved GitHub publication and requested topic/subtopic organization.
+The outline now recovers 7,285 parent topics and 8,309 subtopics, linked to every
+raw index entry, with chapter/search browsing and deduplicated reading selections.
+Seven orphan entries remain in one review group. 27 tests pass. This is a
+resource-specific, review-required outline, not a replacement clinical taxonomy.
+See FIRST_AID_OUTLINE.md and the repository's CONTINUE.md for the saved handoff.

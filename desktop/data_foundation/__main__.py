@@ -24,6 +24,10 @@ def main(argv=None):
     s = sub.add_parser('register')
     s.add_argument('path'); s.add_argument('--source-key', required=True)
     sub.add_parser('map')
+    o = sub.add_parser('firstaid-outline'); o.add_argument('path')
+    o = sub.add_parser('outline-export'); o.add_argument('out')
+    o = sub.add_parser('outline-browse'); o.add_argument('--chapter'); o.add_argument('--query',default=''); o.add_argument('--limit',type=int,default=100)
+    o = sub.add_parser('outline-select'); o.add_argument('node_ids',nargs='+'); o.add_argument('--out',required=True)
     a = sub.add_parser('anki')
     a.add_argument('path'); a.add_argument('--collection', required=True); a.add_argument('--confirmed-backup', action='store_true')
     r = sub.add_parser('report'); r.add_argument('--out')
@@ -50,6 +54,20 @@ def main(argv=None):
         elif args.command == 'map':
             from .mappings import generate
             result = generate(db)
+        elif args.command == 'firstaid-outline':
+            from .firstaid_outline import build
+            result = build(db,args.path)
+        elif args.command == 'outline-export':
+            from .firstaid_outline import outline
+            data=outline(db);write_json(args.out,data)
+            result={'out':args.out,'topic_groups':len(data['topics'])}
+        elif args.command == 'outline-browse':
+            from .firstaid_outline import browse
+            result=browse(db,chapter_name=args.chapter,query=args.query,limit=args.limit)
+        elif args.command == 'outline-select':
+            from .firstaid_outline import linked_resources
+            data=linked_resources(db,args.node_ids);write_json(args.out,data)
+            result={'out':args.out,'referenced_pages':data['selection']['distinct_referenced_pages'],'requires_review':True}
         elif args.command == 'anki':
             from .anki import import_anki
             result = import_anki(db, args.path, collection=args.collection, confirmed_backup=args.confirmed_backup)

@@ -38,12 +38,14 @@ def connect(path):
     db.row_factory = sqlite3.Row
     db.execute('PRAGMA foreign_keys=ON')
     version = db.execute('PRAGMA user_version').fetchone()[0]
-    if version > 1:
+    if version > 2:
         db.close()
         raise ValueError('Database schema is newer than this importer')
     db.executescript(Path(__file__).with_name('schema.sql').read_text())
+    db.executescript(Path(__file__).with_name('outline_schema.sql').read_text())
     db.execute('INSERT OR IGNORE INTO schema_migrations VALUES(1,?)', (now(),))
-    db.execute('PRAGMA user_version=1')
+    db.execute('INSERT OR IGNORE INTO schema_migrations VALUES(2,?)', (now(),))
+    db.execute('PRAGMA user_version=2')
     db.commit()
     return db
 

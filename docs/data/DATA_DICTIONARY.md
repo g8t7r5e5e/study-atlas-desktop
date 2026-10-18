@@ -23,6 +23,10 @@ indexes are defined by `desktop/data_foundation/schema.sql`.
 | anki_tags, anki_note_tags | Hierarchical tag strings belong to notes |
 | users, user_resource_progress, user_question_progress, user_anki_progress | Separate user state; never populated from general question statistics |
 | study_events | Future observed activity, no invented historical records |
+| resource_outline_versions | Versioned source-layout interpretation, anchored to a catalog snapshot |
+| resource_outline_nodes | Resource-specific parent topics, subtopics and explicit unresolved-context groups |
+| resource_outline_entries | Node membership per outline, page pointers, source locators and review status |
+| resource_outline_item_links | Traceability from outline nodes back to unchanged raw catalog entries |
 
 `current_questions` and `current_resource_items` expose active catalogs.
 `current_candidate_question_links` joins current title-label evidence and resource

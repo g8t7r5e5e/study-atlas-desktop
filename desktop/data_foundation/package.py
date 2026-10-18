@@ -34,6 +34,8 @@ def verify(path):
 def build(root, output):
     root,output=Path(root).resolve(),Path(output).resolve()
     files={}
+    for name in ('CONTINUE.md','PLAN.md'):
+        if (root/name).is_file():files[name]=(root/name).read_bytes()
     source=root/'desktop/data_foundation'
     for path in sorted(source.rglob('*')):
         if path.is_file() and path.suffix in ('.py','.sql','.json','.txt') and '__pycache__' not in path.parts:

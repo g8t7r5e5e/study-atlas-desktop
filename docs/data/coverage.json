@@ -1,5 +1,22 @@
 {
   "schema_version": "study-atlas-data-report/v1",
+  "resource_outlines": [
+    {
+      "algorithm": "firstaid-indentation/v1",
+      "topics": 7285,
+      "subtopics": 8309,
+      "review_groups": 1,
+      "nodes_with_direct_page_references": 13083,
+      "orphan_entries": 7,
+      "raw_catalog_entries_linked": 13247,
+      "raw_catalog_entries_unlinked": 0,
+      "all_nodes_require_review": true,
+      "chapter_facet_source": "Supplied 2025 contents, PDF pages 2-3",
+      "missing_printed_index_pages": [
+        813
+      ]
+    }
+  ],
   "question_records": 3659,
   "source_label_topics": 1142,
   "official_categories": 22,

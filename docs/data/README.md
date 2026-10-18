@@ -101,6 +101,11 @@ Historical missing notes/cards are retained; no live synchronization is claimed.
 
 ## Mapping review
 
+First Aid now also has chapter/topic/subtopic browsing and deduplicated reading
+selection. See FIRST_AID_OUTLINE.md for working commands and review limitations.
+NEXT_RESOURCES_AND_PLANNER.md records future resource ingestion and the requested
+algorithm-research roadmap.
+
 Source question titles populate internal topic labels. Official top-level
 categories remain separate; numeric codes are not decoded by guessing. The
 schema supports system/discipline/process/topic/subtopic levels, but a complete

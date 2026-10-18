@@ -39,9 +39,12 @@ def report(db):
         s['warning_count'] = len(validation.get('warnings', []))
         sources.append(s)
     qcount = scalar('SELECT count(*) FROM current_questions')
+    outlines=[json.loads(r[0]) for r in db.execute('''SELECT o.report_json FROM resource_outline_versions o
+        JOIN resource_catalog_versions c ON c.id=o.catalog_id WHERE c.is_current=1''')]
     covered = scalar('SELECT count(DISTINCT q.id) ' + candidate_sql + " WHERE e.validation_status='candidate'")
     return {
         'schema_version': 'study-atlas-data-report/v1',
+        'resource_outlines':outlines,
         'question_records': qcount,
         'source_label_topics': scalar("SELECT count(*) FROM topics WHERE origin='internal_source_label'"),
         'official_categories': scalar("SELECT count(*) FROM topics WHERE origin='official_category'"),
@@ -82,6 +85,7 @@ def private_export(db, directory):
              'topic_question_mappings','topic_resource_mappings','resource_question_mappings',
              'resource_resource_mappings','mapping_evidence','review_queue','source_snapshots',
              'current_candidate_question_links']
+    names += ['resource_outline_versions','resource_outline_nodes','resource_outline_entries','resource_outline_item_links']
     for name in names:
         cur = db.execute('SELECT * FROM ' + name)
         cols = [d[0] for d in cur.description]
@@ -100,4 +104,10 @@ def private_export(db, directory):
     unmatched_questions=[dict(r) for r in db.execute('SELECT * FROM current_questions WHERE id NOT IN (SELECT question_id FROM current_candidate_question_links)')]
     write_json(directory / 'unmatched_resource_items.json',unmatched_items)
     write_json(directory / 'unmatched_questions.json',unmatched_questions)
+    from .firstaid_outline import outline
+    try:
+        tree=outline(db)
+    except ValueError:
+        tree=None
+    if tree is not None:write_json(directory/'firstaid_outline.json',tree)
     (directory / 'PRIVATE_LOCAL_ONLY.txt').write_text('User-supplied metadata and review evidence. Do not upload, commit or redistribute. Original question bodies and explanations are excluded.\n')

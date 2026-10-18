@@ -1,12 +1,12 @@
 {
   "path": "usmle_step1_research_and_data_package.zip",
-  "bytes": 57600,
-  "sha256": "4fa8e752def370a221508a06d6aa5041faf41b4cbe8a43ba00a36200dcc29b13",
-  "members": 29,
+  "bytes": 74855,
+  "sha256": "fc126ad9c33984fbbdd279f6a2781b99f13d284c3d6f7920231b0b13635e37c6",
+  "members": 36,
   "crc": "passed",
   "member_sha256": "passed",
   "manifest_members": "passed",
-  "clean_extraction_tests": "18 passed",
-  "category_database_records": 22,
-  "restricted_question_records": 0
+  "clean_extraction_tests": "27 passed",
+  "private_source_snippet_scan": "passed",
+  "private_outline_rows_in_package": 0
 }
