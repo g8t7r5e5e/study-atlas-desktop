@@ -1,0 +1,12 @@
+{
+  "raw_csv_row_count": 3659,
+  "unique_source_ids": 3659,
+  "idempotent_real_csv_reimport": "passed",
+  "source_checksums_unchanged": "passed",
+  "database_integrity": "ok",
+  "foreign_keys": "passed",
+  "private_sqlite_backup_counts": "passed",
+  "pathoma_independent_duration_comparison": 110,
+  "export_json_parse": "passed",
+  "no_student_records_seeded": "passed"
+}

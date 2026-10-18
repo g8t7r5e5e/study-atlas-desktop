@@ -1,0 +1,37 @@
+[
+  {
+    "repo": "TheEverion/Atlas",
+    "description": "Atlas connects UWorld results to AnKing cards, resource tags, videos, and images — directly from your browser.",
+    "pushed_at": "2026-09-24T13:55:45Z",
+    "license": "not detected",
+    "archived": false
+  },
+  {
+    "repo": "roshanlodha/Uworld2Anki",
+    "description": null,
+    "pushed_at": "2025-03-24T18:18:34Z",
+    "license": "MIT",
+    "archived": false
+  },
+  {
+    "repo": "omn0mn0m/UWorldToAnking",
+    "description": "Gets question IDs from Anki",
+    "pushed_at": "2024-11-28T18:01:55Z",
+    "license": "GPL-3.0",
+    "archived": false
+  },
+  {
+    "repo": "Yusufashk/find-uworld-questions-anki-addon",
+    "description": "Anki Addon that lets you find U world Questions specific to your anki cards from the Anking deck!",
+    "pushed_at": "2025-09-10T01:39:31Z",
+    "license": "MIT",
+    "archived": false
+  },
+  {
+    "repo": "langfield/AnKing-v11",
+    "description": "AnKing Overhaul Step 1/Step 2 Version 11 Update",
+    "pushed_at": "2022-06-16T18:47:58Z",
+    "license": "not detected",
+    "archived": false
+  }
+]
