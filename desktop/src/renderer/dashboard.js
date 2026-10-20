@@ -1,0 +1,1091 @@
+"use strict";
+// Shared browser records. Existing user entries are retained across upgrades.
+demo.profile ||= {};
+demo.preferences ||= {};
+demo.reflections ||= {};
+demo.addedTopics ||= [];
+for (const r of demo.addedTopics)
+  if (!D.curriculum.some((x) => x.url === r.url))
+    D.curriculum.push({ ...r, ...demo.edits[r.url] });
+demo.assessmentRecords ||= D.assessments.map((r) => ({
+  id: r.url,
+  title: r.Assessment,
+  date: dt(r),
+  status: r.Status || "Scheduled",
+  form: r["Assessment Form"] || "",
+  notes: r.Notes || "",
+  weak: r["Main Weak Areas"] || "",
+  score: "",
+  metric: "EPC %",
+  probability: "",
+  actualDate: "",
+}));
+demo.milestoneRecords ||= sorted(D.milestones).map((r) => ({
+  id: r.url,
+  title: r.Milestone,
+  date: dt(r),
+  category: r.Type || "Study",
+  notes: r.Notes || "",
+  status: "Planned",
+  completedDate: "",
+  evidence: "",
+}));
+names.sources = "Workspace & data";
+nav[3][1] = nav[3][1].map((x) =>
+  x[0] === "sources" ? ["sources", "◈", "Workspace & data"] : x,
+);
+names.profile = "My profile";
+names.howto = "How to use this app";
+names.phases = "Study roadmap";
+nav[3][1] = nav[3][1].map((x) =>
+  x[0] === "howto" ? ["howto", "↗", "How to use this app"] : x,
+);
+nav[2][1] = nav[2][1].map((x) =>
+  x[0] === "phases" ? ["phases", "≋", "Study roadmap"] : x,
+);
+const isoDay = (d) => d.toISOString().slice(0, 10),
+  shiftDay = (date, n) => {
+    const d = new Date(date + "T12:00:00Z");
+    d.setUTCDate(d.getUTCDate() + n);
+    return isoDay(d);
+  };
+const total = (rows, key) =>
+  rows.reduce((n, x) => n + (Number(x[key]) || 0), 0);
+function appSave() {
+  return desktopSave();
+}
+persist = appSave;
+function avatarHTML(cls = "") {
+  return demo.profile.photo &&
+    /^data:image\/(jpeg|png|webp);base64,/.test(demo.profile.photo)
+    ? `<img class="avatar-picture ${cls}" src="${demo.profile.photo}" alt="Your profile photo">`
+    : `<span class="avatar-picture initials ${cls}">${E(
+        (demo.profile.name || "Your workspace")
+          .split(" ")
+          .map((x) => x[0])
+          .slice(0, 2)
+          .join("")
+          .toUpperCase(),
+      )}</span>`;
+}
+const routeHistory = [];
+let lastRoute = state.page,
+  backPending = false;
+function goBack() {
+  const p = routeHistory.pop() || "home";
+  backPending = p !== state.page;
+  go(p);
+}
+const legacyRender = render;
+render = function () {
+  if (state.page !== lastRoute) {
+    if (!backPending) routeHistory.push(lastRoute);
+    backPending = false;
+    lastRoute = state.page;
+  }
+  document.body.classList.toggle(
+    "soft",
+    demo.preferences.theme === "Soft contrast",
+  );
+  document.body.classList.toggle(
+    "compact",
+    demo.preferences.density === "Compact",
+  );
+  if (state.page === "profile") {
+    state.page = "home";
+    legacyRender();
+    state.page = "profile";
+    $("#main").innerHTML = profile();
+  } else legacyRender();
+  const p = state.page;
+  const profileNode = $("#sidebar .profile");
+  if (profileNode) {
+    profileNode.innerHTML = `<a href="#profile" class="profile-link">${avatarHTML()}<span>${E(demo.profile.name || "Your study workspace")}<small>${E(demo.profile.tagline || "A steady climb to Step 1")}</small></span></a>`;
+  }
+  $("#topbar").innerHTML =
+    `<div class="flex">${btn("☰", "document.body.classList.toggle('nav-open')", "menu-toggle ghost")}${btn("← Back", "goBack()", "small ghost")}<span class="crumb">Study Atlas <span class="muted">/</span> ${E(names[p])}</span></div><div class="top-actions">${btn("☀ Today", "state.date=TODAY;go('today')", "small")}${btn("◷ Focus", "go('focus')", "small")}${btn("⚙ Settings", "go('settings')", "small")}<button class="avatar-button" aria-label="Open my profile" onclick="go('profile')">${avatarHTML()}</button></div>`;
+  document.title = `${names[p]} · Study Atlas`;
+};
+function profile() {
+  const p = demo.profile;
+  return (
+    head("Your space. Your story.", "Make this workspace feel like yours.") +
+    `<div class="profile-layout">${card("Your study identity", `<div class="profile-portrait">${avatarHTML("large")}<h2>${E(p.name || "Your name")}</h2><p>${E(p.tagline || "A steady climb to Step 1")}</p></div>${btn("Change profile picture", "chooseProfilePhoto()", "upload-zone")}<p class="screen-note">JPG, PNG or WebP · up to 5 MB. Stored in your local profile.</p>${btn("Remove picture", "delete demo.profile.photo;persist();render()", "small ghost")}`)}<form onsubmit="saveProfile(event)">${card("About you", `<div class="form-grid">${field("name", "Display name", "text", p.name || "")}${field("tagline", "Your personal motto", "text", p.tagline || "")}${field("school", "Medical school / institution", "text", p.school || "")}${field("stage", "Current stage", "text", p.stage || "")}${field("location", "Location", "text", p.location || "")}${field("goal", "My Step 1 goal", "textarea", p.goal || "")}${field("about", "About me", "textarea", p.about || "")}</div><div class="card-foot"><button class="primary">Save profile</button></div>`)}</form></div>`
+  );
+}
+function saveProfile(e) {
+  e.preventDefault();
+  Object.assign(demo.profile, Object.fromEntries(new FormData(e.target)));
+  if (persist()) {
+    render();
+    toast("Profile saved.");
+  }
+}
+async function uploadProfilePhoto(file) {
+  if (!file) return;
+  if (
+    !["image/jpeg", "image/png", "image/webp"].includes(file.type) ||
+    file.size > 5e6
+  ) {
+    toast("Choose a JPG, PNG or WebP under 5 MB.");
+    return;
+  }
+  try {
+    const img = await createImageBitmap(file);
+    const canvas = document.createElement("canvas");
+    canvas.width = canvas.height = 256;
+    const ctx = canvas.getContext("2d"),
+      size = Math.min(img.width, img.height);
+    ctx.drawImage(
+      img,
+      (img.width - size) / 2,
+      (img.height - size) / 2,
+      size,
+      size,
+      0,
+      0,
+      256,
+      256,
+    );
+    demo.profile.photo = canvas.toDataURL("image/jpeg", 0.85);
+    img.close();
+    if (persist()) render();
+  } catch (error) {
+    showDesktopError(error);
+  }
+}
+function weakness() {
+  return (
+    head(
+      "Turn uncertainty into understanding.",
+      "One concept per row. Keep the explanation clear and the next review visible.",
+      btn("＋ Capture weakness", "weaknessChooser()", "primary"),
+    ) +
+    card(
+      "Your weakness collection",
+      table(
+        ["Concept", "System / source", "Priority", "Review date", "Status", ""],
+        demo.weakness.map(
+          (x, i) =>
+            `<tr><td class="cell-main"><strong>${E(x["Weak Topic"])}</strong><small>${E(x["Correct Concept"] || "Add your explanation")}</small></td><td>${E(x.System || "General")}<small>${E(x.Source || "Daily mission")}</small></td><td>${badge(x.Severity || "Medium", "gold")}</td><td>${dateFmt(x["Review Date"])}</td><td>${badge(x.Status || "Open", "dim")}</td><td><div class="flex">${btn("Edit", `weaknessEditor(${i})`, "small ghost")}${btn("Schedule", `repairWeakness(${i})`, "small ghost")}</div></td></tr>`,
+        ),
+      ),
+    )
+  );
+}
+function openSystem(i) {
+  state.system = systemsList()[i];
+  go("resources", true);
+}
+function systems() {
+  return (
+    head(
+      "Every system. One steady picture.",
+      "Updates automatically when you save topic progress in your mission or Resource Map.",
+    ) +
+    `<div class="grid three uniform-grid system-grid">${systemsList()
+      .map((s, i) => {
+        const rows = D.curriculum.filter((x) => x.System === s),
+          reviewed = rows.filter((x) =>
+            ["Reviewed", "Mastered"].includes(topicStatus(x)),
+          ).length,
+          mastered = rows.filter((x) => topicStatus(x) === "Mastered").length,
+          started = rows.filter((x) => topicStatus(x) === "In Progress").length;
+        return `<section class="card system-card"><div class="flex between"><span class="system-symbol">${["♡", "◉", "◇", "✧"][i % 4]}</span>${badge(rows.length + " topics", "dim")}</div><h2>${E(s)}</h2><div class="metric-line"><span>Reviewed or mastered</span><strong>${reviewed}/${rows.length}</strong></div><div class="bar"><i style="width:${(reviewed / rows.length) * 100}%"></i></div><div class="metric-line"><span>In progress</span><span>${started}</span></div><div class="metric-line"><span>Mastered</span><span>${mastered}</span></div><div class="card-foot">${btn("Open resources →", `openSystem(${i})`, "small ghost")}</div></section>`;
+      })
+      .join("")}</div>`
+  );
+}
+// Resource upload uses the same local CSV / XLSX parser as the daily plan.
+const oldCurriculum = curriculum;
+curriculum = function () {
+  return oldCurriculum().replace(
+    '<div class="toolbar">',
+    `<div class="toolbar">${btn("↑ Resource map (CSV or Excel)", "resourceImportDialog()", "primary")}`,
+  );
+};
+let resourceSheets = [],
+  resourcePreview = [];
+function resourceImportDialog() {
+  modal(
+    "Import a resource map",
+    `<p>Upload CSV or Excel (.xlsx). Topics are matched by topic name and system; existing matches are updated.</p><label class="upload-zone">↑ Choose your resource map<input type="file" accept=".csv,.xlsx" onchange="loadResourceFile(this.files[0])"></label><p class="screen-note">Required: Topic, System. Optional: Study Date, First Aid Reference, FA Status, B&B Reference, B&B Status, Anki Status, UWorld Status, Overall Status, Priority, Discipline, FA Chapter, FA Order, Notes. Blank cells keep existing values.</p><div id="resource-import-result" aria-live="polite"></div>`,
+  );
+}
+async function loadResourceFile(file) {
+  if (!file) return;
+  try {
+    if (file.size > 10e6) throw Error("Use a file smaller than 10 MB.");
+    resourceSheets = /\.xlsx$/i.test(file.name)
+      ? await window.atlas.spreadsheet()
+      : /\.csv$/i.test(file.name)
+        ? [{ name: "CSV", rows: parseCSV(await file.text()) }]
+        : [];
+    if (!resourceSheets.length) throw Error("Choose a CSV or .xlsx workbook.");
+    showResourceSheet(0);
+  } catch (err) {
+    $("#resource-import-result").textContent = err.message;
+  }
+}
+function mapResources(rows, date1904) {
+  const clean = rows.filter((r) => r.some((v) => String(v ?? "").trim()));
+  if (!clean.length) throw Error("The sheet is empty.");
+  const norm = (k) =>
+      String(k)
+        .toLowerCase()
+        .replace(/[^a-z]/g, ""),
+    aliases = Object.fromEntries(resourceKeys.map((k) => [norm(k), k]));
+  Object.assign(aliases, {
+    studydate: "date:Start Date:start",
+    date: "date:Start Date:start",
+    startdate: "date:Start Date:start",
+    enddate: "date:End Date:start",
+    firstaidreference: "FA Reference",
+    bbreference: "B&B topic reference",
+    status: "Overall Status",
+    concept: "Topic",
+  });
+  const headers = clean[0].map((k) => aliases[norm(k)]);
+  if (!headers.includes("Topic") || !headers.includes("System"))
+    throw Error("The first row must include Topic and System columns.");
+  const seen = new Set();
+  return clean.slice(1).map((row, i) => {
+    const r = {};
+    headers.forEach((k, j) => {
+      if (k && row[j] !== undefined && String(row[j]).trim())
+        r[k] = String(row[j]).trim();
+    });
+    if (!r.Topic || !r.System)
+      throw Error(`Row ${i + 2}: Topic and System are required.`);
+    for (const k of ["date:Start Date:start", "date:End Date:start"])
+      if (r[k]) {
+        r[k] = importDate(r[k], date1904);
+        if (!validDate(r[k])) throw Error(`Row ${i + 2}: invalid study date.`);
+      }
+    if (
+      r["date:Start Date:start"] &&
+      r["date:End Date:start"] &&
+      r["date:Start Date:start"] > r["date:End Date:start"]
+    )
+      throw Error(`Row ${i + 2}: end date must follow start date.`);
+    for (const k of Object.keys(r).filter((k) => k.includes("Status")))
+      if (!statuses.includes(r[k]))
+        throw Error(`Row ${i + 2}: ${k} must be ${statuses.join(", ")}.`);
+    if (
+      r["FA order"] &&
+      (!Number.isInteger(+r["FA order"]) || +r["FA order"] < 0)
+    )
+      throw Error(
+        `Row ${i + 2}: FA Order must be a non-negative whole number.`,
+      );
+    const key = r.Topic.toLowerCase() + "|" + r.System.toLowerCase();
+    if (seen.has(key)) throw Error(`Row ${i + 2}: duplicate topic and system.`);
+    seen.add(key);
+    return r;
+  });
+}
+function showResourceSheet(i) {
+  const selector =
+    resourceSheets.length > 1
+      ? `<label>Worksheet<select onchange="showResourceSheet(+this.value)">${resourceSheets.map((x, j) => `<option value="${j}" ${i === j ? "selected" : ""}>${E(x.name)}</option>`).join("")}</select></label>`
+      : "";
+  try {
+    resourcePreview = mapResources(
+      resourceSheets[i].rows,
+      resourceSheets[i].date1904,
+    );
+    if (!resourcePreview.length || resourcePreview.length > 2000)
+      throw Error("Import between 1 and 2,000 topics.");
+    const match = (r) =>
+        D.curriculum.some(
+          (x) =>
+            x.Topic.toLowerCase() === r.Topic.toLowerCase() &&
+            x.System.toLowerCase() === r.System.toLowerCase(),
+        ),
+      updated = resourcePreview.filter(match).length;
+    $("#resource-import-result").innerHTML =
+      selector +
+      `<p>${resourcePreview.length - updated} new topics · ${updated} updates</p>` +
+      table(
+        ["Topic", "System", "First Aid"],
+        resourcePreview
+          .slice(0, 8)
+          .map(
+            (r) =>
+              `<tr><td>${E(r.Topic)}</td><td>${E(r.System)}</td><td>${E(r["FA Reference"])}</td></tr>`,
+          ),
+      ) +
+      `<div class="modal-actions">${btn("Cancel", "closeModal()")}${btn("Import " + resourcePreview.length + " topics", "commitResources()", "primary")}</div>`;
+  } catch (err) {
+    resourcePreview = [];
+    $("#resource-import-result").innerHTML =
+      selector + `<p role="alert">${E(err.message)}</p>`;
+  }
+}
+function commitResources() {
+  for (const f of resourcePreview) {
+    let r = D.curriculum.find(
+      (x) =>
+        x.Topic.toLowerCase() === f.Topic.toLowerCase() &&
+        x.System.toLowerCase() === f.System.toLowerCase(),
+    );
+    if (!r) {
+      r = {
+        url: "local-topic-" + crypto.randomUUID(),
+        ...Object.fromEntries(
+          [
+            "FA Status",
+            "B&B Status",
+            "Anki Status",
+            "UWorld Status",
+            "Overall Status",
+          ].map((k) => [k, "Not Started"]),
+        ),
+        ...f,
+      };
+      D.curriculum.push(r);
+      demo.addedTopics.push({ ...r });
+    } else Object.assign(r, f);
+    demo.edits[r.url] = { ...demo.edits[r.url], ...f };
+    if (f["Overall Status"]) demo.topic[r.url] = f["Overall Status"];
+  }
+  persist();
+  resourcePreview = [];
+  closeModal();
+  render();
+  toast("Resource map and system progress updated.");
+}
+function assessmentEditor(i = -1) {
+  const r = demo.assessmentRecords[i] || {};
+  modal(
+    i < 0 ? "Plan an assessment" : "Edit assessment & result",
+    `<form onsubmit="saveAssessment(event,${i})"><div class="form-grid">${field("title", "Assessment name", "text", r.title)}${field("form", "Exact form", "text", r.form)}${field("date", "Planned date", "date", r.date)}${field("actualDate", "Date taken", "date", r.actualDate)}${field("status", "Status", "select", r.status || "Scheduled", ["Scheduled", "Completed", "Deferred", "Cancelled"])}${field("metric", "Score type", "select", r.metric || "EPC %", ["EPC %", "Percent correct", "Three-digit score"])}${field("score", "Official score (optional)", "number", r.score)}${field("probability", "Official passing probability % (optional)", "number", r.probability)}${field("weak", "Weak areas", "textarea", r.weak)}${field("action", "Next action", "textarea", r.action)}${field("notes", "Notes", "textarea", r.notes)}</div><p class="screen-note">Enter reported results manually. The app does not estimate scores or passing probability.</p><div class="modal-actions"><button type="button" onclick="closeModal()">Cancel</button><button class="primary">Save assessment</button></div></form>`,
+  );
+}
+function saveAssessment(e, i) {
+  e.preventDefault();
+  const f = Object.fromEntries(new FormData(e.target));
+  if (
+    !f.title.trim() ||
+    [f.date, f.actualDate].some((d) => d && !validDate(d))
+  ) {
+    toast("Add a name and valid dates.");
+    return;
+  }
+  if (f.status === "Completed" && !validDate(f.actualDate)) {
+    toast("Enter the date taken for a completed assessment.");
+    return;
+  }
+  if (
+    (f.score !== "" &&
+      (!Number.isFinite(+f.score) ||
+        +f.score < 0 ||
+        +f.score > (f.metric === "Three-digit score" ? 300 : 100))) ||
+    (f.probability !== "" &&
+      (!Number.isFinite(+f.probability) ||
+        +f.probability < 0 ||
+        +f.probability > 100))
+  ) {
+    toast("Check the score and probability ranges.");
+    return;
+  }
+  if (i < 0) demo.assessmentRecords.push({ id: crypto.randomUUID(), ...f });
+  else Object.assign(demo.assessmentRecords[i], f);
+  persist();
+  closeModal();
+  render();
+}
+function assessmentSummary() {
+  const completed = demo.assessmentRecords
+      .filter((r) => r.status === "Completed")
+      .sort((a, b) => (a.actualDate || "").localeCompare(b.actualDate || "")),
+    scored = completed.filter((r) => r.score !== "" && r.score != null),
+    latest = scored.at(-1);
+  return card(
+    "Assessment analytics",
+    `<div class="side-number">${completed.length}<small>completed assessments</small></div><div class="metric-line"><span>Latest result</span><strong>${latest ? E(latest.score) + " " + E(latest.metric) : "Not entered"}</strong></div><div class="metric-line"><span>Readiness</span><span>${E(set()["Readiness Status"] || "Not Ready")}</span></div><div class="metric-line"><span>Exam date</span><span>${dateFmt(set()["date:Actual Exam Date:start"])}</span></div><div class="form-section">RECORDED RESULTS</div>${
+      scored.length
+        ? scored
+            .slice(-6)
+            .map(
+              (r) =>
+                `<div class="score-row"><div class="flex between"><span>${E(r.title)}</span><b>${E(r.score)} ${E(r.metric)}</b></div><small>${dateFmt(r.actualDate)}</small>${r.metric !== "Three-digit score" ? `<div class="bar"><i style="width:${Math.min(100, +r.score)}%"></i></div>` : ""}</div>`,
+            )
+            .join("")
+        : '<p class="muted">Add an official result to see it here.</p>'
+    }<p class="screen-note">Different score types are shown separately. Completion and scores do not automatically set readiness.</p>${link("settings", "Update readiness")}`,
+  );
+}
+function assessments() {
+  return (
+    head(
+      "Evidence, thoughtfully recorded.",
+      "Plan each assessment and enter your official results when you are ready.",
+      btn("＋ Plan assessment", "assessmentEditor()", "primary"),
+    ) +
+    `<div class="dashboard-split"><div>${card(
+      "Your assessment plan",
+      table(
+        ["Assessment", "Planned / taken", "Status", "Result", ""],
+        [...demo.assessmentRecords]
+          .sort((a, b) => (a.date || "9999").localeCompare(b.date || "9999"))
+          .map(
+            (r) =>
+              `<tr><td class="cell-main"><strong>${E(r.title)}</strong><small>${E(r.form || r.notes)}</small></td><td>${dateFmt(r.date)}${r.actualDate ? "<small>Taken " + dateFmt(r.actualDate) + "</small>" : ""}</td><td>${badge(r.status, "dim")}</td><td>${r.status === "Completed" && r.score !== "" ? E(r.score) + "<small>" + E(r.metric) + "</small>" : "—"}</td><td>${btn("Edit / result", `assessmentEditor(${demo.assessmentRecords.indexOf(r)})`, "small ghost")}</td></tr>`,
+          ),
+      ),
+    )}</div><aside class="analytics-side">${assessmentSummary()}</aside></div>`
+  );
+}
+function milestoneEditor(i = -1) {
+  const r = demo.milestoneRecords[i] || {};
+  modal(
+    i < 0 ? "Create a milestone" : "Edit milestone",
+    `<form onsubmit="saveMilestone(event,${i})"><div class="form-grid">${field("title", "A clear, meaningful milestone", "text", r.title)}${field("date", "Target date", "date", r.date)}${field("category", "Category", "select", r.category || "Study", ["Study", "Resource", "Questions", "Assessment", "Personal", "Start", "Target", "Checkpoint"])}${field("status", "Status", "select", r.status || "Planned", ["Planned", "In Progress", "Achieved", "Deferred"])}${field("completedDate", "Date achieved", "date", r.completedDate)}${field("evidence", "What will count as success? / Evidence", "textarea", r.evidence)}${field("notes", "Notes and next step", "textarea", r.notes)}</div><div class="modal-actions"><button type="button" onclick="closeModal()">Cancel</button><button class="primary">Save milestone</button></div></form>`,
+  );
+}
+function saveMilestone(e, i) {
+  e.preventDefault();
+  const f = Object.fromEntries(new FormData(e.target));
+  if (
+    !f.title.trim() ||
+    [f.date, f.completedDate].some((d) => d && !validDate(d))
+  ) {
+    toast("Use a title and valid dates.");
+    return;
+  }
+  if (f.status === "Achieved" && !f.completedDate) {
+    toast(
+      "Add the achievement date so it appears in the correct weekly review.",
+    );
+    return;
+  }
+  if (f.status !== "Achieved") f.completedDate = "";
+  if (i < 0) demo.milestoneRecords.push({ id: crypto.randomUUID(), ...f });
+  else Object.assign(demo.milestoneRecords[i], f);
+  persist();
+  closeModal();
+  render();
+}
+function milestones() {
+  const m = demo.milestoneRecords;
+  return (
+    head(
+      "Mark the progress that matters.",
+      "A milestone is a meaningful outcome. You decide when it has been achieved.",
+      btn("＋ Create milestone", "milestoneEditor()", "primary"),
+    ) +
+    stats([
+      [
+        "ACHIEVED",
+        m.filter((x) => x.status === "Achieved").length,
+        "Your confirmed achievements",
+      ],
+      [
+        "IN PROGRESS",
+        m.filter((x) => x.status === "In Progress").length,
+        "Where your effort is going",
+      ],
+      [
+        "UPCOMING",
+        m.filter((x) => x.status === "Planned").length,
+        "Flexible targets",
+      ],
+    ]) +
+    `<div class="grid three uniform-grid milestone-grid">${[...m]
+      .sort((a, b) => (a.date || "9999").localeCompare(b.date || "9999"))
+      .map(
+        (r) =>
+          `<section class="card milestone-card"><div class="flex between">${badge(r.category, "dim")}<button class="small ghost" aria-label="Edit milestone ${E(r.title)}" onclick="milestoneEditor(${m.indexOf(r)})">⚙ Edit</button></div><h2>${E(r.title)}</h2><p>${E(r.evidence || r.notes || "Define what success looks like using Edit.")}</p><div class="card-foot"><div class="flex between">${badge(r.status, r.status === "Achieved" ? "gold" : "dim")}<span>${dateFmt(r.status === "Achieved" ? r.completedDate : r.date)}</span></div></div></section>`,
+      )
+      .join("")}</div>`
+  );
+}
+function previousMonday() {
+  const d = new Date(TODAY + "T12:00:00Z");
+  return shiftDay(TODAY, -((d.getUTCDay() + 6) % 7) - 7);
+}
+let reviewStart = previousMonday();
+function weekData(start) {
+  const end = shiftDay(start, 6),
+    inWeek = (d) => d >= start && d <= end,
+    logs = demo.logs.filter((x) => inWeek(x.date)),
+    days = Array.from({ length: 7 }, (_, i) => {
+      const date = shiftDay(start, i),
+        plan = D.daily.find((x) => dt(x) === date),
+        record = logs.find((x) => !x._block && x.date === date),
+        q = logs.filter((x) => x.date === date);
+      return {
+        date,
+        plan,
+        record,
+        q,
+        goal: Number(record?.target ?? plan?.["Planned Hours"] ?? 0),
+      };
+    }),
+    eligible = days.filter(
+      (x) => x.date <= TODAY && x.plan && x.goal > 0 && !isPause(x.date),
+    ),
+    actual = total(
+      logs.filter((x) => !x._block),
+      "hours",
+    ),
+    target = eligible.reduce((n, x) => n + x.goal, 0),
+    credit = eligible.reduce(
+      (n, x) => n + Math.min(x.goal, Number(x.record?.hours) || 0),
+      0,
+    );
+  return {
+    start,
+    end,
+    logs,
+    days,
+    eligible,
+    actual,
+    target,
+    credit,
+    questions: total(logs, "questions"),
+    correct: total(logs, "correct"),
+    reviewed: total(logs, "reviewed"),
+    anki: total(
+      logs.filter((x) => !x._block),
+      "anki",
+    ),
+    milestones: demo.milestoneRecords.filter(
+      (x) => x.status === "Achieved" && inWeek(x.completedDate),
+    ),
+    weakness: demo.weakness.filter(
+      (x) =>
+        inWeek(x["Date Identified"]) || (x._missionDates || []).some(inWeek),
+    ),
+    catchup: demo.catchup.filter((x) => inWeek(x["Rescheduled For"])),
+    assessments: demo.assessmentRecords.filter((x) =>
+      inWeek(x.actualDate || x.date),
+    ),
+  };
+}
+function weekMove(n) {
+  reviewStart = shiftDay(reviewStart, n * 7);
+  render();
+}
+function chooseWeek(d) {
+  if (!validDate(d)) return;
+  const dow = new Date(d + "T12:00:00Z").getUTCDay();
+  reviewStart = shiftDay(d, -((dow + 6) % 7));
+  render();
+}
+function weekly() {
+  const w = weekData(reviewStart),
+    reflection = demo.reflections[reviewStart] || {},
+    lag = w.eligible.filter(
+      (x) => x.record && Number(x.record.hours || 0) < x.goal,
+    ),
+    unlogged = w.eligible.filter((x) => !x.record);
+  return (
+    head(
+      "Look back. Move forward.",
+      "Your week, drawn from the records you actually saved.",
+    ) +
+    `<div class="toolbar"><div class="flex">${btn("← Previous week", "weekMove(-1)")}${btn("Next week →", "weekMove(1)")}</div><strong>${dateFmt(w.start)} — ${dateFmt(w.end)}</strong><input type="date" aria-label="Choose review week" value="${w.start}" onchange="chooseWeek(this.value)"></div>` +
+    stats([
+      [
+        "STUDY HOURS",
+        w.actual.toFixed(1),
+        w.target.toFixed(1) + " eligible planned hours",
+      ],
+      [
+        "UWORLD",
+        w.questions,
+        w.questions
+          ? questionAccuracy(w.logs) + " weighted accuracy"
+          : "No attempts recorded",
+      ],
+      ["ANKI REVIEWS", w.anki, "Daily review totals"],
+      ["MILESTONES", w.milestones.length, "Confirmed achievements this week"],
+    ]) +
+    `<div class="dashboard-split"><div class="stack">${card(
+      "The week, day by day",
+      table(
+        ["Date / focus", "Hours / goal", "UWorld", "Anki", "Outcome", ""],
+        w.days.map(
+          (x) =>
+            `<tr><td class="cell-main"><strong>${dateFmt(x.date, { weekday: "short", day: "numeric", month: "short" })}</strong><small>${E(x.plan?.["Primary System/Subject"] || "No plan")}</small></td><td>${x.record ? E(x.record.hours || 0) : "—"} / ${x.goal} h</td><td>${total(x.q, "questions")} Q<small>${total(x.q, "reviewed")} reviewed</small></td><td>${x.record?.anki !== undefined ? E(x.record.anki) : "—"}</td><td>${badge(x.record?.outcome || (isPause(x.date) ? "Protected break" : x.plan?.["Planned Hours"] === 0 ? "Rest" : x.plan ? "Not logged" : "No plan"), "dim")}</td><td>${btn("Open", `openDay('${x.date}')`, "small ghost")}</td></tr>`,
+        ),
+      ),
+    )}${card(
+      "Every saved study record",
+      w.logs.length
+        ? table(
+            ["Date", "Record", "Details", "Notes"],
+            w.logs.map(
+              (x) =>
+                `<tr><td>${dateFmt(x.date)}</td><td>${x._block ? "UWorld block" : "Daily record"}</td><td>${x._block ? E(x.questions || 0) + " Q · " + E(x.correct || 0) + " correct" : E(x.hours || 0) + " h · " + E(x.anki || 0) + " Anki"}<small>${E(x.system || "")}</small></td><td>${E(x.notes || x.ankiNotes || "—")}${x.unfinished ? "<small>Unfinished: " + E(x.unfinished) + "</small>" : ""}</td></tr>`,
+            ),
+          )
+        : empty(
+            "No records for this week",
+            "Use Today’s Mission to record your study sessions.",
+          ),
+    )}${card("Achievements & checkpoints", w.milestones.length || w.assessments.length ? `<div class="review-list">${w.milestones.map((x) => `<div><strong>✓ ${E(x.title)}</strong><p>${dateFmt(x.completedDate)} · ${E(x.evidence || "Marked achieved")}</p></div>`).join("")}${w.assessments.map((x) => `<div><strong>△ ${E(x.title)}</strong><p>${dateFmt(x.actualDate || x.date)} · ${E(x.status)}${x.score !== "" ? " · " + E(x.score) + " " + E(x.metric) : ""}</p></div>`).join("")}</div>` : '<p class="muted">No achievements or assessments recorded for this week.</p>')}${card("Weaknesses & catch-up", `<div class="review-list">${w.weakness.map((x) => `<div><strong>⌁ ${E(x["Weak Topic"])}</strong><p>${E(x.System)} · ${E(x.Status)}</p></div>`).join("")}${w.catchup.map((x) => `<div><strong>↻ ${E(x.Item)}</strong><p>${dateFmt(x["Rescheduled For"])} · ${E(x.Status)}</p></div>`).join("") || '<p class="muted">No weaknesses identified or catch-up items scheduled in this week.</p>'}</div>`)}<form onsubmit="saveReflection(event)">${card("Your reflection", `<div class="form-grid">${field("wins", "What went well?", "textarea", reflection.wins)}${field("lessons", "What held me back?", "textarea", reflection.lessons)}${field("next", "My next-week priorities", "textarea", reflection.next)}</div><div class="card-foot"><button class="primary">Save this week’s reflection</button></div>`)}</form></div><aside class="analytics-side stack">${card("Where to adjust", `<div class="side-number">${w.target ? Math.round((w.credit / w.target) * 100) + "%" : "—"}<small>capped time adherence</small></div><p>${lag.length} logged days below goal.<br>${unlogged.length} eligible days without a log.</p>${lag.map((x) => `<div class="metric-line"><span>${dateFmt(x.date, { day: "numeric", month: "short" })}</span><span>${(x.goal - Number(x.record.hours || 0)).toFixed(1)} h below goal</span></div>`).join("")}<p class="screen-note">Rest and break days do not reduce adherence. Unlogged days have no recorded credit; they are not proof that you did not study. Historical topic mastery cannot be reconstructed from current status.</p>${btn("Adjust next week’s plan", "go('planner')", "small")}`)}${card("Question review", `<div class="metric-line"><span>Attempted</span><b>${w.questions}</b></div><div class="metric-line"><span>Explanations reviewed</span><b>${w.reviewed}</b></div><div class="metric-line"><span>Awaiting review</span><b>${Math.max(0, w.questions - w.reviewed)}</b></div>${link("uworld", "Review blocks")}`)}</aside></div>`
+  );
+}
+function saveReflection(e) {
+  e.preventDefault();
+  demo.reflections[reviewStart] = Object.fromEntries(new FormData(e.target));
+  persist();
+  toast("Weekly reflection saved.");
+}
+function analytics() {
+  const logs = demo.logs,
+    q = total(logs, "questions"),
+    correct = total(logs, "correct"),
+    days = logs.filter((x) => !x._block),
+    lastWeek = weekData(previousMonday());
+  return (
+    head(
+      "Your progress, grounded in records.",
+      "Live totals from your saved missions, blocks, resources, and assessments.",
+    ) +
+    stats([
+      [
+        "STUDY HOURS",
+        total(days, "hours").toFixed(1),
+        days.filter((x) => x.hours !== undefined).length +
+          " daily hour records",
+      ],
+      [
+        "UWORLD ATTEMPTS",
+        q,
+        q ? questionAccuracy(logs) + " weighted accuracy" : "No question data",
+      ],
+      ["ANKI REVIEWS", total(days, "anki"), "Saved daily review totals"],
+      [
+        "TOPICS REVIEWED",
+        D.curriculum.filter((x) =>
+          ["Reviewed", "Mastered"].includes(topicStatus(x)),
+        ).length,
+        "Of " + D.curriculum.length + " topics",
+      ],
+    ]) +
+    `<div class="dashboard-split"><div class="stack">${card(
+      "Recent study days",
+      table(
+        ["Date", "Focused hours", "Questions", "Anki"],
+        [...days]
+          .sort((a, b) => b.date.localeCompare(a.date))
+          .slice(0, 14)
+          .map(
+            (x) =>
+              `<tr><td>${dateFmt(x.date)}</td><td>${E(x.hours ?? "—")}</td><td>${total(
+                logs.filter((l) => l.date === x.date),
+                "questions",
+              )}</td><td>${E(x.anki ?? "—")}</td></tr>`,
+          ),
+      ),
+    )}${card("Last completed week", `<p>${dateFmt(lastWeek.start)} — ${dateFmt(lastWeek.end)}</p><div class="metric-line"><span>Recorded hours</span><strong>${lastWeek.actual.toFixed(1)} h</strong></div><div class="metric-line"><span>Eligible target</span><strong>${lastWeek.target.toFixed(1)} h</strong></div>${link("weekly", "Full weekly review")}`)}</div><aside class="analytics-side">${assessmentSummary()}</aside></div>`
+  );
+}
+const baseApplyPause = applyPause;
+applyPause = function () {
+  baseApplyPause();
+  const p = demo.preferences;
+  for (const r of D.daily) {
+    const date = dt(r);
+    if (
+      date < TODAY ||
+      isPause(date) ||
+      r["Day Type"] === "Assessment Day" ||
+      r["Day Type"] === "Rest Day" ||
+      r.Status === "REST DAY"
+    )
+      continue;
+    const edits = demo.edits[r.url] || {},
+      dow = new Date(date + "T12:00:00Z").getUTCDay(),
+      hours = dow === 0 ? p.sunday : dow === 6 ? p.saturday : p.weekday;
+    if (!Object.hasOwn(edits, "New Card Budget"))
+      r["New Card Budget"] =
+        r["Planned Hours"] > 0 ? Number(set()["New Card Budget"]) : 0;
+    if (!p.applyDefaults) continue;
+    const beforeStart =
+      set()["date:Study Start:start"] && date < set()["date:Study Start:start"];
+    if (!Object.hasOwn(edits, "Planned Hours"))
+      r["Planned Hours"] = beforeStart ? 0 : Number(hours);
+    if (!Object.hasOwn(edits, "UWorld Target"))
+      r["UWorld Target"] = r["Planned Hours"] > 0 ? Number(p.questions) : 0;
+    if (!Object.hasOwn(edits, "New Card Budget"))
+      r["New Card Budget"] =
+        r["Planned Hours"] > 0 ? Number(set()["New Card Budget"]) : 0;
+  }
+};
+function settings() {
+  const s = set(),
+    p = demo.preferences;
+  return (
+    head(
+      "Your settings, everywhere.",
+      "One place for your exam plan, study rhythm, resources, and workspace.",
+    ) +
+    `<form onsubmit="saveSettings(event)"><div class="grid two uniform-grid settings-grid">${card("01 · Exam & readiness", `<div class="form-grid">${field("start", "Study starts", "date", s["date:Study Start:start"])}${field("exam", "Actual exam date (optional)", "date", s["date:Actual Exam Date:start"])}${field("windowStart", "Provisional window starts", "date", s["date:Provisional Window Start:start"])}${field("windowEnd", "Provisional window ends", "date", s["date:Provisional Window End:start"])}${field("qbankdate", "QBank target date", "date", s["date:QBank First-Pass Target:start"])}${field("readiness", "My readiness decision", "select", s["Readiness Status"], ["Not Ready", "Developing", "Probably Ready", "Ready to Schedule"])}</div>`)}${card("02 · Weekly capacity", `<div class="form-grid">${field("weekday", "Weekday hours", "number", p.weekday ?? 4.5)}${field("saturday", "Saturday hours", "number", p.saturday ?? 8)}${field("sunday", "Sunday hours (0 = rest)", "number", p.sunday ?? 0)}${field("questions", "Daily UWorld target", "number", p.questions ?? 20)}${field("applyDefaults", "Apply capacity to future plans", "select", p.applyDefaults ? "Yes" : "No", ["Yes", "No"])}</div><p class="screen-note">Applies to today onward. Explicit lesson edits/imports, assessments, past days, and protected breaks are preserved. A zero-hour day has zero routine question and new-card targets.</p>`)}${card("03 · Learning resources", `<div class="form-grid">${field("deck", "Default Anki deck", "text", s["Active Anki Deck"])}${field("budget", "New-card ceiling", "number", s["New Card Budget"] ?? 20)}${field("qbank", "Actual UWorld bank size", "number", typeof s["UWorld Total Available"] === "number" ? s["UWorld Total Available"] : 0)}${field("order", "Default Resource Map order", "select", demo.resourceOrder === "fa" ? "First Aid sequence" : "My study schedule", ["My study schedule", "First Aid sequence"])}${field("focusMinutes", "Default focus session (minutes)", "number", p.focusMinutes ?? 25)}</div><p class="screen-note">Existing Anki records keep their own deck. Bank size is context, not unique completion.</p>`)}${card("04 · Break & appearance", `<div class="form-grid">${field("pauseLabel", "Break name", "text", demo.pause.label)}${field("pauseStart", "Break starts", "date", demo.pause.start)}${field("pauseEnd", "Break ends", "date", demo.pause.end)}${field("theme", "Contrast", "select", p.theme || "Forest", ["Forest", "Soft contrast"])}${field("timezone", "Timezone (IANA name)", "text", p.timezone || "Asia/Karachi")}${field("density", "Table spacing", "select", p.density || "Comfortable", ["Comfortable", "Compact"])}</div>`)}</div><div class="settings-save"><span>Changes apply to the connected pages after saving.</span><button class="primary">Save all settings</button></div></form><div class="grid two uniform-grid section-gap">${card("Your identity", `<p>Add your name, photo, goals, and a little about yourself.</p><div class="card-foot">${btn("Open profile", "go('profile')", "small")}</div>`)}${card("Your data", `<p>Records are stored in this browser. Download a backup of your entries and settings before clearing browser data.</p><div class="card-foot">${btn("Download backup", "exportBackup()", "small")}${btn("About this workspace", "go('sources')", "small ghost")}</div>`)}</div>`
+  );
+}
+function saveSettings(e) {
+  e.preventDefault();
+  const f = Object.fromEntries(new FormData(e.target));
+  for (const k of [
+    "start",
+    "exam",
+    "windowStart",
+    "windowEnd",
+    "qbankdate",
+    "pauseStart",
+    "pauseEnd",
+  ])
+    if (f[k] && !validDate(f[k])) {
+      toast("Check all dates.");
+      return;
+    }
+  if (
+    Boolean(f.pauseStart) !== Boolean(f.pauseEnd) ||
+    f.pauseStart > f.pauseEnd ||
+    (f.windowStart && f.windowEnd && f.windowStart > f.windowEnd)
+  ) {
+    toast("Each end date must follow its start date.");
+    return;
+  }
+  if (
+    ["weekday", "saturday", "sunday"].some(
+      (k) => !Number.isFinite(+f[k]) || +f[k] < 0 || +f[k] > 24,
+    ) ||
+    ["questions", "budget", "qbank"].some(
+      (k) => !Number.isInteger(+f[k]) || +f[k] < 0,
+    ) ||
+    !Number.isInteger(+f.focusMinutes) ||
+    +f.focusMinutes < 1 ||
+    +f.focusMinutes > 720
+  ) {
+    toast(
+      "Use 0–24 study hours, whole non-negative counts, and 1–720 focus minutes.",
+    );
+    return;
+  }
+  Object.assign(demo.settings, {
+    "date:Study Start:start": f.start,
+    "date:Actual Exam Date:start": f.exam,
+    "date:Provisional Window Start:start": f.windowStart,
+    "date:Provisional Window End:start": f.windowEnd,
+    "date:QBank First-Pass Target:start": f.qbankdate,
+    "Readiness Status": f.readiness,
+    "Active Anki Deck": f.deck,
+    "New Card Budget": +f.budget,
+    "UWorld Total Available": +f.qbank,
+  });
+  Object.assign(demo.preferences, {
+    weekday: +f.weekday,
+    saturday: +f.saturday,
+    sunday: +f.sunday,
+    questions: +f.questions,
+    applyDefaults: f.applyDefaults === "Yes",
+    focusMinutes: +f.focusMinutes,
+    theme: f.theme,
+    density: f.density,
+    timezone: f.timezone || "Asia/Karachi",
+  });
+  demo.pause = {
+    start: f.pauseStart,
+    end: f.pauseEnd,
+    label: f.pauseLabel || "Protected break",
+  };
+  demo.resourceOrder = f.order === "First Aid sequence" ? "fa" : "study";
+  if (!timerActive) {
+    timerDuration = +f.focusMinutes * 60;
+    timerSeconds = timerDuration;
+  }
+  applyPause();
+  persist();
+  render();
+  toast("Settings saved across the workspace.");
+}
+function phases() {
+  const s = set(),
+    groups = [
+      ...new Set(
+        sorted(D.daily)
+          .filter((x) => x.Phase && !isPause(dt(x)))
+          .map((x) => x.Phase),
+      ),
+    ];
+  return (
+    head(
+      "The route, kept simple.",
+      "A short guide to where the work is headed.",
+    ) +
+    `<div class="grid three uniform-grid">${card("1 · Learn & connect", `<p>Follow your daily plan. Learn each concept, connect it to First Aid, and record its progress.</p><div class="card-foot">${link("resources", "Your resource map")}</div>`)}${card("2 · Practice & repair", `<p>Use questions to identify gaps. Review explanations, revisit weak concepts, and keep Anki manageable.</p><div class="card-foot">${link("weakness", "Your weakness log")}</div>`)}${card("3 · Assess & decide", `<p>Record official assessments and make your own readiness decision.</p><p>Exam: ${dateFmt(s["date:Actual Exam Date:start"])}<br>Window: ${dateFmt(s["date:Provisional Window Start:start"])} — ${dateFmt(s["date:Provisional Window End:start"])}</p><div class="card-foot">${link("assessments", "Your assessments")}</div>`)}</div><div class="mini-note section-gap">Protected break: ${dateFmt(demo.pause.start)} — ${dateFmt(demo.pause.end)} · ${E(demo.pause.label)}. Dates are flexible; readiness is not inferred from completion.</div>`
+  );
+}
+function home() {
+  const r = D.daily.find((x) => dt(x) === TODAY),
+    s = set(),
+    p = demo.preferences,
+    reviewed = D.curriculum.filter((x) =>
+      ["Reviewed", "Mastered"].includes(topicStatus(x)),
+    ).length,
+    next = demo.assessmentRecords
+      .filter((x) => x.status === "Scheduled" && x.date >= TODAY)
+      .sort((a, b) => a.date.localeCompare(b.date))[0];
+  return (
+    hero() +
+    stats([
+      ["TODAY’S CAPACITY", r?.["Planned Hours"] ?? 0, "Planned focused hours"],
+      [
+        "TODAY’S UWORLD",
+        r?.["UWorld Target"] ?? 0,
+        "Questions with explanation review",
+      ],
+      ["TOPICS REVIEWED", reviewed, "Of " + D.curriculum.length + " topics"],
+      [
+        "EXAM DATE",
+        s["date:Actual Exam Date:start"]
+          ? dateFmt(s["date:Actual Exam Date:start"], {
+              day: "numeric",
+              month: "short",
+            })
+          : "Not set",
+        E(s["Readiness Status"] || "Not Ready"),
+      ],
+    ]) +
+    `<div class="grid three uniform-grid">${card("Today’s mission", `<div class="pill-row">${badge(dateFmt(TODAY), "dim")}${badge(r?.["Primary System/Subject"] || "Your day", "gold")}</div><h3>${E(r?.["Main Task"] || "Choose a meaningful next step.")}</h3><p>${E(r?.["First Aid Target"] || "Record what you learn, practice, and retain.")}</p><div class="card-foot">${link("today", "Open today")}</div>`)}${card(
+      "Your study rhythm",
+      `<div class="side-number">${total(
+        demo.logs.filter((x) => !x._block),
+        "hours",
+      ).toFixed(
+        1,
+      )}<small>hours recorded</small></div><div class="metric-line"><span>Weekdays</span><span>${p.weekday ?? 4.5} h</span></div><div class="metric-line"><span>Saturday</span><span>${p.saturday ?? 8} h</span></div><div class="metric-line"><span>Sunday</span><span>${p.sunday ?? 0} h</span></div><div class="card-foot">${link("settings", "Adjust your rhythm")}</div>`,
+    )}${card("Next checkpoint", `<span class="eyebrow">${next ? dateFmt(next.date) : "YOUR NEXT STEP"}</span><h3>${E(next?.title || "Plan an assessment")}</h3><p>${E(next?.notes || "Choose a date and record your result when ready.")}</p><div class="card-foot">${link("assessments", "Assessment plan")}</div>`)}${card("Protected time", `<p>${E(demo.pause.label)}</p><h3>${dateFmt(demo.pause.start)} — ${dateFmt(demo.pause.end)}</h3><p>Your routine workload pauses during this date range.</p><div class="card-foot">${link("calendar", "Your calendar")}</div>`)}${card("Your exam window", `<p>${dateFmt(s["date:Provisional Window Start:start"])} — ${dateFmt(s["date:Provisional Window End:start"])}</p><p>A planning window, not a fixed readiness deadline.</p><div class="card-foot">${link("settings", "Exam settings")}</div>`)}${card("Reflect & reset", `<p>See your saved records, achievements, and unfinished priorities from the previous week.</p><div class="card-foot">${link("weekly", "Weekly review")}</div>`)}</div>`
+  );
+}
+const helpSections = [
+  [
+    "Start your day",
+    [
+      "Open Today from the top bar.",
+      "Choose the date you want to work on.",
+      "Read the planned topics and targets.",
+      "Enter your actual study hours, UWorld counts, and Anki reviews.",
+      "Choose each topic’s progress and your daily outcome.",
+      "Press Save today’s record. The connected trackers update immediately.",
+    ],
+  ],
+  [
+    "Plan or import lessons",
+    [
+      "Open Daily plan.",
+      "Choose Add a lesson for a new date, or Make an edit for an existing date.",
+      "Change the fields in the pop-up and save.",
+      "Use Import schedule for CSV or Excel .xlsx files.",
+      "The first row must contain column names, including Date.",
+      "Check the preview before importing. Existing dates are updated; blank cells preserve old values.",
+      "The Calendar shows the same plan. Click any date to open or edit it.",
+    ],
+  ],
+  [
+    "Use the Resource Map",
+    [
+      "Choose My study schedule or First Aid sequence.",
+      "Use the system filter or search to find a concept.",
+      "Choose View / edit to change its details.",
+      "Use the upload button for CSV or .xlsx files with Topic and System columns.",
+      "Review the preview before saving. Matching topic and system pairs are updated.",
+      "Topic progress saved in Today’s Mission appears here and in System progress.",
+    ],
+  ],
+  [
+    "Record questions and Anki",
+    [
+      "Open UWorld to log a separate question block.",
+      "Choose System-wise, then choose the system you studied.",
+      "Enter attempted, correct, and reviewed counts.",
+      "Daily Mission question counts already appear here. Do not enter the same work again as a separate block.",
+      "Open Anki to enter or edit the selected day’s reviews.",
+      "The Anki journal and Today’s Mission share the same daily record.",
+      "These are manual trackers, not connections to your UWorld or Anki accounts.",
+    ],
+  ],
+  [
+    "Repair gaps and catch up",
+    [
+      "Open Weakness log and choose Capture weakness.",
+      "Choose New weakness or Edit existing weakness.",
+      "Write the correct concept in your own words and set a review date.",
+      "Choose Schedule to put a repair task into the catch-up queue.",
+      "In Catch-up queue, use Edit to move the date or change the status.",
+      "Scheduled items appear beside that day’s mission. Done and dropped items leave the active workload.",
+    ],
+  ],
+  [
+    "Assess, reflect, and celebrate",
+    [
+      "Plan an assessment from the Assessments page.",
+      "Use Edit / result to enter the official score and the date taken.",
+      "Read the analytics on the right. You decide your readiness in Settings.",
+      "Open Weekly review to see the previous Monday through Sunday.",
+      "Use the arrows or date picker to review another week.",
+      "Read the saved records, logged shortfalls, unlogged days, and achievements.",
+      "Write your reflection and save it.",
+      "Create a milestone for an outcome you value. Mark it Achieved with a completion date to include it in that week’s review.",
+    ],
+  ],
+  [
+    "Make the workspace yours",
+    [
+      "Open Settings from the top bar.",
+      "Choose your study capacity, exam dates, deck, and focus duration.",
+      "Turn on Apply capacity to future plans if you want the new hour and question defaults applied.",
+      "Explicit lesson edits and past records are preserved.",
+      "Change the break dates and press Save all settings.",
+      "Open your profile from the photo or the lower-left workspace link.",
+      "Add your name, photo, goals, and personal notes.",
+      "Use Back to return to the previous page in this app.",
+    ],
+  ],
+  [
+    "Keep your records safe",
+    [
+      "Your entries are saved on this device on this device.",
+      "This app does not write changes back to Notion.",
+      "Use Download backup in Settings to keep a JSON copy of your entries and settings.",
+      "Clearing browser data removes local records.",
+      "Use the same browser to continue your work.",
+      "Importing a schedule or resource map does not restore a full JSON backup.",
+    ],
+  ],
+];
+function howto() {
+  return (
+    head(
+      "How to use your Study Atlas",
+      "Simple steps. One page at a time.",
+      btn("Open today", "state.date=TODAY;go('today')", "primary"),
+    ) +
+    `<div class="grid two uniform-grid help-grid">${helpSections.map(([title, steps], i) => card(String(i + 1).padStart(2, "0") + " · " + title, `<ol class="help-steps">${steps.map((s) => `<li>${E(s)}</li>`).join("")}</ol>`)).join("")}</div>`
+  );
+}
+function guide() {
+  return (
+    head(
+      "A simple way to study.",
+      "Use the plan to guide your effort, and your records to guide your adjustments.",
+      btn("How to use this app →", "go('howto')", "primary"),
+    ) +
+    `<div class="grid three uniform-grid">${[
+      [
+        "Understand",
+        "Start with the day’s concept. Use a resource to clarify the parts you cannot explain.",
+        "today",
+        "Today’s mission",
+      ],
+      [
+        "Connect",
+        "Use First Aid as your reference. Update the topic status after an intentional review.",
+        "resources",
+        "Resource Map",
+      ],
+      [
+        "Apply",
+        "Answer questions and review the explanations. Record what you actually attempted and reviewed.",
+        "uworld",
+        "UWorld",
+      ],
+      [
+        "Retain",
+        "Record your Anki reviews. Adjust new cards to your workload rather than chasing the ceiling.",
+        "anki",
+        "Anki",
+      ],
+      [
+        "Repair",
+        "Capture one clear weak concept. Give unfinished priorities a realistic date.",
+        "weakness",
+        "Weakness log",
+      ],
+      [
+        "Reflect",
+        "Look at the previous week’s records. Choose a small number of useful next steps.",
+        "weekly",
+        "Weekly review",
+      ],
+    ]
+      .map(([title, body, page, label]) =>
+        card(
+          title,
+          `<p>${body}</p><div class="card-foot">${link(page, label)}</div>`,
+        ),
+      )
+      .join(
+        "",
+      )}</div><div class="mini-note section-gap">Your assessment results and your judgment guide readiness. A completed checklist is not an automatic readiness decision.</div>`
+  );
+}
+const baseUworld = uworld;
+uworld = function () {
+  const s = set();
+  return (
+    baseUworld() +
+    `<div class="mini-note section-gap">Bank size: ${Number(s["UWorld Total Available"]) || "Not set"} questions · First-pass target: ${dateFmt(s["date:QBank First-Pass Target:start"])}. Attempts may include repeats and do not establish unique completion. ${link("settings", "Update settings")}</div>`
+  );
+};
+const baseCalendar = calendar;
+calendar = function () {
+  return baseCalendar().replace(
+    /<button class="cal-cell calendar-day[\s\S]*?<\/button>/g,
+    (html) => {
+      const date = html.match(/data-date="([^"]+)"/)?.[1];
+      if (!date) return html;
+      const list = demo.assessmentRecords.filter(
+        (r) => r.date === date && r.status !== "Cancelled",
+      );
+      return html.replace(
+        "</button>",
+        list
+          .map((r) => `<div class="cal-event assess">△ ${E(r.title)}</div>`)
+          .join("") + "</button>",
+      );
+    },
+  );
+};
+const baseToday = today;
+today = function () {
+  const records = demo.assessmentRecords.filter(
+    (r) => (r.actualDate || r.date) === state.date && r.status !== "Cancelled",
+  );
+  return (
+    baseToday() +
+    (records.length
+      ? card(
+          "Assessment checkpoint",
+          records
+            .map(
+              (r) =>
+                `<div class="metric-line"><div><strong>${E(r.title)}</strong><small>${E(r.status)} · ${E(r.form || "")}</small></div>${btn("Edit / result", `assessmentEditor(${demo.assessmentRecords.indexOf(r)})`, "small ghost")}</div>`,
+            )
+            .join(""),
+        )
+      : "")
+  );
+};
+calendarDay = function (date) {
+  const r = D.daily.find((x) => dt(x) === date),
+    a = demo.assessmentRecords.filter(
+      (x) => x.date === date && x.status !== "Cancelled",
+    );
+  modal(
+    dateFmt(date),
+    `${r ? `<div class="pill-row">${badge(r["Primary System/Subject"], "gold")}${badge(r.Status, "dim")}</div><h3>${E(r["Main Task"])}</h3><p>${E(r["First Aid Target"] || "")}</p><p>${E(r["Planned Hours"])} hours · ${E(r["UWorld Target"])} UWorld questions</p>` : "<p>No lesson planned yet.</p>"}${a.map((x) => `<div class="mini-note section-gap"><strong>△ ${E(x.title)}</strong><p>${E(x.status)} · ${E(x.form || "")}</p>${btn("Edit assessment", `assessmentEditor(${demo.assessmentRecords.indexOf(x)})`, "small ghost")}</div>`).join("")}<div class="modal-actions">${btn("Open mission", `closeModal();openDay('${date}')`)}${btn(r ? "Edit lesson" : "Add lesson", `lessonEditor('${r ? "edit" : "add"}','${date}')`, "primary")}</div>`,
+  );
+};
+if (location.hash === "#profile") state.page = "profile";
+applyPause();
+if (!timerActive && demo.preferences.focusMinutes) {
+  timerDuration = demo.preferences.focusMinutes * 60;
+  timerSeconds = timerDuration;
+}

@@ -1,0 +1,70 @@
+{
+  "name": "study-atlas-desktop",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Offline Study Atlas desktop workspace",
+  "author": "Study Atlas contributors",
+  "license": "UNLICENSED",
+  "main": "src/main/index.cjs",
+  "engines": {
+    "node": ">=24.0.0 <25"
+  },
+  "scripts": {
+    "build": "node scripts/build.cjs",
+    "dev": "npm run build && electron .",
+    "test": "node --test tests/*.test.cjs",
+    "test:reference": "node ../scripts/verify-reference.cjs && node ../scripts/smoke-reference.cjs",
+    "test:e2e": "npm run build && playwright test",
+    "test:electron": "node scripts/electron-smoke.cjs",
+    "dist:win": "node scripts/dist-win.cjs",
+    "audit:release": "node scripts/audit-release.cjs",
+    "export:owner-plan": "node scripts/export-owner.cjs",
+    "postinstall": "node node_modules/electron/install.js",
+    "test:smoke": "npm run test:reference && npm run build && npm run test:electron",
+    "dist:dir": "npm run build && electron-builder --dir --publish never"
+  },
+  "dependencies": {
+    "fast-xml-parser": "5.11.2",
+    "fflate": "0.8.3"
+  },
+  "devDependencies": {
+    "@fontsource/dm-sans": "5.3.0",
+    "@fontsource/manrope": "5.3.0",
+    "@fontsource/noto-sans-symbols-2": "5.3.0",
+    "@playwright/test": "1.64.1",
+    "acorn": "8.19.0",
+    "electron": "44.8.0",
+    "electron-builder": "26.15.3",
+    "pngjs": "7.0.0"
+  },
+  "build": {
+    "appId": "org.studyatlas.desktop",
+    "productName": "Study Atlas",
+    "directories": {
+      "output": "release",
+      "buildResources": "assets/icons"
+    },
+    "files": [
+      "src/main/**",
+      "src/preload/**",
+      "dist/**",
+      "migrations/**",
+      "package.json",
+      "docs/USER_GUIDE.md",
+      "docs/THIRD_PARTY_NOTICES.md"
+    ],
+    "asar": true,
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icons/icon.ico",
+      "artifactName": "Study-Atlas-${version}-${arch}-Setup.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "deleteAppDataOnUninstall": false,
+      "createDesktopShortcut": true
+    }
+  }
+}

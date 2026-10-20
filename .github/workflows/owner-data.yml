@@ -1,0 +1,30 @@
+name: Download my Step 1 data
+on:
+  workflow_dispatch:
+  push:
+    branches: [desktop/windows-installer]
+    paths:
+      - .github/workflows/owner-data.yml
+      - desktop/scripts/export-owner-backup.cjs
+permissions:
+  contents: read
+jobs:
+  owner-data:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24.19.0"
+      - name: Verify approved source
+        run: node scripts/verify-reference.cjs
+      - name: Generate and test private owner import files
+        run: node desktop/scripts/export-owner-backup.cjs "$RUNNER_TEMP/study-atlas-owner-data"
+      - name: Upload owner-only import files
+        uses: actions/upload-artifact@v4
+        with:
+          name: Study-Atlas-My-Step1-Data
+          path: ${{ runner.temp }}/study-atlas-owner-data/*
+          if-no-files-found: error
+          retention-days: 7

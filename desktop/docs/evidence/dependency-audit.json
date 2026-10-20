@@ -1,0 +1,76 @@
+{
+  "at": "2026-10-17T11:04:53.769Z",
+  "metadata": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 0,
+      "moderate": 8,
+      "high": 0,
+      "critical": 0,
+      "total": 8
+    },
+    "dependencies": {
+      "prod": 10,
+      "dev": 292,
+      "optional": 23,
+      "peer": 13,
+      "peerOptional": 0,
+      "total": 301
+    }
+  },
+  "advisories": [
+    {
+      "name": "@electron/get",
+      "severity": "moderate",
+      "devBuildChain": true,
+      "via": []
+    },
+    {
+      "name": "app-builder-lib",
+      "severity": "moderate",
+      "devBuildChain": true,
+      "via": []
+    },
+    {
+      "name": "dmg-builder",
+      "severity": "moderate",
+      "devBuildChain": true,
+      "via": []
+    },
+    {
+      "name": "electron-builder",
+      "severity": "moderate",
+      "devBuildChain": true,
+      "via": []
+    },
+    {
+      "name": "electron-builder-squirrel-windows",
+      "severity": "moderate",
+      "devBuildChain": true,
+      "via": []
+    },
+    {
+      "name": "global-agent",
+      "severity": "moderate",
+      "devBuildChain": true,
+      "via": []
+    },
+    {
+      "name": "roarr",
+      "severity": "moderate",
+      "devBuildChain": true,
+      "via": []
+    },
+    {
+      "name": "sprintf-js",
+      "severity": "moderate",
+      "devBuildChain": true,
+      "via": [
+        {
+          "title": "sprintf-js vulnerable to denial of service through unbounded precision specifiers",
+          "url": "https://github.com/advisories/GHSA-hp3w-g68c-fv3c"
+        }
+      ]
+    }
+  ]
+}

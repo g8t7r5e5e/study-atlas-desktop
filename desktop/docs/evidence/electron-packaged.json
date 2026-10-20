@@ -1,0 +1,17 @@
+{
+  "electron": "44.8.0",
+  "node": "24.22.0",
+  "routes": 22,
+  "inlineHandlers": 0,
+  "rendererRequire": "undefined",
+  "contextIsolation": true,
+  "nodeIntegration": false,
+  "sandboxPreference": true,
+  "linuxSandboxDisabled": true,
+  "persistenceRestart": true,
+  "ipcValidation": true,
+  "platform": "linux",
+  "arch": "x64",
+  "packaged": true,
+  "errors": []
+}
