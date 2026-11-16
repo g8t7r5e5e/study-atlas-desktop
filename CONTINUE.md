@@ -1,3 +1,7 @@
+# Current Claude Cowork handoff
+
+Read [instructions n overview of the project for claude.md](instructions%20n%20overview%20of%20the%20project%20for%20claude.md) first. It records the latest status, local Windows workflow, remaining implementation and AnkiWeb/MedMaster integration requirements. Older notes below are historical where they conflict.
+
 # Scheduling research checkpoint — 17 November 2026
 
 Completed the sourced approach comparison in docs/planner/SCHEDULING_RESEARCH.md. Recommended: deterministic capacity planner with explicit order/dependencies, separate Anki review forecasts, conservative replanning; CP-SAT deferred pending benchmarks. Eight analytical scenarios documented; arithmetic checked, no scheduler or solver benchmark implemented. Next task is workload/feasibility calculations. First-pass reading stays forward; revisiting prior material is a separately identified review activity (proposed policy). Preserve the new workbook catalog and existing desktop design.
