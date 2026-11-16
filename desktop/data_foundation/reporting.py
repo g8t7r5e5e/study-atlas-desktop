@@ -64,7 +64,7 @@ def report(db):
             'Snapshot count is not the current official question-bank size.',
             'Title and fuzzy matches are review candidates, never verified medical mappings.',
             'No student activity or AnKing collection was supplied.',
-            'First Aid entries are partial index references, not a chapter workload catalog.',
+            'First Aid workbook records are user-verified; workload estimates are not measured student performance.' if scalar('SELECT count(*) FROM firstaid_workbook_rows') else 'First Aid entries are partial index references, not a chapter workload catalog.',
             'Pathoma rows can group multiple lessons under one runtime.',
             'The separately named backend research document was not among the attachments.',
         ]
@@ -86,6 +86,7 @@ def private_export(db, directory):
              'resource_resource_mappings','mapping_evidence','review_queue','source_snapshots',
              'current_candidate_question_links']
     names += ['study_unit_definitions','study_unit_resource_candidates']
+    names += ['firstaid_workbook_rows']
     names += ['resource_outline_versions','resource_outline_nodes','resource_outline_entries','resource_outline_item_links']
     for name in names:
         cur = db.execute('SELECT * FROM ' + name)
@@ -100,6 +101,7 @@ def private_export(db, directory):
                 writer.writerow({k: "'"+v if isinstance(v,str) and v.startswith(('=','+','-','@','\t','\r')) else v for k,v in row.items()})
     with sqlite3.connect(directory / 'study-atlas.sqlite') as target:
         db.backup(target)
+    target.close()
     write_json(directory / 'coverage.json', report(db))
     unmatched_items=[dict(r) for r in db.execute('SELECT * FROM current_resource_items WHERE id NOT IN (SELECT item_id FROM current_candidate_question_links)')]
     unmatched_questions=[dict(r) for r in db.execute('SELECT * FROM current_questions WHERE id NOT IN (SELECT question_id FROM current_candidate_question_links)')]

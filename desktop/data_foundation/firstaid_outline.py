@@ -136,15 +136,16 @@ def build(db,path):
 
 
 def current_id(db):
-    row=db.execute("SELECT o.id FROM resource_outline_versions o JOIN resource_catalog_versions c ON c.id=o.catalog_id WHERE c.is_current=1 AND o.resource_id='firstaid' AND o.algorithm_version=?",(ALGORITHM,)).fetchone()
+    row=db.execute("SELECT o.id FROM resource_outline_versions o JOIN resource_catalog_versions c ON c.id=o.catalog_id WHERE c.is_current=1 AND o.resource_id='firstaid' AND o.algorithm_version IN (?, 'firstaid-workbooks/v1') ORDER BY CASE o.algorithm_version WHEN 'firstaid-workbooks/v1' THEN 0 ELSE 1 END",(ALGORITHM,)).fetchone()
     if not row:raise ValueError('Build the outline for the current First Aid catalog first')
     return row[0]
 
 
 def outline(db):
     oid=current_id(db)
+    workbook=db.execute('SELECT algorithm_version FROM resource_outline_versions WHERE id=?',(oid,)).fetchone()[0]=='firstaid-workbooks/v1'
     nodes={r['id']:{**dict(r),'page_refs':json.loads(r['page_refs']),'children':[]} for r in db.execute(
-        'SELECT n.id,n.parent_id,n.title,n.level,e.page_refs,e.review_status FROM resource_outline_nodes n JOIN resource_outline_entries e ON e.node_id=n.id WHERE e.outline_id=?',(oid,))}
+        'SELECT n.id,n.parent_id,n.title,n.level,e.page_refs,e.review_status,e.locators_json FROM resource_outline_nodes n JOIN resource_outline_entries e ON e.node_id=n.id WHERE e.outline_id=?',(oid,))}
     roots=[]
     for n in nodes.values():
         if n['parent_id'] in nodes:nodes[n['parent_id']]['children'].append(n)
@@ -153,13 +154,19 @@ def outline(db):
         pages=set(n['page_refs'])
         for child in n['children']:pages.update(aggregate(child))
         n['all_page_refs']=sorted(pages);n['chapters']=sorted({chapter(p) for p in pages})
-        n['children'].sort(key=lambda c:norm(c['title']))
+        if workbook:n['children'].sort(key=lambda c:json.loads(c['locators_json'])[0].get('subtopic_ordinal',0))
+        else:n['children'].sort(key=lambda c:norm(c['title']))
         return pages
     for n in roots:aggregate(n)
-    roots.sort(key=lambda n:norm(n['title']))
+    if workbook:
+        order={r['node_id']:r['sequence'] for r in db.execute('''SELECT l.node_id,w.sequence FROM resource_outline_item_links l
+            JOIN firstaid_workbook_rows w ON w.item_id=l.item_id WHERE l.outline_id=?''',(oid,))}
+        roots.sort(key=lambda n:order[n['id']])
+    else:roots.sort(key=lambda n:norm(n['title']))
     return {'schema_version':'study-atlas-resource-outline/v1','resource_id':'firstaid','outline_id':oid,
             'chapters':[{'title':title,'start_page':start} for start,title in CHAPTERS],
-            'topics':roots,'duration_policy':'Not estimated from index references; student calibration required.'}
+            'topics':roots,'source_kind':'user_verified_workbooks' if workbook else 'candidate_index',
+            'duration_policy':'Workbook estimates retained separately; student calibration required.' if workbook else 'Not estimated from index references; student calibration required.'}
 
 
 def selection(db,node_ids):
@@ -181,8 +188,8 @@ def selection(db,node_ids):
     items=sorted({r['item_id'] for r in db.execute('SELECT node_id,item_id FROM resource_outline_item_links WHERE outline_id=?',(tree['outline_id'],)) if r['node_id'] in selected})
     return {'schema_version':'study-atlas-reading-selection/v1','resource_id':'firstaid','outline_id':tree['outline_id'],
             'selected_node_ids':sorted(selected),'resource_item_ids':items,'page_refs':pages,
-            'distinct_referenced_pages':len(pages),'estimated_minutes':None,'requires_review':True,
-            'warning':'Index pointers are not complete chapter coverage; review before scheduling. No plan has been activated.'}
+            'distinct_referenced_pages':len(pages),'estimated_minutes':None,'requires_review':tree['source_kind']!='user_verified_workbooks',
+            'warning':'No plan has been activated. Cross-resource mappings and personal workload still require validation.'}
 
 
 def browse(db,*,chapter_name=None,query='',limit=100):

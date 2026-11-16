@@ -135,6 +135,7 @@ class FoundationTests(unittest.TestCase):
             a.execute('INSERT INTO notes VALUES(1,?,?,?)',('guid','#AK_Step1_v12::#UWorld::1 #AK_Step1_v12::#B&B::Test_topic','private card text'))
             a.executemany('INSERT INTO cards VALUES(?,?,?,?,?,?,?)',[(10,1,-1,1,2,3,4),(11,1,2,2,3,4,5)])
         original=path.read_bytes()
+        a.close()
         with self.assertRaises(ValueError):import_anki(self.db,path,collection='test')
         result=import_anki(self.db,path,collection='test',confirmed_backup=True)
         self.assertEqual((result['notes'],result['cards'],result['cotag_candidates']),(1,2,1))
@@ -161,10 +162,12 @@ class FoundationTests(unittest.TestCase):
             self.assertEqual(c.execute('PRAGMA foreign_key_check').fetchall(),[])
             self.assertEqual(c.execute('select count(*) from current_questions').fetchone()[0],1)
         self.assertTrue((self.root/'export/current_resource_items.json').exists())
+        c.close()
 
     def test_future_schema_rejected(self):
         p=self.root/'future.sqlite'
         with sqlite3.connect(p) as c:c.execute('PRAGMA user_version=99')
+        c.close()
         with self.assertRaises(ValueError):connect(p)
 
 

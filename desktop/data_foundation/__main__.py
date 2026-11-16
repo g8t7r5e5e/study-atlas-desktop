@@ -24,6 +24,8 @@ def main(argv=None):
     s = sub.add_parser('register')
     s.add_argument('path'); s.add_argument('--source-key', required=True)
     sub.add_parser('map')
+    w = sub.add_parser('firstaid-workbooks')
+    w.add_argument('paths',nargs='+'); w.add_argument('--manifest',required=True)
     o = sub.add_parser('firstaid-outline'); o.add_argument('path')
     o = sub.add_parser('outline-export'); o.add_argument('out')
     o = sub.add_parser('outline-browse'); o.add_argument('--chapter'); o.add_argument('--query',default=''); o.add_argument('--limit',type=int,default=100)
@@ -53,6 +55,11 @@ def main(argv=None):
             with db:
                 sid = snapshot(db, args.path, args.source_key, 0, {'status':'reference_only_not_a_catalog'})
             result = {'snapshot_id':sid,'status':'reference_only'}
+        elif args.command == 'firstaid-workbooks':
+            from .firstaid_workbooks import read_workbooks, replace
+            data=read_workbooks(args.paths)
+            write_json(args.manifest,data)
+            result=replace(db,args.manifest)
         elif args.command == 'map':
             from .mappings import generate
             result = generate(db)

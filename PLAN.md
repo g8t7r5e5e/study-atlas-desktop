@@ -1,3 +1,7 @@
+# Current checkpoint: First Aid workbook replacement
+
+Read docs/data/FIRST_AID_REPLACEMENT.md first. It supersedes all First Aid index and 334-unit inventory assumptions below. The desktop app is already merged into main; this branch still requires reconciliation.
+
 # Checkpoint plan — 18 October 2026
 
 The current user request prioritizes the real data checkpoint before planner UI.

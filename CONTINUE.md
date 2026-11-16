@@ -1,3 +1,7 @@
+# Current checkpoint: First Aid workbook replacement
+
+Read docs/data/FIRST_AID_REPLACEMENT.md first. It supersedes all First Aid index and 334-unit inventory assumptions below. The desktop app is already merged into main; this branch still requires reconciliation.
+
 # Continue Study Atlas here
 
 Read this file, PLAN.md, AGENTS.md and docs/data/CHECKPOINT1.md before resuming.
