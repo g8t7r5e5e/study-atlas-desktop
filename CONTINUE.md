@@ -1,3 +1,9 @@
+# Final transfer to Claude Cowork — 17 November 2026
+
+The owner is continuing all remaining work in Claude Cowork directly on this Windows PC. Read "instructions n overview of the project for claude.md" first. Both flashcard (Anki/AnkiWeb-related) and MedMaster quiz apps are already installed and store data locally, per the owner. Claude knows the earlier KMU Atlas / ProffMaster integration context: inspect and adapt that local-data approach. The web-service-first integration notes are superseded. Exact store paths/schemas must be established locally; no connection is claimed yet.
+
+Current implementation checkpoint: 41f57b5165e04fcb1e9b6213afc5f33542772e56; 79 tests passed. First Aid catalog, workload/feasibility, draft scheduler, independent validator and protected replanning are implemented. Remaining: branch reconciliation, seven page-allocation flags, calibration/selections/accepted-plan persistence, local app synchronization, onboarding, desktop integration, AI plan exchange and installed validation. No further Codex implementation is required before Claude begins.
+
 # Current checkpoint: validated draft scheduler and replanning
 
 Read docs/planner/SCHEDULER_CHECKPOINT.md first. The First Aid adapter now feeds a deterministic allocator and independent validator; locks/completed history and usable prior assignments are protected. 79 tests pass. A real-topic example with synthetic availability validated initial and missed-day drafts. Next: resolve seven page-allocation flags, persist calibration/selections and accepted plan versions, then onboarding/desktop integration. No new installer or applied owner schedule is claimed.
