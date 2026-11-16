@@ -1,3 +1,7 @@
+# Scheduling research checkpoint — 17 November 2026
+
+Completed the sourced approach comparison in docs/planner/SCHEDULING_RESEARCH.md. Recommended: deterministic capacity planner with explicit order/dependencies, separate Anki review forecasts, conservative replanning; CP-SAT deferred pending benchmarks. Eight analytical scenarios documented; arithmetic checked, no scheduler or solver benchmark implemented. Next task is workload/feasibility calculations. First-pass reading stays forward; revisiting prior material is a separately identified review activity (proposed policy). Preserve the new workbook catalog and existing desktop design.
+
 # Current checkpoint: First Aid workbook replacement
 
 Read docs/data/FIRST_AID_REPLACEMENT.md first. It supersedes all First Aid index and 334-unit inventory assumptions below. The desktop app is already merged into main; this branch still requires reconciliation.
