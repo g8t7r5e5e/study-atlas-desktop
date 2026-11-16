@@ -1,3 +1,7 @@
+# Current checkpoint: validated draft scheduler and replanning
+
+Read docs/planner/SCHEDULER_CHECKPOINT.md first. The First Aid adapter now feeds a deterministic allocator and independent validator; locks/completed history and usable prior assignments are protected. 79 tests pass. A real-topic example with synthetic availability validated initial and missed-day drafts. Next: resolve seven page-allocation flags, persist calibration/selections and accepted plan versions, then onboarding/desktop integration. No new installer or applied owner schedule is claimed.
+
 # Current checkpoint: First Aid workload and necessary feasibility checks
 
 Read docs/planner/FIRST_AID_FEASIBILITY.md and the Claude handoff first. Adapter and checks implemented; 57 tests pass. Next: page allocation, persistent calibration, locks, allocator and assignment validator.

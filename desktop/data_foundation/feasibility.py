@@ -1,6 +1,7 @@
 """First Aid workload adapter and necessary feasibility checks, without allocation."""
 import json
 import math
+import heapq
 from datetime import date
 from .workload import number
 
@@ -76,16 +77,24 @@ def check(tasks,windows):
         if 'release_date' in t:day(t['release_date'])
         if type(t.get('splittable',False)) is not bool or type(t.get('completed',False)) is not bool:raise ValueError('Invalid boolean')
         if t.get('needs_page_allocation'):unresolved.append({'task_id':key,'reason':'explicit_page_workload_allocation_required'})
-    visiting=set();done=set();order=[]
-    def visit(key):
-        if key in visiting:raise ValueError('Prerequisite cycle')
-        if key in done:return
-        visiting.add(key)
-        for parent in known[key].get('prerequisites',[]):
+    # Iterative topological ordering supports full-curriculum dependency chains
+    # without exceeding Python's recursion limit.
+    incoming={};children={k:[] for k in known};order=[]
+    for key,t in known.items():
+        parents=t.get('prerequisites',[])
+        if not isinstance(parents,list) or any(not isinstance(p,str) for p in parents) or len(set(parents))!=len(parents):
+            raise ValueError('Invalid prerequisites')
+        incoming[key]=len(parents)
+        for parent in parents:
             if parent not in known:raise ValueError('Unknown prerequisite')
-            visit(parent)
-        visiting.remove(key);done.add(key);order.append(key)
-    for key in known:visit(key)
+            children[parent].append(key)
+    ready=[k for k,n in incoming.items() if not n];heapq.heapify(ready)
+    while ready:
+        key=heapq.heappop(ready);order.append(key)
+        for child in children[key]:
+            incoming[child]-=1
+            if not incoming[child]:heapq.heappush(ready,child)
+    if len(order)!=len(known):raise ValueError('Prerequisite cycle')
     active={k:t for k,t in known.items() if not t.get('completed',False)}
     # Propagate descendant deadlines backwards; prerequisites must finish in time.
     due={k:t['deadline'] for k,t in active.items()}
