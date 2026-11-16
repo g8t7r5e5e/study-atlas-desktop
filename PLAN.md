@@ -1,3 +1,7 @@
+# Current checkpoint: First Aid workload and necessary feasibility checks
+
+Read docs/planner/FIRST_AID_FEASIBILITY.md and the Claude handoff first. Adapter and checks implemented; 57 tests pass. Next: page allocation, persistent calibration, locks, allocator and assignment validator.
+
 # Scheduling research checkpoint — 17 November 2026
 
 Completed the sourced approach comparison in docs/planner/SCHEDULING_RESEARCH.md. Recommended: deterministic capacity planner with explicit order/dependencies, separate Anki review forecasts, conservative replanning; CP-SAT deferred pending benchmarks. Eight analytical scenarios documented; arithmetic checked, no scheduler or solver benchmark implemented. Next task is workload/feasibility calculations. First-pass reading stays forward; revisiting prior material is a separately identified review activity (proposed policy). Preserve the new workbook catalog and existing desktop design.

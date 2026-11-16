@@ -1,6 +1,6 @@
-# Current Claude Cowork handoff
+# Current checkpoint: First Aid workload and necessary feasibility checks
 
-Read [instructions n overview of the project for claude.md](instructions%20n%20overview%20of%20the%20project%20for%20claude.md) first. It records the latest status, local Windows workflow, remaining implementation and AnkiWeb/MedMaster integration requirements. Older notes below are historical where they conflict.
+Read docs/planner/FIRST_AID_FEASIBILITY.md and the Claude handoff first. Adapter and checks implemented; 57 tests pass. Next: page allocation, persistent calibration, locks, allocator and assignment validator.
 
 # Scheduling research checkpoint — 17 November 2026
 

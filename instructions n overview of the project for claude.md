@@ -138,6 +138,21 @@ Aggregate status deliberately does not prove that tasks fit daily slots or depen
 
 Latest observed local test run: **48 tests passed**, including six workload tests and eight workbook replacement tests. Tests ran on Windows with bundled Python. No new app installer was built after these data changes.
 
+## 7A. Latest implementation: First Aid estimates and feasibility checks
+
+
+Implemented desktop/data_foundation/feasibility.py with firstaid_tasks(db, topic_ids, deadline=..., progress=..., pace_multiplier=...) and check(tasks, windows).
+
+The adapter reads only the active workbook catalog, deduplicates selected IDs, preserves topic identity and source estimate, supports explicit completed fractions and a pace multiplier, and charges each topic once. Remaining estimates round upward to whole minutes. Completed fractions represent user-reported work fraction, not inferred mastery. Unknown IDs and invalid progress are rejected. Source sequence establishes selected-topic order only where page spans permit a whole-topic dependency. Overlapping or noncontiguous pages are flagged for explicit workload allocation; no page durations are invented.
+
+Checks validate ISO dates, net free local-day minute windows, overlap, task identities, numeric minutes, dependency references/cycles, propagated prerequisite deadlines, task-specific capacity, continuous-window fit, cumulative release/deadline interval demand and optimistic earliest-finish prerequisite paths. Completed prerequisites do not create remaining workload. Windows must exclude commitments and buffers already; do not subtract them again. Split cross-midnight windows by date. This module does not handle timezone conversion itself.
+
+Passing necessary checks is not proof of a feasible schedule. Independent task competition, locks, assignment validation, automated repair and allocation remain to implement. Contradictions have machine-readable issue kinds. No accepted plan is generated or applied. No UI or installed app changed.
+
+57 tests pass, including nine feasibility/adapter tests. Read-only integration against all 1,405 real First Aid topics preserved all IDs and produced 25,147 source-estimated minutes (about 419.1 hours) at baseline pace, with seven page-allocation flags. This is reading workload from the supplied estimates only, not total USMLE preparation time. Synthetic capacity preview saved locally as outputs/First-Aid-Feasibility-Check.json; it is not owner availability.
+
+Next: resolve the seven page-allocation flags with explicit duration assumptions/evidence; persist calibration and selected progress; add locked-task constraints; build the deterministic allocator and independent assignment validator before calendar integration. Continue the broader Claude handoff roadmap.
+
 ## 8. Unfinished implementation: execute in this order
 
 ### A. Establish the combined local project
@@ -146,7 +161,7 @@ Read this file, `AGENTS.md`, both branch READMEs and migration docs. Preserve ma
 
 ### B. Complete workload and feasibility
 
-Connect selected First Aid topic IDs and source estimates to activities. Add persistent calibration based on active study time and completed quantities, separate by reading/video/question/card activity. Show sample counts and uncertainty. Do not use idle timers as actual active minutes. Include baseline and conservative scenarios without inventing statistical confidence.
+The First Aid adapter and necessary deadline/prerequisite/window checks now exist; inspect docs/planner/FIRST_AID_FEASIBILITY.md and extend them rather than rebuilding them. Connect those module interfaces to persisted selections and desktop services. Add persistent calibration based on active study time and completed quantities, separate by reading/video/question/card activity. Show sample counts and uncertainty. Do not use idle timers as actual active minutes. Include baseline and conservative scenarios without inventing statistical confidence.
 
 Validate counts, units, nonnegative finite durations, playback speed, remaining progress and dates. Distinguish gross available time from already-net study time so commitments are subtracted once. Reserve review demand once. Track unknown inputs and do not declare a complete plan feasible with missing workload.
 
